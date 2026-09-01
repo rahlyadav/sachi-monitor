@@ -1,43 +1,43 @@
 {
   "schema_version": 1,
   "trade": {
-    "entry_date": "2026-06-04",
-    "status": "ACTIVE",
     "added_at": "2026-06-07T19:35:34",
-    "quantity": 1.0,
-    "latest_date": "2026-08-26",
-    "bars_held": 58,
-    "return_pct": 13.604211218950502,
-    "updated_at": "2026-09-01T12:16:18",
-    "id": "f0f7a78fe0964905a36fd3607633cd35",
-    "strategy_label": "Donchian Breakout (45/32)",
-    "reason": "Strategy position is still active",
-    "pnl": 41.35000000000002,
-    "action_sort": 5,
     "strategy_snapshot": {
-      "total_return_c_pct": 117.69810451059391,
+      "total_return_c_pct": 120.18842455929604,
       "trades": 16,
       "win_rate_pct": 50.0,
-      "avg_trade_pct": 5.331564640817081,
-      "sharpe": 0.6324669505902404,
+      "avg_trade_pct": 5.413514848285961,
+      "sharpe": 0.6382297182475161,
       "max_drawdown_pct": -29.82229334194705
     },
-    "latest_close": 345.3,
-    "manual_stop_price": null,
-    "stop_text": "Manual 279.63",
+    "id": "f0f7a78fe0964905a36fd3607633cd35",
     "action": "HOLD",
+    "manual_stop_price": null,
+    "monitor_updated_at": "2026-09-01T17:23:41",
+    "stop_text": "Manual 279.63",
+    "quantity": 1.0,
     "stop_loss_pct": 8.0,
-    "monitor_updated_at": "2026-09-01T16:46:52",
-    "entry_price": 303.95,
+    "latest_close": 349.25,
+    "return_pct": 14.9037670669518,
     "symbol": "FEDERALBNK",
-    "strategy_key": "donchian_45_32"
+    "status": "ACTIVE",
+    "entry_price": 303.95,
+    "strategy_key": "donchian_45_32",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "reason": "Strategy position is still active",
+    "entry_date": "2026-06-04",
+    "updated_at": "2026-09-01T17:23:45",
+    "pnl": 45.30000000000001,
+    "bars_held": 62,
+    "action_sort": 5,
+    "latest_date": "2026-09-01"
   },
   "metrics": {
-    "total_return_c_pct": 117.69810451059391,
+    "total_return_c_pct": 120.18842455929604,
     "trades": 16,
     "win_rate_pct": 50.0,
-    "avg_trade_pct": 5.331564640817081,
-    "sharpe": 0.6324669505902404,
+    "avg_trade_pct": 5.413514848285961,
+    "sharpe": 0.6382297182475161,
     "max_drawdown_pct": -29.82229334194705
   },
   "manual_stop_price": 279.634,
@@ -518,6 +518,38 @@
       "trade_signal": 1.0,
       "donchian_entry_high_45": 371.7,
       "donchian_exit_low_32": 326.6
+    },
+    {
+      "date": "2026-08-27",
+      "Close": 344.8,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 371.7,
+      "donchian_exit_low_32": 326.6
+    },
+    {
+      "date": "2026-08-28",
+      "Close": 344.25,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 371.7,
+      "donchian_exit_low_32": 326.6
+    },
+    {
+      "date": "2026-08-31",
+      "Close": 356.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 371.7,
+      "donchian_exit_low_32": 326.6
+    },
+    {
+      "date": "2026-09-01",
+      "Close": 349.25,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 371.7,
+      "donchian_exit_low_32": 344.25
     }
   ]
 }

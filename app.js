@@ -2,8 +2,8 @@ const state = {
   status: {},
   monitor: [],
   sort: {
-    active: { key: "rank", type: "number", dir: "asc" },
-    closed: { key: "rank", type: "number", dir: "asc" },
+    active: { key: "entry_date", type: "date", dir: "desc" },
+    closed: { key: "closed_exit_date", type: "date", dir: "desc" },
   },
 };
 

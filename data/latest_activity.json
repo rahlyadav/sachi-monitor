@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-01T19:54:31",
+  "latest_data_date": "2026-08-26",
+  "scan_date": "2026-09-01",
+  "summary": {
+    "added": 2,
+    "closed": 0,
+    "actions": 0
+  },
+  "added": [
+    {
+      "id": "7918ec885f88456fa4e77ed5006dd050",
+      "rank": 12,
+      "symbol": "IDEA",
+      "strategy_key": "donchian_45_32",
+      "strategy_label": "Donchian Breakout (45/32)",
+      "entry_date": "2026-08-26",
+      "entry_price": 15.26,
+      "quantity": 1.0,
+      "stop_loss_pct": 8.0,
+      "manual_stop_price": null,
+      "status": "ACTIVE",
+      "latest_date": "2026-08-26",
+      "latest_close": 15.06,
+      "return_pct": -1.3106159895150626,
+      "pnl": -0.1999999999999993,
+      "bars_held": 0,
+      "stop_text": "Manual 14.04",
+      "action": "HOLD",
+      "reason": "Strategy position is still active",
+      "action_sort": 5
+    },
+    {
+      "id": "164e42da054c473397722ab1a3fc54e6",
+      "rank": 19,
+      "symbol": "MOTILALOFS",
+      "strategy_key": "donchian_45_32",
+      "strategy_label": "Donchian Breakout (45/32)",
+      "entry_date": "2026-08-24",
+      "entry_price": 990.0,
+      "quantity": 1.0,
+      "stop_loss_pct": 8.0,
+      "manual_stop_price": null,
+      "status": "ACTIVE",
+      "latest_date": "2026-08-26",
+      "latest_close": 1040.0,
+      "return_pct": 5.050505050505061,
+      "pnl": 50.0,
+      "bars_held": 2,
+      "stop_text": "Manual 910.80",
+      "action": "HOLD",
+      "reason": "Strategy position is still active",
+      "action_sort": 5
+    }
+  ],
+  "closed": [],
+  "actions": []
+}

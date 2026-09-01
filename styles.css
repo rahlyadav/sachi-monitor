@@ -188,11 +188,49 @@ main {
   max-height: min(70vh, 780px);
 }
 
+.activity-grid {
+  display: grid;
+  gap: 0;
+}
+
+.activity-block + .activity-block {
+  border-top: 1px solid var(--line);
+}
+
+.activity-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #fafbf8;
+  border-bottom: 1px solid var(--line);
+}
+
+.activity-block-head h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.activity-block-head span {
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-table-wrap {
+  max-height: 300px;
+}
+
 table {
   width: 100%;
   min-width: 1240px;
   border-collapse: collapse;
   font-size: 13px;
+}
+
+#activityTab table {
+  min-width: 860px;
 }
 
 th,
@@ -270,6 +308,10 @@ tr.reject,
 tr.exit,
 tr.stop {
   background: #fff7f4;
+}
+
+.muted-block {
+  background: #fbfbf8;
 }
 
 .pill {

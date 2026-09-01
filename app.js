@@ -1,5 +1,6 @@
 const state = {
   status: {},
+  activity: { summary: {}, added: [], closed: [], actions: [] },
   monitor: [],
   sort: {
     active: { key: "entry_date", type: "date", dir: "desc" },
@@ -175,6 +176,8 @@ function showTab(name) {
 
 function updateSummary() {
   const status = state.status || {};
+  const activity = state.activity || {};
+  const activitySummary = activity.summary || {};
   const monitor = status.monitor || {};
   const prediction = status.prediction || {};
   const universe = status.universe || {};
@@ -184,12 +187,109 @@ function updateSummary() {
   $("latestData").textContent = `Data: ${status.latest_data_date || "NA"}`;
   $("metricActive").textContent = `${monitor.active || 0}`;
   $("metricActions").textContent = `${monitor.hold || 0} / ${monitor.exit_signal || 0} / ${monitor.stop_hit || 0}`;
-  $("metricPredictions").textContent = `${prediction.matches || 0} / ${prediction.entry_signals || 0}`;
+  $("metricPredictions").textContent = `${activitySummary.added || 0} / ${activitySummary.closed || 0}`;
   $("metricUniverse").textContent = `${universe.stocks || 0} + ${universe.indices || 0}`;
 
+  $("activitySummary").textContent =
+    `Data ${activity.latest_data_date || status.latest_data_date || "NA"} | Scan ${activity.scan_date || "NA"} | ` +
+    `Added ${activitySummary.added || 0} | Closed ${activitySummary.closed || 0} | Alerts ${activitySummary.actions || 0}`;
   $("activeSummary").textContent =
     `Active ${monitor.active || 0} | HOLD ${monitor.hold || 0} | EXIT ${monitor.exit_signal || 0} | STOP ${monitor.stop_hit || 0}`;
   $("closedSummary").textContent = `Closed ${(state.monitor || []).filter((row) => row.status === "CLOSED").length}`;
+}
+
+function renderActivityTable(tableId, rows, renderRow, emptyText, colSpan) {
+  const body = $(tableId).querySelector("tbody");
+  body.replaceChildren();
+  for (const row of rows) {
+    body.appendChild(renderRow(row));
+  }
+  if (!rows.length) {
+    const tr = document.createElement("tr");
+    const empty = td(emptyText);
+    empty.colSpan = colSpan;
+    tr.appendChild(empty);
+    body.appendChild(tr);
+  }
+}
+
+function renderActivity() {
+  const activity = state.activity || {};
+  const added = activity.added || [];
+  const closed = activity.closed || [];
+  const actions = activity.actions || [];
+
+  $("activityAddedCount").textContent = `${added.length}`;
+  $("activityClosedCount").textContent = `${closed.length}`;
+  $("activityActionCount").textContent = `${actions.length}`;
+  $("activityActionBlock").classList.toggle("muted-block", !actions.length);
+
+  renderActivityTable(
+    "activityAddedTable",
+    added,
+    (row) => {
+      const tr = document.createElement("tr");
+      tr.className = rowClassForAction(row.action);
+      tr.append(
+        td(row.symbol),
+        td(row.strategy_label),
+        td(row.entry_date),
+        td(fmt(row.entry_price), "numeric"),
+        td(fmt(row.latest_close), "numeric"),
+        td(fmt(row.return_pct), "numeric"),
+      );
+      const tools = document.createElement("td");
+      tools.appendChild(button("Chart", () => loadChart(row.id)));
+      tr.appendChild(tools);
+      return tr;
+    },
+    "No trades were added in the latest run.",
+    7,
+  );
+
+  renderActivityTable(
+    "activityClosedTable",
+    closed,
+    (row) => {
+      const tr = document.createElement("tr");
+      tr.className = rowClassForAction(row.action);
+      tr.append(
+        td(row.symbol),
+        td(row.strategy_label),
+        td(row.entry_date),
+        td(row.exit_date || row.latest_date || "NA"),
+        td(fmt(row.exit_price || row.latest_close), "numeric"),
+        td(fmt(row.realized_return_pct || row.return_pct), "numeric"),
+        td(row.close_reason || row.reason || "NA", "reason"),
+      );
+      const tools = document.createElement("td");
+      tools.appendChild(button("Chart", () => loadChart(row.id)));
+      tr.appendChild(tools);
+      return tr;
+    },
+    "No trades were closed on the latest data date.",
+    8,
+  );
+
+  renderActivityTable(
+    "activityActionTable",
+    actions,
+    (row) => {
+      const tr = document.createElement("tr");
+      tr.className = rowClassForAction(row.action);
+      tr.append(td(row.symbol), td(row.strategy_label), td(row.entry_date));
+      const action = document.createElement("td");
+      action.appendChild(pill(row.action, actionKind(row.action)));
+      tr.appendChild(action);
+      tr.appendChild(td(row.reason || "NA", "reason"));
+      const tools = document.createElement("td");
+      tools.appendChild(button("Chart", () => loadChart(row.id)));
+      tr.appendChild(tools);
+      return tr;
+    },
+    "No open exit or stop alerts.",
+    6,
+  );
 }
 
 function renderActive() {
@@ -547,13 +647,16 @@ function bindEvents() {
 
 async function boot() {
   bindEvents();
-  const [status, monitor] = await Promise.all([
+  const [status, activity, monitor] = await Promise.all([
     fetchJson("./data/status.json", {}),
+    fetchJson("./data/latest_activity.json", { summary: {}, added: [], closed: [], actions: [] }),
     fetchJson("./data/latest_monitor.json", { rows: [], summary: {} }),
   ]);
   state.status = status || {};
+  state.activity = activity || { summary: {}, added: [], closed: [], actions: [] };
   state.monitor = monitor.rows || [];
   updateSummary();
+  renderActivity();
   renderActive();
   renderClosed();
 }

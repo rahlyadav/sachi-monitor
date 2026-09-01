@@ -11,11 +11,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-08-26",
-    "latest_close": 1287.8,
-    "return_pct": -3.8955223880597023,
-    "pnl": -52.200000000000045,
-    "bars_held": 49,
+    "latest_date": "2026-09-01",
+    "latest_close": 1270.5,
+    "return_pct": -5.186567164179101,
+    "pnl": -69.5,
+    "bars_held": 53,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -28,16 +28,16 @@
     "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
-    "total_return_c_pct": -29.28975523900199,
+    "total_return_c_pct": -30.239659909265438,
     "trades": 4,
     "win_rate_pct": 0.0,
-    "avg_trade_pct": -7.548092417542798,
-    "sharpe": -1.73186616000277,
-    "max_drawdown_pct": -31.404389704580893
+    "avg_trade_pct": -7.870853611572648,
+    "sharpe": -1.7195608165917482,
+    "max_drawdown_pct": -31.721464368278028
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-17",
-  "chart_end_date": "2026-08-26",
+  "chart_end_date": "2026-09-01",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -442,6 +442,38 @@
       "Close": 1287.8,
       "position": 1.0,
       "trade_signal": 1.0,
+      "donchian_entry_high_45": 1428.6,
+      "donchian_exit_low_32": 1276.4
+    },
+    {
+      "date": "2026-08-27",
+      "Close": 1333.9,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1428.6,
+      "donchian_exit_low_32": 1276.4
+    },
+    {
+      "date": "2026-08-28",
+      "Close": 1297.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1428.6,
+      "donchian_exit_low_32": 1276.4
+    },
+    {
+      "date": "2026-08-31",
+      "Close": 1299.6,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1428.6,
+      "donchian_exit_low_32": 1276.4
+    },
+    {
+      "date": "2026-09-01",
+      "Close": 1270.5,
+      "position": 1.0,
+      "trade_signal": 0.0,
       "donchian_entry_high_45": 1428.6,
       "donchian_exit_low_32": 1276.4
     }

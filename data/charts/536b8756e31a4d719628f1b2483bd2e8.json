@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "536b8756e31a4d719628f1b2483bd2e8",
+    "symbol": "ENGINERSIN",
+    "strategy_key": "sma_20_50_atr05_band",
+    "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
+    "entry_date": "2026-09-01",
+    "entry_price": 263.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-09-01",
+    "latest_close": 280.05,
+    "return_pct": 6.482889733840302,
+    "pnl": 17.05000000000001,
+    "bars_held": 0,
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5
+  },
+  "strategy": {
+    "key": "sma_20_50_atr05_band",
+    "label": "SMA Crossover (20/50) + 0.5x ATR Band",
+    "description": "Entry when SMA20 crosses above SMA50 + 0.5x ATR(14); exit when SMA20 falls below SMA50 - 0.5x ATR(14).",
+    "indicator_description": "Adds a lower panel with SMA20, SMA50, and SMA50 +/- 0.5x ATR(14) band."
+  },
+  "metrics": {
+    "total_return_c_pct": 27.133781578014936,
+    "trades": 15,
+    "win_rate_pct": 46.666666666666664,
+    "avg_trade_pct": 2.9683770907282954,
+    "sharpe": 0.2731548750991773,
+    "max_drawdown_pct": -50.74529992996478
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-09-01",
+  "chart_end_date": "2026-09-01",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "sma_20",
+    "sma_50",
+    "sma50_atr_upper_05",
+    "sma50_atr_lower_05"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-09-01",
+      "Close": 280.05,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 246.99099999999999,
+      "sma_50": 239.12760000000003,
+      "sma50_atr_upper_05": 244.35152857142862,
+      "sma50_atr_lower_05": 233.90367142857144
+    }
+  ]
+}

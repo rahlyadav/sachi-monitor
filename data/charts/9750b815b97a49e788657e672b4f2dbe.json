@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "9750b815b97a49e788657e672b4f2dbe",
+    "symbol": "ENGINERSIN",
+    "strategy_key": "donchian_45_32",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "entry_date": "2026-09-01",
+    "entry_price": 263.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-09-01",
+    "latest_close": 280.05,
+    "return_pct": 6.482889733840302,
+    "pnl": 17.05000000000001,
+    "bars_held": 0,
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
+  },
+  "metrics": {
+    "total_return_c_pct": 62.95207550872226,
+    "trades": 15,
+    "win_rate_pct": 46.666666666666664,
+    "avg_trade_pct": 4.798999629232676,
+    "sharpe": 0.3956827111336884,
+    "max_drawdown_pct": -47.91589671548161
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-09-01",
+  "chart_end_date": "2026-09-01",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "donchian_entry_high_45",
+    "donchian_exit_low_32"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-09-01",
+      "Close": 280.05,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 261.87,
+      "donchian_exit_low_32": 221.98
+    }
+  ]
+}

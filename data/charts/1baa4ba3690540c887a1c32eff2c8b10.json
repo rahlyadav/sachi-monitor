@@ -11,17 +11,17 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "CLOSED",
-    "exit_date": "2026-08-20",
-    "exit_price": 527.45,
-    "realized_return_pct": 1.6477163229909664,
-    "close_reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-08-20",
-    "latest_date": "2026-08-26",
-    "latest_close": 515.05,
-    "return_pct": -0.7419541337444602,
-    "pnl": -3.8500000000000227,
-    "bars_held": 47,
+    "exit_date": "2026-08-25",
+    "exit_price": 501.0,
+    "realized_return_pct": -3.449604933513195,
+    "close_reason": "EXIT SIGNAL",
+    "latest_date": "2026-09-01",
+    "latest_close": 538.1,
+    "return_pct": 3.700134900751606,
+    "pnl": 19.200000000000045,
+    "bars_held": 51,
     "action": "CLOSED",
-    "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-08-20",
+    "reason": "EXIT SIGNAL",
     "action_sort": 8
   },
   "strategy": {
@@ -35,12 +35,12 @@
     "trades": 9,
     "win_rate_pct": 22.22222222222222,
     "avg_trade_pct": -4.234865497952477,
-    "sharpe": -0.2953255950732627,
+    "sharpe": -0.29469298732571536,
     "max_drawdown_pct": -56.62070151058628
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-19",
-  "chart_end_date": "2026-08-20",
+  "chart_end_date": "2026-08-25",
   "chart_end_reason": "exit",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -399,6 +399,30 @@
       "trade_signal": 0.0,
       "donchian_entry_high_45": 570.5,
       "donchian_exit_low_32": 521.25
+    },
+    {
+      "date": "2026-08-21",
+      "Close": 520.95,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "donchian_entry_high_45": 570.5,
+      "donchian_exit_low_32": 521.25
+    },
+    {
+      "date": "2026-08-24",
+      "Close": 500.0,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "donchian_entry_high_45": 570.5,
+      "donchian_exit_low_32": 520.95
+    },
+    {
+      "date": "2026-08-25",
+      "Close": 501.0,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "donchian_entry_high_45": 570.5,
+      "donchian_exit_low_32": 500.0
     }
   ]
 }

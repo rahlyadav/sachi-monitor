@@ -1,25 +1,31 @@
 {
   "schema_version": 1,
   "trade": {
-    "stop_loss_pct": 8.0,
     "latest_date": "2026-08-26",
-    "entry_price": 434.0,
-    "strategy_key": "donchian_45_32",
     "manual_stop_price": null,
-    "strategy_label": "Donchian Breakout (45/32)",
-    "entry_date": "2026-07-02",
-    "reason": "Strategy position is still active",
-    "stop_text": "Manual 399.28",
-    "return_pct": 2.085253456221192,
-    "action_sort": 5,
-    "bars_held": 39,
-    "action": "HOLD",
     "latest_close": 443.05,
     "quantity": 1.0,
+    "stop_loss_pct": 8.0,
+    "entry_date": "2026-07-02",
+    "pnl": 9.050000000000011,
+    "stop_text": "Manual 399.28",
+    "return_pct": 2.085253456221192,
     "symbol": "APOLLOTYRE",
+    "action_sort": 5,
     "id": "dd783c8256bd4b73a10f0e46b71d973f",
+    "strategy_key": "donchian_45_32",
+    "bars_held": 39,
+    "entry_price": 434.0,
     "status": "ACTIVE",
-    "pnl": 9.050000000000011
+    "action": "HOLD",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "reason": "Strategy position is still active"
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
     "total_return_c_pct": 113.48841825626432,

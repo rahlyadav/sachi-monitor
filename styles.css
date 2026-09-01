@@ -304,7 +304,7 @@ tr.stop {
 
 .chart-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
+  grid-template-columns: minmax(0, 1fr) 360px;
   gap: 16px;
   padding: 14px;
 }
@@ -321,11 +321,23 @@ tr.stop {
   border-left: 1px solid var(--line);
   padding-left: 14px;
   font-size: 13px;
+  max-height: 460px;
+  overflow: auto;
+}
+
+.fact-section + .fact-section {
+  margin-top: 16px;
 }
 
 .facts h3 {
   margin: 0 0 8px;
   font-size: 15px;
+}
+
+.fact-text {
+  margin: 0 0 8px;
+  color: #39443d;
+  line-height: 1.42;
 }
 
 .facts dl {

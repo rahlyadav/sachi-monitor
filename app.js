@@ -302,25 +302,75 @@ function renderChart(payload) {
   drawTradeChart(payload);
 }
 
+function labelForColumn(col) {
+  const raw = String(col || "");
+  if (raw === "Close") return "Close";
+  return raw
+    .replace(/^donchian_/, "")
+    .replaceAll("_", " ")
+    .replace(/\b(sma|ema|rsi|atr|macd)\b/gi, (match) => match.toUpperCase())
+    .replace(/\b\w/g, (match) => match.toUpperCase());
+}
+
+function chartWatchText(text) {
+  return String(text || "")
+    .replace(/^Adds a lower panel with /i, "Watch ")
+    .replace(/^Adds /i, "Watch ")
+    .replace(/^Uses /i, "Watch ")
+    .replace(/\.$/, "");
+}
+
+function uniqueValues(items) {
+  return [...new Set(items.filter(Boolean))];
+}
+
+function metricRows(columns, point) {
+  if (!columns.length) return '<p class="fact-text">No extra indicator values for this strategy.</p>';
+  return `
+    <dl>
+      ${columns
+        .map((col) => `<dt>${escapeHtml(labelForColumn(col))}</dt><dd>${escapeHtml(fmt(point[col], 4))}</dd>`)
+        .join("")}
+    </dl>
+  `;
+}
+
 function renderFacts(payload) {
   const trade = payload.trade || {};
+  const strategy = payload.strategy || {};
   const metrics = payload.metrics || {};
-  const latest = (payload.points || []).at(-1) || {};
-  const indicators = payload.indicator_columns || [];
-  const indicatorRows = indicators
-    .map((col) => `<dt>${escapeHtml(col)}</dt><dd>${escapeHtml(fmt(latest[col], 4))}</dd>`)
-    .join("");
+  const points = payload.points || [];
+  const entryPoint = points[0] || {};
+  const latest = points.at(-1) || {};
+  const indicatorColumns = uniqueValues(["Close", ...(payload.indicator_columns || []), ...(payload.stop_columns || [])]);
+  const description = strategy.description || trade.strategy_label || trade.strategy_key || "Strategy details unavailable.";
+  const watch = chartWatchText(strategy.indicator_description || "");
   $("chartFacts").innerHTML = `
-    <h3>Status</h3>
-    <dl>
-      <dt>Action</dt><dd>${escapeHtml(trade.action || trade.monitor_action || "NA")}</dd>
-      <dt>Reason</dt><dd>${escapeHtml(trade.reason || trade.monitor_reason || "NA")}</dd>
-      <dt>Bars Held</dt><dd>${escapeHtml(trade.bars_held ?? "NA")}</dd>
-      <dt>Manual Stop</dt><dd>${escapeHtml(fmt(payload.manual_stop_price))}</dd>
-      <dt>Win Rate</dt><dd>${escapeHtml(fmt(metrics.win_rate_pct))}%</dd>
-      <dt>Avg Trade</dt><dd>${escapeHtml(fmt(metrics.avg_trade_pct))}%</dd>
-      ${indicatorRows}
-    </dl>
+    <section class="fact-section">
+      <h3>Status</h3>
+      <dl>
+        <dt>Value Point</dt><dd>Latest available bar</dd>
+        <dt>Action</dt><dd>${escapeHtml(trade.action || trade.monitor_action || "NA")}</dd>
+        <dt>Reason</dt><dd>${escapeHtml(trade.reason || trade.monitor_reason || "NA")}</dd>
+        <dt>Bars Held</dt><dd>${escapeHtml(trade.bars_held ?? "NA")}</dd>
+        <dt>Manual Stop</dt><dd>${escapeHtml(fmt(payload.manual_stop_price))}</dd>
+        <dt>Win Rate</dt><dd>${escapeHtml(fmt(metrics.win_rate_pct))}%</dd>
+        <dt>Avg Trade</dt><dd>${escapeHtml(fmt(metrics.avg_trade_pct))}%</dd>
+      </dl>
+    </section>
+    <section class="fact-section">
+      <h3>Strategy Guide</h3>
+      <p class="fact-text">${escapeHtml(description)}</p>
+      <p class="fact-text">${escapeHtml(watch || "Watch price, stop levels, and the current action.")}</p>
+    </section>
+    <section class="fact-section">
+      <h3>Latest Indicator Values</h3>
+      ${metricRows(indicatorColumns, latest)}
+    </section>
+    <section class="fact-section">
+      <h3>Entry Indicator Values</h3>
+      ${metricRows(indicatorColumns, entryPoint)}
+    </section>
   `;
 }
 
@@ -371,7 +421,7 @@ function drawTradeChart(payload) {
   yMin -= pad;
   yMax += pad;
 
-  const margin = { top: 24, right: 24, bottom: 52, left: 62 };
+  const margin = { top: 24, right: 150, bottom: 52, left: 62 };
   const plotW = width - margin.left - margin.right;
   const plotH = height - margin.top - margin.bottom;
   const x = (idx) => margin.left + (points.length <= 1 ? 0 : (idx / (points.length - 1)) * plotW);
@@ -397,7 +447,28 @@ function drawTradeChart(payload) {
     ctx.fillText(points[idx].date.slice(5), x(idx) - 16, height - 22);
   }
 
-  function line(values, color, dash = []) {
+  const placedLabels = [];
+  const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+  function lastFinitePoint(values) {
+    for (let idx = values.length - 1; idx >= 0; idx -= 1) {
+      const value = Number(values[idx]);
+      if (Number.isFinite(value)) return { idx, value };
+    }
+    return null;
+  }
+
+  function labelY(baseY) {
+    let nextY = clamp(baseY, margin.top + 10, height - margin.bottom - 10);
+    for (let guard = 0; guard < 10; guard += 1) {
+      if (!placedLabels.some((existing) => Math.abs(existing - nextY) < 14)) break;
+      nextY = clamp(nextY + 14, margin.top + 10, height - margin.bottom - 10);
+    }
+    placedLabels.push(nextY);
+    return nextY;
+  }
+
+  function line(values, color, dash = [], label = "") {
     ctx.save();
     ctx.strokeStyle = color;
     ctx.lineWidth = 1.7;
@@ -414,16 +485,30 @@ function drawTradeChart(payload) {
       }
     });
     ctx.stroke();
+    const finalPoint = label ? lastFinitePoint(values) : null;
+    if (finalPoint) {
+      const ly = labelY(y(finalPoint.value));
+      const startX = x(finalPoint.idx);
+      const labelX = width - margin.right + 10;
+      ctx.setLineDash([]);
+      ctx.beginPath();
+      ctx.moveTo(startX, y(finalPoint.value));
+      ctx.lineTo(labelX - 5, ly);
+      ctx.stroke();
+      ctx.fillStyle = color;
+      ctx.font = "12px system-ui, sans-serif";
+      ctx.fillText(label, labelX, ly + 4);
+    }
     ctx.restore();
   }
 
-  line(points.map((p) => Number(p.Close)), "#246a9f");
+  line(points.map((p) => Number(p.Close)), "#246a9f", [], "Close");
   const colors = ["#167247", "#a06a12", "#7256a6", "#58656f"];
   priceLikeCols.slice(0, 4).forEach((col, idx) => {
-    line(points.map((p) => Number(p[col])), colors[idx % colors.length], [5, 4]);
+    line(points.map((p) => Number(p[col])), colors[idx % colors.length], [5, 4], labelForColumn(col));
   });
   stopCols.forEach((col) => {
-    line(points.map((p) => Number(p[col])), "#b43d35", [6, 5]);
+    line(points.map((p) => Number(p[col])), "#b43d35", [6, 5], labelForColumn(col));
   });
 
   const manualStop = Number(payload.manual_stop_price);
@@ -436,7 +521,8 @@ function drawTradeChart(payload) {
     ctx.lineTo(width - 24, y(manualStop));
     ctx.stroke();
     ctx.fillStyle = "#b43d35";
-    ctx.fillText(`Stop ${fmt(manualStop)}`, width - 106, y(manualStop) - 6);
+    const ly = labelY(y(manualStop));
+    ctx.fillText(`Manual Stop ${fmt(manualStop)}`, width - margin.right + 10, ly + 4);
     ctx.restore();
   }
 
@@ -446,7 +532,7 @@ function drawTradeChart(payload) {
   ctx.beginPath();
   ctx.arc(x(lastIdx), y(lastClose), 4, 0, Math.PI * 2);
   ctx.fill();
-  ctx.fillText(`Close ${fmt(lastClose)}`, Math.max(62, x(lastIdx) - 78), y(lastClose) - 8);
+  ctx.fillText(fmt(lastClose), Math.max(62, x(lastIdx) - 40), y(lastClose) - 8);
 }
 
 function bindEvents() {

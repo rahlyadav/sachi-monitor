@@ -1,25 +1,31 @@
 {
   "schema_version": 1,
   "trade": {
-    "stop_loss_pct": 8.0,
     "latest_date": "2026-08-26",
-    "entry_price": 1240.0,
-    "strategy_key": "donchian_45_32",
     "manual_stop_price": null,
-    "strategy_label": "Donchian Breakout (45/32)",
-    "entry_date": "2026-08-12",
-    "reason": "Strategy position is still active",
-    "stop_text": "Manual 1140.80",
-    "return_pct": 3.7379032258064493,
-    "action_sort": 5,
-    "bars_held": 10,
-    "action": "HOLD",
     "latest_close": 1286.35,
     "quantity": 1.0,
+    "stop_loss_pct": 8.0,
+    "entry_date": "2026-08-12",
+    "pnl": 46.34999999999991,
+    "stop_text": "Manual 1140.80",
+    "return_pct": 3.7379032258064493,
     "symbol": "FINCABLES",
+    "action_sort": 5,
     "id": "ebab869780bf49a38c5f8d61312d7bff",
+    "strategy_key": "donchian_45_32",
+    "bars_held": 10,
+    "entry_price": 1240.0,
     "status": "ACTIVE",
-    "pnl": 46.34999999999991
+    "action": "HOLD",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "reason": "Strategy position is still active"
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
     "total_return_c_pct": 224.67707320823519,

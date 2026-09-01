@@ -243,7 +243,7 @@ function renderActivity() {
       tr.appendChild(tools);
       return tr;
     },
-    "No trades were added in the latest run.",
+    "No trades were added on the latest data date.",
     7,
   );
 

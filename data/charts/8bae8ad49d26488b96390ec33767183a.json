@@ -1,8 +1,19 @@
 {
   "schema_version": 1,
   "trade": {
+    "entry_date": "2026-08-26",
+    "status": "ACTIVE",
+    "added_at": "2026-08-27T06:11:11",
+    "quantity": 1.0,
+    "latest_date": "2026-08-26",
     "bars_held": 0,
-    "action": "HOLD",
+    "return_pct": 5.402414486921536,
+    "updated_at": "2026-09-01T12:16:18",
+    "id": "8bae8ad49d26488b96390ec33767183a",
+    "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
+    "reason": "Strategy position is still active",
+    "pnl": 53.700000000000045,
+    "action_sort": 5,
     "strategy_snapshot": {
       "total_return_c_pct": 539.3003442065661,
       "trades": 8,
@@ -11,26 +22,15 @@
       "sharpe": 1.150665937781035,
       "max_drawdown_pct": -35.270613891812665
     },
-    "id": "8bae8ad49d26488b96390ec33767183a",
-    "monitor_updated_at": "2026-09-01T16:46:52",
-    "manual_stop_price": null,
-    "entry_date": "2026-08-26",
-    "reason": "Strategy position is still active",
-    "return_pct": 5.402414486921536,
-    "stop_text": "Manual 914.48",
-    "pnl": 53.700000000000045,
-    "entry_price": 994.0,
-    "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
-    "symbol": "CYIENT",
-    "status": "ACTIVE",
-    "strategy_key": "ema_12_26_atr05_band",
     "latest_close": 1047.7,
+    "manual_stop_price": null,
+    "stop_text": "Manual 914.48",
+    "action": "HOLD",
     "stop_loss_pct": 8.0,
-    "added_at": "2026-08-27T06:11:11",
-    "quantity": 1.0,
-    "latest_date": "2026-08-26",
-    "action_sort": 5,
-    "updated_at": "2026-09-01T17:26:12"
+    "monitor_updated_at": "2026-09-01T16:46:52",
+    "entry_price": 994.0,
+    "symbol": "CYIENT",
+    "strategy_key": "ema_12_26_atr05_band"
   },
   "metrics": {
     "total_return_c_pct": 539.3003442065661,
@@ -55,9 +55,9 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "ema_12": 918.3144815941661,
-      "ema_26": 889.977481457601,
-      "ema26_atr_upper_05": 907.139981457601,
-      "ema26_atr_lower_05": 872.814981457601
+      "ema_26": 889.9774814576011,
+      "ema26_atr_upper_05": 907.1399814576012,
+      "ema26_atr_lower_05": 872.8149814576011
     }
   ]
 }

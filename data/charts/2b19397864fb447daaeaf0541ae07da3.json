@@ -1,8 +1,19 @@
 {
   "schema_version": 1,
   "trade": {
+    "entry_date": "2026-08-19",
+    "status": "ACTIVE",
+    "added_at": "2026-08-19T23:31:14",
+    "quantity": 1.0,
+    "latest_date": "2026-08-26",
     "bars_held": 5,
-    "action": "HOLD",
+    "return_pct": -1.8985419198055853,
+    "updated_at": "2026-09-01T12:16:18",
+    "id": "2b19397864fb447daaeaf0541ae07da3",
+    "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
+    "reason": "Strategy position is still active",
+    "pnl": -37.5,
+    "action_sort": 5,
     "strategy_snapshot": {
       "total_return_c_pct": 266.09223871702244,
       "trades": 13,
@@ -11,26 +22,15 @@
       "sharpe": 0.7348262940545166,
       "max_drawdown_pct": -35.732602790276246
     },
-    "id": "2b19397864fb447daaeaf0541ae07da3",
-    "monitor_updated_at": "2026-09-01T16:46:52",
-    "manual_stop_price": null,
-    "entry_date": "2026-08-19",
-    "reason": "Strategy position is still active",
-    "return_pct": -1.8985419198055853,
-    "stop_text": "Manual 1817.18",
-    "pnl": -37.5,
-    "entry_price": 1975.2,
-    "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
-    "symbol": "BEML",
-    "status": "ACTIVE",
-    "strategy_key": "ema_12_26_atr05_band",
     "latest_close": 1937.7,
+    "manual_stop_price": null,
+    "stop_text": "Manual 1817.18",
+    "action": "HOLD",
     "stop_loss_pct": 8.0,
-    "added_at": "2026-08-19T23:31:14",
-    "quantity": 1.0,
-    "latest_date": "2026-08-26",
-    "action_sort": 5,
-    "updated_at": "2026-09-01T17:26:12"
+    "monitor_updated_at": "2026-09-01T16:46:52",
+    "entry_price": 1975.2,
+    "symbol": "BEML",
+    "strategy_key": "ema_12_26_atr05_band"
   },
   "metrics": {
     "total_return_c_pct": 266.09223871702244,
@@ -55,9 +55,9 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "ema_12": 1877.3293192311662,
-      "ema_26": 1835.0053967140145,
-      "ema26_atr_upper_05": 1870.4161109997287,
-      "ema26_atr_lower_05": 1799.5946824283003
+      "ema_26": 1835.0053967140143,
+      "ema26_atr_upper_05": 1870.4161109997285,
+      "ema26_atr_lower_05": 1799.5946824283
     },
     {
       "date": "2026-08-20",
@@ -65,39 +65,39 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "ema_12": 1890.4786547340636,
-      "ema_26": 1844.4716636240876,
-      "ema26_atr_upper_05": 1878.7930921955162,
-      "ema26_atr_lower_05": 1810.150235052659
+      "ema_26": 1844.4716636240873,
+      "ema26_atr_upper_05": 1878.793092195516,
+      "ema26_atr_lower_05": 1810.1502350526587
     },
     {
       "date": "2026-08-21",
       "Close": 1935.4,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 1897.3896309288232,
-      "ema_26": 1851.2070959482292,
-      "ema26_atr_upper_05": 1885.939238805372,
-      "ema26_atr_lower_05": 1816.4749530910863
+      "ema_12": 1897.389630928823,
+      "ema_26": 1851.207095948229,
+      "ema26_atr_upper_05": 1885.9392388053718,
+      "ema26_atr_lower_05": 1816.474953091086
     },
     {
       "date": "2026-08-24",
       "Close": 1915.0,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 1900.098918478235,
-      "ema_26": 1855.9324962483604,
-      "ema26_atr_upper_05": 1889.1432105340746,
-      "ema26_atr_lower_05": 1822.7217819626462
+      "ema_12": 1900.0989184782347,
+      "ema_26": 1855.9324962483602,
+      "ema26_atr_upper_05": 1889.1432105340743,
+      "ema26_atr_lower_05": 1822.721781962646
     },
     {
       "date": "2026-08-25",
       "Close": 1923.0,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 1903.6221617892757,
-      "ema_26": 1860.9004594892226,
-      "ema26_atr_upper_05": 1894.9647452035083,
-      "ema26_atr_lower_05": 1826.836173774937
+      "ema_12": 1903.6221617892754,
+      "ema_26": 1860.9004594892224,
+      "ema26_atr_upper_05": 1894.964745203508,
+      "ema26_atr_lower_05": 1826.8361737749367
     },
     {
       "date": "2026-08-26",
@@ -105,9 +105,9 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "ema_12": 1908.864906129387,
-      "ema_26": 1866.5893143418728,
-      "ema26_atr_upper_05": 1899.8107429133013,
-      "ema26_atr_lower_05": 1833.3678857704442
+      "ema_26": 1866.5893143418725,
+      "ema26_atr_upper_05": 1899.810742913301,
+      "ema26_atr_lower_05": 1833.367885770444
     }
   ]
 }

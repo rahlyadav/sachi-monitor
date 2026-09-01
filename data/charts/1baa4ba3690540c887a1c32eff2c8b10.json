@@ -39,6 +39,9 @@
     "max_drawdown_pct": -56.62070151058628
   },
   "manual_stop_price": 477.388,
+  "chart_start_date": "2026-06-19",
+  "chart_end_date": "2026-08-20",
+  "chart_end_reason": "exit",
   "indicator_columns": [
     "donchian_entry_high_45",
     "donchian_exit_low_32"
@@ -396,38 +399,6 @@
       "trade_signal": 0.0,
       "donchian_entry_high_45": 570.5,
       "donchian_exit_low_32": 521.25
-    },
-    {
-      "date": "2026-08-21",
-      "Close": 520.95,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "donchian_entry_high_45": 570.5,
-      "donchian_exit_low_32": 521.25
-    },
-    {
-      "date": "2026-08-24",
-      "Close": 500.0,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "donchian_entry_high_45": 570.5,
-      "donchian_exit_low_32": 520.95
-    },
-    {
-      "date": "2026-08-25",
-      "Close": 501.0,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "donchian_entry_high_45": 570.5,
-      "donchian_exit_low_32": 500.0
-    },
-    {
-      "date": "2026-08-26",
-      "Close": 515.05,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "donchian_entry_high_45": 570.5,
-      "donchian_exit_low_32": 500.0
     }
   ]
 }

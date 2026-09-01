@@ -36,6 +36,9 @@
     "max_drawdown_pct": -39.66051169729153
   },
   "manual_stop_price": 3606.032,
+  "chart_start_date": "2026-08-04",
+  "chart_end_date": "2026-08-26",
+  "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
     "donchian_exit_low_32"

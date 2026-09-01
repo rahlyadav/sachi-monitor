@@ -36,6 +36,9 @@
     "max_drawdown_pct": -25.70352478390753
   },
   "manual_stop_price": 10119.54,
+  "chart_start_date": "2026-07-23",
+  "chart_end_date": "2026-08-26",
+  "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_12",
     "ema_26",

@@ -394,10 +394,15 @@ async function loadChart(id) {
 
 function renderChart(payload) {
   const trade = payload.trade || {};
+  const isClosed = String(trade.status || "").toUpperCase() === "CLOSED";
+  const endLabel = isClosed ? "Exit" : "Latest";
+  const endDate = isClosed ? trade.exit_date : trade.latest_date;
+  const endPrice = isClosed ? trade.exit_price : trade.latest_close;
+  const endReturn = isClosed ? firstPresent(trade.realized_return_pct, trade.return_pct) : trade.return_pct;
   $("chartTitle").textContent = `${trade.symbol || "Trade"} | ${trade.strategy_label || trade.strategy_key || ""}`;
   $("chartSummary").textContent =
     `${trade.action || trade.monitor_action || "WATCH"} | Entry ${trade.entry_date || "NA"} @ ${fmt(trade.entry_price)} | ` +
-    `Latest ${trade.latest_date || "NA"} @ ${fmt(trade.latest_close)} | Return ${fmt(trade.return_pct)}%`;
+    `${endLabel} ${endDate || "NA"} @ ${fmt(endPrice)} | Return ${fmt(endReturn)}%`;
   renderFacts(payload);
   drawTradeChart(payload);
 }
@@ -442,6 +447,9 @@ function renderFacts(payload) {
   const points = payload.points || [];
   const entryPoint = points[0] || {};
   const latest = points.at(-1) || {};
+  const isClosed = String(trade.status || "").toUpperCase() === "CLOSED";
+  const valuePointLabel = isClosed ? "Exit bar" : "Latest available bar";
+  const indicatorHeading = isClosed ? "Exit Indicator Values" : "Latest Indicator Values";
   const indicatorColumns = uniqueValues(["Close", ...(payload.indicator_columns || []), ...(payload.stop_columns || [])]);
   const description = strategy.description || trade.strategy_label || trade.strategy_key || "Strategy details unavailable.";
   const watch = chartWatchText(strategy.indicator_description || "");
@@ -449,7 +457,7 @@ function renderFacts(payload) {
     <section class="fact-section">
       <h3>Status</h3>
       <dl>
-        <dt>Value Point</dt><dd>Latest available bar</dd>
+        <dt>Value Point</dt><dd>${escapeHtml(valuePointLabel)}</dd>
         <dt>Action</dt><dd>${escapeHtml(trade.action || trade.monitor_action || "NA")}</dd>
         <dt>Reason</dt><dd>${escapeHtml(trade.reason || trade.monitor_reason || "NA")}</dd>
         <dt>Bars Held</dt><dd>${escapeHtml(trade.bars_held ?? "NA")}</dd>
@@ -464,7 +472,7 @@ function renderFacts(payload) {
       <p class="fact-text">${escapeHtml(watch || "Watch price, stop levels, and the current action.")}</p>
     </section>
     <section class="fact-section">
-      <h3>Latest Indicator Values</h3>
+      <h3>${escapeHtml(indicatorHeading)}</h3>
       ${metricRows(indicatorColumns, latest)}
     </section>
     <section class="fact-section">

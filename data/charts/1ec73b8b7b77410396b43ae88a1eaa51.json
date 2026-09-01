@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "exit_price": 267.1,
+    "bars_held": 19,
+    "action": "CLOSED",
+    "id": "1ec73b8b7b77410396b43ae88a1eaa51",
+    "monitor_updated_at": "2026-09-01T16:46:52",
+    "realized_return_pct": -7.893375633642529,
+    "manual_stop_price": null,
+    "entry_date": "2026-07-30",
+    "reason": "STOP HIT",
+    "return_pct": -6.87609917583365,
+    "pnl": -19.939999999999998,
+    "entry_price": 289.99,
+    "strategy_label": "Donchian Breakout (45/32)",
+    "close_reason": "STOP HIT",
+    "symbol": "FSL",
+    "status": "CLOSED",
+    "exit_date": "2026-08-14",
+    "strategy_key": "donchian_45_32",
+    "latest_close": 270.05,
+    "stop_loss_pct": 8.0,
+    "added_at": "2026-07-30T23:40:11",
+    "quantity": 1.0,
+    "latest_date": "2026-08-26",
+    "action_sort": 8,
+    "updated_at": "2026-09-01T17:26:13"
+  },
+  "metrics": {
+    "total_return_c_pct": 121.37808320295433,
+    "trades": 16,
+    "win_rate_pct": 37.5,
+    "avg_trade_pct": 10.419982464421974,
+    "sharpe": 0.5382329694850528,
+    "max_drawdown_pct": -58.88482853852373
+  },
+  "manual_stop_price": 266.79080000000005,
+  "indicator_columns": [
+    "donchian_entry_high_45",
+    "donchian_exit_low_32"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-07-30",
+      "Close": 299.62,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 293.58,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-07-31",
+      "Close": 302.12,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 299.62,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-03",
+      "Close": 324.35,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 302.12,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-04",
+      "Close": 330.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 324.35,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-05",
+      "Close": 339.45,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 330.7,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-06",
+      "Close": 293.95,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-07",
+      "Close": 279.85,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-10",
+      "Close": 279.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-11",
+      "Close": 279.6,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-12",
+      "Close": 274.5,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-13",
+      "Close": 272.2,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 228.45
+    },
+    {
+      "date": "2026-08-14",
+      "Close": 267.1,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 229.69
+    },
+    {
+      "date": "2026-08-17",
+      "Close": 267.75,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 237.19
+    },
+    {
+      "date": "2026-08-18",
+      "Close": 263.85,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 237.19
+    },
+    {
+      "date": "2026-08-19",
+      "Close": 273.05,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 237.19
+    },
+    {
+      "date": "2026-08-20",
+      "Close": 272.25,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 237.19
+    },
+    {
+      "date": "2026-08-21",
+      "Close": 276.05,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 237.19
+    },
+    {
+      "date": "2026-08-24",
+      "Close": 272.5,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 242.94
+    },
+    {
+      "date": "2026-08-25",
+      "Close": 275.4,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 253.58
+    },
+    {
+      "date": "2026-08-26",
+      "Close": 270.05,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 339.45,
+      "donchian_exit_low_32": 253.58
+    }
+  ]
+}

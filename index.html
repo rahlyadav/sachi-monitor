@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sachi Web Monitor</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Sachi Web Monitor</h1>
+      <p id="subtitle">Loading latest automated scan</p>
+    </div>
+    <div class="header-meta">
+      <span id="lastUpdated">Updated: NA</span>
+      <span id="latestData">Data: NA</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="metrics-grid" aria-label="Summary">
+      <div class="metric">
+        <span>Active Trades</span>
+        <strong id="metricActive">NA</strong>
+      </div>
+      <div class="metric">
+        <span>Hold / Exit / Stop</span>
+        <strong id="metricActions">NA</strong>
+      </div>
+      <div class="metric">
+        <span>Signals / Entries</span>
+        <strong id="metricPredictions">NA</strong>
+      </div>
+      <div class="metric">
+        <span>Universe</span>
+        <strong id="metricUniverse">NA</strong>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Views">
+      <button class="tab active" data-tab="active">Active Monitor</button>
+      <button class="tab" data-tab="closed">Closed Trades</button>
+      <button class="tab" data-tab="chart">Trade Chart</button>
+    </nav>
+
+    <section id="activeTab" class="panel active">
+      <div class="section-head">
+        <div>
+          <h2>Active Monitor</h2>
+          <p id="activeSummary">Loading active trades</p>
+        </div>
+        <input id="activeSearch" type="search" placeholder="Search active trades">
+      </div>
+      <div class="table-wrap">
+        <table id="activeTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Symbol</th>
+              <th>Strategy</th>
+              <th>Entry</th>
+              <th>Entry Px</th>
+              <th>Latest</th>
+              <th>Close</th>
+              <th>Return %</th>
+              <th>Bars</th>
+              <th>Stop</th>
+              <th>Action</th>
+              <th>Reason</th>
+              <th>Chart</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="closedTab" class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Closed Trades</h2>
+          <p id="closedSummary">Loading closed trades</p>
+        </div>
+        <input id="closedSearch" type="search" placeholder="Search closed trades">
+      </div>
+      <div class="table-wrap">
+        <table id="closedTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Symbol</th>
+              <th>Strategy</th>
+              <th>Entry</th>
+              <th>Exit</th>
+              <th>Entry Px</th>
+              <th>Exit Px</th>
+              <th>Return %</th>
+              <th>Reason</th>
+              <th>Chart</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="chartTab" class="panel">
+      <div class="section-head">
+        <div>
+          <h2 id="chartTitle">Trade Chart</h2>
+          <p id="chartSummary">Select a trade to view price and strategy state from entry.</p>
+        </div>
+      </div>
+      <div class="chart-layout">
+        <canvas id="tradeChart" width="1100" height="460"></canvas>
+        <div id="chartFacts" class="facts"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+const state = {
+  status: {},
+  monitor: [],
+};
+
+const $ = (id) => document.getElementById(id);
+
+function showToast(message) {
+  const toast = $("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  window.clearTimeout(showToast.timer);
+  showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 2800);
+}
+
+async function fetchJson(path, fallback) {
+  const cacheBust = path.includes("?") ? "&" : "?";
+  const response = await fetch(`${path}${cacheBust}v=${Date.now()}`, { cache: "no-store" });
+  if (!response.ok) return fallback;
+  return response.json();
+}
+
+function fmt(value, digits = 2) {
+  if (value === null || value === undefined || value === "" || Number.isNaN(Number(value))) {
+    return "NA";
+  }
+  return Number(value).toFixed(digits);
+}
+
+function fmtInt(value) {
+  if (value === null || value === undefined || value === "" || Number.isNaN(Number(value))) {
+    return "NA";
+  }
+  return String(Math.round(Number(value)));
+}
+
+function escapeHtml(text) {
+  return String(text ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function td(value, className = "") {
+  const cell = document.createElement("td");
+  if (className) cell.className = className;
+  cell.textContent = value === null || value === undefined || value === "" ? "NA" : String(value);
+  return cell;
+}
+
+function pill(label, kind = "") {
+  const el = document.createElement("span");
+  el.className = `pill ${kind}`.trim();
+  el.textContent = label || "NA";
+  return el;
+}
+
+function button(label, onClick) {
+  const el = document.createElement("button");
+  el.type = "button";
+  el.textContent = label;
+  el.addEventListener("click", onClick);
+  return el;
+}
+
+function actionKind(value) {
+  const text = String(value || "");
+  if (text === "HOLD" || text.startsWith("PASS")) return "good";
+  if (text.includes("EXIT") || text.includes("STOP") || text.includes("REJECT") || text === "ERROR") return "bad";
+  return "watch";
+}
+
+function rowClassForAction(value) {
+  const text = String(value || "");
+  if (text === "HOLD") return "hold";
+  if (text === "STOP HIT") return "stop";
+  if (text === "EXIT SIGNAL") return "exit";
+  return "";
+}
+
+function showTab(name) {
+  document.querySelectorAll(".tab").forEach((el) => el.classList.toggle("active", el.dataset.tab === name));
+  document.querySelectorAll(".panel").forEach((el) => el.classList.remove("active"));
+  $(`${name}Tab`).classList.add("active");
+}
+
+function updateSummary() {
+  const status = state.status || {};
+  const monitor = status.monitor || {};
+  const prediction = status.prediction || {};
+  const universe = status.universe || {};
+
+  $("subtitle").textContent = `Automated monitor from ${prediction.generated_at || status.generated_at || "NA"}`;
+  $("lastUpdated").textContent = `Updated: ${status.generated_at || "NA"}`;
+  $("latestData").textContent = `Data: ${status.latest_data_date || "NA"}`;
+  $("metricActive").textContent = `${monitor.active || 0}`;
+  $("metricActions").textContent = `${monitor.hold || 0} / ${monitor.exit_signal || 0} / ${monitor.stop_hit || 0}`;
+  $("metricPredictions").textContent = `${prediction.matches || 0} / ${prediction.entry_signals || 0}`;
+  $("metricUniverse").textContent = `${universe.stocks || 0} + ${universe.indices || 0}`;
+
+  $("activeSummary").textContent =
+    `Active ${monitor.active || 0} | HOLD ${monitor.hold || 0} | EXIT ${monitor.exit_signal || 0} | STOP ${monitor.stop_hit || 0}`;
+  $("closedSummary").textContent = `Closed ${(state.monitor || []).filter((row) => row.status === "CLOSED").length}`;
+}
+
+function renderActive() {
+  const body = $("activeTable").querySelector("tbody");
+  body.replaceChildren();
+  const needle = $("activeSearch").value.trim().toLowerCase();
+  const rows = state.monitor.filter((row) => {
+    if (String(row.status || "").toUpperCase() !== "ACTIVE") return false;
+    if (!needle) return true;
+    return `${row.symbol} ${row.strategy_label} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
+  });
+
+  for (const row of rows) {
+    const tr = document.createElement("tr");
+    tr.className = rowClassForAction(row.action);
+    tr.append(
+      td(row.rank),
+      td(row.symbol),
+      td(row.strategy_label),
+      td(row.entry_date),
+      td(fmt(row.entry_price), "numeric"),
+      td(row.latest_date),
+      td(fmt(row.latest_close), "numeric"),
+      td(fmt(row.return_pct), "numeric"),
+      td(row.bars_held, "numeric"),
+      td(row.stop_text || "NA"),
+    );
+    const action = document.createElement("td");
+    action.appendChild(pill(row.action, actionKind(row.action)));
+    tr.appendChild(action);
+    const reason = td(row.reason || "", "reason");
+    reason.title = row.reason || "";
+    tr.appendChild(reason);
+    const tools = document.createElement("td");
+    tools.appendChild(button("Chart", () => loadChart(row.id)));
+    tr.appendChild(tools);
+    body.appendChild(tr);
+  }
+
+  if (!rows.length) {
+    const tr = document.createElement("tr");
+    const empty = td("No active trades match the current search.");
+    empty.colSpan = 13;
+    tr.appendChild(empty);
+    body.appendChild(tr);
+  }
+}
+
+function renderClosed() {
+  const body = $("closedTable").querySelector("tbody");
+  body.replaceChildren();
+  const needle = $("closedSearch").value.trim().toLowerCase();
+  const rows = state.monitor.filter((row) => {
+    if (String(row.status || "").toUpperCase() !== "CLOSED") return false;
+    if (!needle) return true;
+    return `${row.symbol} ${row.strategy_label} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
+  });
+
+  for (const row of rows) {
+    const tr = document.createElement("tr");
+    tr.append(
+      td(row.rank),
+      td(row.symbol),
+      td(row.strategy_label),
+      td(row.entry_date),
+      td(row.exit_date || row.latest_date || "NA"),
+      td(fmt(row.entry_price), "numeric"),
+      td(fmt(row.exit_price || row.latest_close), "numeric"),
+      td(fmt(row.realized_return_pct || row.return_pct), "numeric"),
+      td(row.close_reason || row.reason || "NA", "reason"),
+    );
+    const tools = document.createElement("td");
+    tools.appendChild(button("Chart", () => loadChart(row.id)));
+    tr.appendChild(tools);
+    body.appendChild(tr);
+  }
+
+  if (!rows.length) {
+    const tr = document.createElement("tr");
+    const empty = td("No closed trades match the current search.");
+    empty.colSpan = 10;
+    tr.appendChild(empty);
+    body.appendChild(tr);
+  }
+}
+
+async function loadChart(id) {
+  showTab("chart");
+  $("chartTitle").textContent = "Loading chart";
+  $("chartSummary").textContent = "Reading prebuilt trade chart data.";
+  const payload = await fetchJson(`./data/charts/${encodeURIComponent(id)}.json`, null);
+  if (!payload) {
+    $("chartTitle").textContent = "Chart unavailable";
+    $("chartSummary").textContent = "This trade did not have a prebuilt chart in the latest Pages build.";
+    drawEmptyChart("No chart data available");
+    return;
+  }
+  renderChart(payload);
+}
+
+function renderChart(payload) {
+  const trade = payload.trade || {};
+  $("chartTitle").textContent = `${trade.symbol || "Trade"} | ${trade.strategy_label || trade.strategy_key || ""}`;
+  $("chartSummary").textContent =
+    `${trade.action || trade.monitor_action || "WATCH"} | Entry ${trade.entry_date || "NA"} @ ${fmt(trade.entry_price)} | ` +
+    `Latest ${trade.latest_date || "NA"} @ ${fmt(trade.latest_close)} | Return ${fmt(trade.return_pct)}%`;
+  renderFacts(payload);
+  drawTradeChart(payload);
+}
+
+function renderFacts(payload) {
+  const trade = payload.trade || {};
+  const metrics = payload.metrics || {};
+  const latest = (payload.points || []).at(-1) || {};
+  const indicators = payload.indicator_columns || [];
+  const indicatorRows = indicators
+    .map((col) => `<dt>${escapeHtml(col)}</dt><dd>${escapeHtml(fmt(latest[col], 4))}</dd>`)
+    .join("");
+  $("chartFacts").innerHTML = `
+    <h3>Status</h3>
+    <dl>
+      <dt>Action</dt><dd>${escapeHtml(trade.action || trade.monitor_action || "NA")}</dd>
+      <dt>Reason</dt><dd>${escapeHtml(trade.reason || trade.monitor_reason || "NA")}</dd>
+      <dt>Bars Held</dt><dd>${escapeHtml(trade.bars_held ?? "NA")}</dd>
+      <dt>Manual Stop</dt><dd>${escapeHtml(fmt(payload.manual_stop_price))}</dd>
+      <dt>Win Rate</dt><dd>${escapeHtml(fmt(metrics.win_rate_pct))}%</dd>
+      <dt>Avg Trade</dt><dd>${escapeHtml(fmt(metrics.avg_trade_pct))}%</dd>
+      ${indicatorRows}
+    </dl>
+  `;
+}
+
+function drawEmptyChart(text) {
+  const canvas = $("tradeChart");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#657068";
+  ctx.font = "14px system-ui, sans-serif";
+  ctx.fillText(text, 30, 44);
+}
+
+function drawTradeChart(payload) {
+  const canvas = $("tradeChart");
+  const rect = canvas.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  const width = Math.max(680, rect.width || 1100);
+  const height = 460;
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+  const ctx = canvas.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, width, height);
+
+  const points = payload.points || [];
+  const closes = points.map((p) => Number(p.Close)).filter((v) => Number.isFinite(v));
+  if (!points.length || !closes.length) {
+    drawEmptyChart("No chart points available");
+    return;
+  }
+
+  const priceRef = closes.at(-1) || closes[0];
+  const priceLikeCols = (payload.indicator_columns || []).filter((col) => {
+    const vals = points.map((p) => Number(p[col])).filter((v) => Number.isFinite(v));
+    if (!vals.length) return false;
+    const mid = vals[Math.floor(vals.length / 2)];
+    return Math.abs(mid) >= priceRef * 0.15 && Math.abs(mid) <= priceRef * 3;
+  });
+  const stopCols = payload.stop_columns || [];
+  const allPriceValues = [...closes, Number(payload.manual_stop_price)]
+    .concat(...priceLikeCols.map((col) => points.map((p) => Number(p[col]))))
+    .concat(...stopCols.map((col) => points.map((p) => Number(p[col]))))
+    .filter((v) => Number.isFinite(v));
+
+  let yMin = Math.min(...allPriceValues);
+  let yMax = Math.max(...allPriceValues);
+  const pad = Math.max((yMax - yMin) * 0.12, yMax * 0.015);
+  yMin -= pad;
+  yMax += pad;
+
+  const margin = { top: 24, right: 24, bottom: 52, left: 62 };
+  const plotW = width - margin.left - margin.right;
+  const plotH = height - margin.top - margin.bottom;
+  const x = (idx) => margin.left + (points.length <= 1 ? 0 : (idx / (points.length - 1)) * plotW);
+  const y = (value) => margin.top + ((yMax - value) / (yMax - yMin)) * plotH;
+
+  ctx.strokeStyle = "#d9dfd6";
+  ctx.lineWidth = 1;
+  ctx.fillStyle = "#657068";
+  ctx.font = "12px system-ui, sans-serif";
+  for (let i = 0; i <= 4; i += 1) {
+    const gy = margin.top + (i / 4) * plotH;
+    ctx.beginPath();
+    ctx.moveTo(margin.left, gy);
+    ctx.lineTo(width - margin.right, gy);
+    ctx.stroke();
+    const value = yMax - (i / 4) * (yMax - yMin);
+    ctx.fillText(fmt(value), 8, gy + 4);
+  }
+
+  const labelCount = Math.min(6, points.length);
+  for (let i = 0; i < labelCount; i += 1) {
+    const idx = Math.round((i / Math.max(1, labelCount - 1)) * (points.length - 1));
+    ctx.fillText(points[idx].date.slice(5), x(idx) - 16, height - 22);
+  }
+
+  function line(values, color, dash = []) {
+    ctx.save();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1.7;
+    ctx.setLineDash(dash);
+    ctx.beginPath();
+    let started = false;
+    values.forEach((value, idx) => {
+      if (!Number.isFinite(value)) return;
+      if (!started) {
+        ctx.moveTo(x(idx), y(value));
+        started = true;
+      } else {
+        ctx.lineTo(x(idx), y(value));
+      }
+    });
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  line(points.map((p) => Number(p.Close)), "#246a9f");
+  const colors = ["#167247", "#a06a12", "#7256a6", "#58656f"];
+  priceLikeCols.slice(0, 4).forEach((col, idx) => {
+    line(points.map((p) => Number(p[col])), colors[idx % colors.length], [5, 4]);
+  });
+  stopCols.forEach((col) => {
+    line(points.map((p) => Number(p[col])), "#b43d35", [6, 5]);
+  });
+
+  const manualStop = Number(payload.manual_stop_price);
+  if (Number.isFinite(manualStop)) {
+    ctx.save();
+    ctx.strokeStyle = "#b43d35";
+    ctx.setLineDash([3, 4]);
+    ctx.beginPath();
+    ctx.moveTo(62, y(manualStop));
+    ctx.lineTo(width - 24, y(manualStop));
+    ctx.stroke();
+    ctx.fillStyle = "#b43d35";
+    ctx.fillText(`Stop ${fmt(manualStop)}`, width - 106, y(manualStop) - 6);
+    ctx.restore();
+  }
+
+  const lastIdx = points.length - 1;
+  const lastClose = Number(points[lastIdx].Close);
+  ctx.fillStyle = "#17201b";
+  ctx.beginPath();
+  ctx.arc(x(lastIdx), y(lastClose), 4, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillText(`Close ${fmt(lastClose)}`, Math.max(62, x(lastIdx) - 78), y(lastClose) - 8);
+}
+
+function bindEvents() {
+  document.querySelectorAll(".tab").forEach((el) => {
+    el.addEventListener("click", () => showTab(el.dataset.tab));
+  });
+  $("activeSearch").addEventListener("input", renderActive);
+  $("closedSearch").addEventListener("input", renderClosed);
+}
+
+async function boot() {
+  bindEvents();
+  const [status, monitor] = await Promise.all([
+    fetchJson("./data/status.json", {}),
+    fetchJson("./data/latest_monitor.json", { rows: [], summary: {} }),
+  ]);
+  state.status = status || {};
+  state.monitor = monitor.rows || [];
+  updateSummary();
+  renderActive();
+  renderClosed();
+}
+
+boot().catch((err) => {
+  showToast(err.message || "Dashboard failed to load");
+  drawEmptyChart("Dashboard failed to load");
+});

@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "exit_price": 80.53,
+    "bars_held": 43,
+    "action": "CLOSED",
+    "id": "9d37466b99db496e9808c377612ff118",
+    "monitor_updated_at": "2026-09-01T16:46:52",
+    "realized_return_pct": -8.175598631698977,
+    "manual_stop_price": null,
+    "entry_date": "2026-06-25",
+    "reason": "STOP HIT",
+    "return_pct": 8.038768529076389,
+    "pnl": 7.049999999999997,
+    "entry_price": 87.7,
+    "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
+    "close_reason": "STOP HIT",
+    "symbol": "IDBI",
+    "status": "CLOSED",
+    "exit_date": "2026-07-08",
+    "strategy_key": "sma_20_50_atr05_band",
+    "latest_close": 94.75,
+    "stop_loss_pct": 8.0,
+    "added_at": "2026-06-30T00:31:26",
+    "quantity": 1.0,
+    "latest_date": "2026-08-26",
+    "action_sort": 8,
+    "updated_at": "2026-09-01T17:26:13"
+  },
+  "metrics": {
+    "total_return_c_pct": 5.689501463004221,
+    "trades": 14,
+    "win_rate_pct": 50.0,
+    "avg_trade_pct": -0.13624365269132507,
+    "sharpe": 0.19708155292878576,
+    "max_drawdown_pct": -51.43931285559149
+  },
+  "manual_stop_price": 80.68400000000001,
+  "indicator_columns": [
+    "sma_20",
+    "sma_50",
+    "sma50_atr_upper_05",
+    "sma50_atr_lower_05"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-06-25",
+      "Close": 86.4,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 78.36449999999999,
+      "sma_50": 75.71719999999999,
+      "sma50_atr_upper_05": 77.95327142857143,
+      "sma50_atr_lower_05": 73.48112857142856
+    },
+    {
+      "date": "2026-06-29",
+      "Close": 85.96,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 78.971,
+      "sma_50": 75.9486,
+      "sma50_atr_upper_05": 78.22038571428571,
+      "sma50_atr_lower_05": 73.67681428571429
+    },
+    {
+      "date": "2026-06-30",
+      "Close": 83.53,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 79.54400000000001,
+      "sma_50": 76.1324,
+      "sma50_atr_upper_05": 78.37954285714287,
+      "sma50_atr_lower_05": 73.88525714285714
+    },
+    {
+      "date": "2026-07-01",
+      "Close": 82.28,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 79.9985,
+      "sma_50": 76.27680000000001,
+      "sma50_atr_upper_05": 78.52787142857143,
+      "sma50_atr_lower_05": 74.02572857142859
+    },
+    {
+      "date": "2026-07-02",
+      "Close": 84.41,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 80.54849999999999,
+      "sma_50": 76.4824,
+      "sma50_atr_upper_05": 78.77954285714286,
+      "sma50_atr_lower_05": 74.18525714285714
+    },
+    {
+      "date": "2026-07-03",
+      "Close": 83.84,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 81.0935,
+      "sma_50": 76.6648,
+      "sma50_atr_upper_05": 78.8948,
+      "sma50_atr_lower_05": 74.4348
+    },
+    {
+      "date": "2026-07-06",
+      "Close": 83.97,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 81.638,
+      "sma_50": 76.8542,
+      "sma50_atr_upper_05": 78.99455714285715,
+      "sma50_atr_lower_05": 74.71384285714286
+    },
+    {
+      "date": "2026-07-07",
+      "Close": 83.36,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 82.2135,
+      "sma_50": 77.0468,
+      "sma50_atr_upper_05": 79.15644285714286,
+      "sma50_atr_lower_05": 74.93715714285715
+    },
+    {
+      "date": "2026-07-08",
+      "Close": 80.53,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 82.4715,
+      "sma_50": 77.134,
+      "sma50_atr_upper_05": 78.83328571428571,
+      "sma50_atr_lower_05": 75.43471428571429
+    },
+    {
+      "date": "2026-07-09",
+      "Close": 82.32,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 82.84100000000001,
+      "sma_50": 77.2296,
+      "sma50_atr_upper_05": 78.78924285714287,
+      "sma50_atr_lower_05": 75.66995714285714
+    },
+    {
+      "date": "2026-07-10",
+      "Close": 82.89,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.37,
+      "sma_50": 77.3506,
+      "sma50_atr_upper_05": 78.88202857142858,
+      "sma50_atr_lower_05": 75.81917142857142
+    },
+    {
+      "date": "2026-07-13",
+      "Close": 84.07,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.804,
+      "sma_50": 77.497,
+      "sma50_atr_upper_05": 78.90342857142858,
+      "sma50_atr_lower_05": 76.09057142857142
+    },
+    {
+      "date": "2026-07-14",
+      "Close": 86.54,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.28699999999999,
+      "sma_50": 77.7102,
+      "sma50_atr_upper_05": 79.17305714285715,
+      "sma50_atr_lower_05": 76.24734285714285
+    },
+    {
+      "date": "2026-07-15",
+      "Close": 86.23,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.741,
+      "sma_50": 77.9374,
+      "sma50_atr_upper_05": 79.39847142857143,
+      "sma50_atr_lower_05": 76.47632857142857
+    },
+    {
+      "date": "2026-07-16",
+      "Close": 85.54,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.5,
+      "sma_50": 78.1576,
+      "sma50_atr_upper_05": 79.57795714285714,
+      "sma50_atr_lower_05": 76.73724285714286
+    },
+    {
+      "date": "2026-07-17",
+      "Close": 87.02,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.62,
+      "sma_50": 78.3774,
+      "sma50_atr_upper_05": 79.77275714285713,
+      "sma50_atr_lower_05": 76.98204285714286
+    },
+    {
+      "date": "2026-07-20",
+      "Close": 85.03,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.7225,
+      "sma_50": 78.56280000000001,
+      "sma50_atr_upper_05": 79.93887142857143,
+      "sma50_atr_lower_05": 77.18672857142859
+    },
+    {
+      "date": "2026-07-21",
+      "Close": 86.63,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.6715,
+      "sma_50": 78.80099999999999,
+      "sma50_atr_upper_05": 80.15707142857141,
+      "sma50_atr_lower_05": 77.44492857142856
+    },
+    {
+      "date": "2026-07-22",
+      "Close": 85.93,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.67,
+      "sma_50": 79.0546,
+      "sma50_atr_upper_05": 80.3446,
+      "sma50_atr_lower_05": 77.76459999999999
+    },
+    {
+      "date": "2026-07-23",
+      "Close": 85.06,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.577,
+      "sma_50": 79.3352,
+      "sma50_atr_upper_05": 80.63591428571429,
+      "sma50_atr_lower_05": 78.03448571428571
+    },
+    {
+      "date": "2026-07-24",
+      "Close": 84.93,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.5035,
+      "sma_50": 79.6104,
+      "sma50_atr_upper_05": 80.94539999999999,
+      "sma50_atr_lower_05": 78.2754
+    },
+    {
+      "date": "2026-07-27",
+      "Close": 84.48,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.42949999999999,
+      "sma_50": 79.872,
+      "sma50_atr_upper_05": 81.21628571428572,
+      "sma50_atr_lower_05": 78.52771428571428
+    },
+    {
+      "date": "2026-07-28",
+      "Close": 85.37,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.52149999999999,
+      "sma_50": 80.17179999999999,
+      "sma50_atr_upper_05": 81.51679999999999,
+      "sma50_atr_lower_05": 78.82679999999999
+    },
+    {
+      "date": "2026-07-29",
+      "Close": 84.14,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.61449999999999,
+      "sma_50": 80.4646,
+      "sma50_atr_upper_05": 81.78995714285715,
+      "sma50_atr_lower_05": 79.13924285714286
+    },
+    {
+      "date": "2026-07-30",
+      "Close": 84.04,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.596,
+      "sma_50": 80.6742,
+      "sma50_atr_upper_05": 81.99098571428571,
+      "sma50_atr_lower_05": 79.35741428571428
+    },
+    {
+      "date": "2026-07-31",
+      "Close": 83.75,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.5915,
+      "sma_50": 80.8832,
+      "sma50_atr_upper_05": 82.1364142857143,
+      "sma50_atr_lower_05": 79.62998571428571
+    },
+    {
+      "date": "2026-08-03",
+      "Close": 84.71,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.6285,
+      "sma_50": 81.1194,
+      "sma50_atr_upper_05": 82.30332857142857,
+      "sma50_atr_lower_05": 79.93547142857143
+    },
+    {
+      "date": "2026-08-04",
+      "Close": 84.55,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.688,
+      "sma_50": 81.3574,
+      "sma50_atr_upper_05": 82.4224,
+      "sma50_atr_lower_05": 80.2924
+    },
+    {
+      "date": "2026-08-05",
+      "Close": 84.32,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.87750000000001,
+      "sma_50": 81.583,
+      "sma50_atr_upper_05": 82.63192857142857,
+      "sma50_atr_lower_05": 80.53407142857142
+    },
+    {
+      "date": "2026-08-06",
+      "Close": 84.54,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.9885,
+      "sma_50": 81.815,
+      "sma50_atr_upper_05": 82.79607142857142,
+      "sma50_atr_lower_05": 80.83392857142857
+    },
+    {
+      "date": "2026-08-07",
+      "Close": 84.22,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 85.055,
+      "sma_50": 82.02960000000002,
+      "sma50_atr_upper_05": 82.93852857142859,
+      "sma50_atr_lower_05": 81.12067142857144
+    },
+    {
+      "date": "2026-08-10",
+      "Close": 83.0,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 85.00150000000001,
+      "sma_50": 82.213,
+      "sma50_atr_upper_05": 83.09621428571428,
+      "sma50_atr_lower_05": 81.3297857142857
+    },
+    {
+      "date": "2026-08-11",
+      "Close": 82.44,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.79650000000001,
+      "sma_50": 82.42040000000001,
+      "sma50_atr_upper_05": 83.26075714285716,
+      "sma50_atr_lower_05": 81.58004285714287
+    },
+    {
+      "date": "2026-08-12",
+      "Close": 82.46,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.608,
+      "sma_50": 82.6058,
+      "sma50_atr_upper_05": 83.42865714285715,
+      "sma50_atr_lower_05": 81.78294285714286
+    },
+    {
+      "date": "2026-08-13",
+      "Close": 82.88,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.475,
+      "sma_50": 82.79520000000001,
+      "sma50_atr_upper_05": 83.55198571428572,
+      "sma50_atr_lower_05": 82.0384142857143
+    },
+    {
+      "date": "2026-08-14",
+      "Close": 82.45,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.2465,
+      "sma_50": 82.98540000000001,
+      "sma50_atr_upper_05": 83.71718571428573,
+      "sma50_atr_lower_05": 82.25361428571429
+    },
+    {
+      "date": "2026-08-17",
+      "Close": 82.18,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.104,
+      "sma_50": 83.1674,
+      "sma50_atr_upper_05": 83.80668571428572,
+      "sma50_atr_lower_05": 82.52811428571428
+    },
+    {
+      "date": "2026-08-18",
+      "Close": 81.11,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.828,
+      "sma_50": 83.3526,
+      "sma50_atr_upper_05": 83.98831428571428,
+      "sma50_atr_lower_05": 82.71688571428571
+    },
+    {
+      "date": "2026-08-19",
+      "Close": 80.72,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.5675,
+      "sma_50": 83.4596,
+      "sma50_atr_upper_05": 84.08067142857142,
+      "sma50_atr_lower_05": 82.83852857142857
+    },
+    {
+      "date": "2026-08-20",
+      "Close": 81.74,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.4015,
+      "sma_50": 83.5958,
+      "sma50_atr_upper_05": 84.2308,
+      "sma50_atr_lower_05": 82.96079999999999
+    },
+    {
+      "date": "2026-08-21",
+      "Close": 82.24,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.267,
+      "sma_50": 83.79440000000001,
+      "sma50_atr_upper_05": 84.39547142857144,
+      "sma50_atr_lower_05": 83.19332857142858
+    },
+    {
+      "date": "2026-08-24",
+      "Close": 87.93,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.4395,
+      "sma_50": 84.04520000000001,
+      "sma50_atr_upper_05": 84.91662857142857,
+      "sma50_atr_lower_05": 83.17377142857144
+    },
+    {
+      "date": "2026-08-25",
+      "Close": 88.31,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 83.5865,
+      "sma_50": 84.2738,
+      "sma50_atr_upper_05": 85.19308571428571,
+      "sma50_atr_lower_05": 83.35451428571427
+    },
+    {
+      "date": "2026-08-26",
+      "Close": 94.75,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 84.11699999999999,
+      "sma_50": 84.6258,
+      "sma50_atr_upper_05": 85.83115714285714,
+      "sma50_atr_lower_05": 83.42044285714286
+    }
+  ]
+}

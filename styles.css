@@ -213,6 +213,42 @@ th {
   font-weight: 700;
 }
 
+th[data-sort] {
+  cursor: pointer;
+  padding-right: 24px;
+  user-select: none;
+}
+
+th[data-sort]::after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--muted);
+  opacity: 0.35;
+  transform: translateY(-50%);
+}
+
+th[data-sort][data-sort-dir="asc"]::after {
+  border-top: 0;
+  border-bottom: 5px solid var(--green);
+  opacity: 0.9;
+}
+
+th[data-sort][data-sort-dir="desc"]::after {
+  border-top-color: var(--green);
+  opacity: 0.9;
+}
+
+th[data-sort]:focus-visible {
+  outline: 2px solid rgba(36, 106, 159, 0.55);
+  outline-offset: -2px;
+}
+
 td.numeric {
   text-align: right;
   font-variant-numeric: tabular-nums;

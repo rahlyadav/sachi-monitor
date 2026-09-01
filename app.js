@@ -1,6 +1,10 @@
 const state = {
   status: {},
   monitor: [],
+  sort: {
+    active: { key: "rank", type: "number", dir: "asc" },
+    closed: { key: "rank", type: "number", dir: "asc" },
+  },
 };
 
 const $ = (id) => document.getElementById(id);
@@ -80,6 +84,89 @@ function rowClassForAction(value) {
   return "";
 }
 
+function firstPresent(...values) {
+  return values.find((value) => value !== null && value !== undefined && value !== "") ?? "";
+}
+
+function sortValue(row, key) {
+  if (key === "closed_exit_date") return firstPresent(row.exit_date, row.latest_date);
+  if (key === "closed_exit_price") return firstPresent(row.exit_price, row.latest_close);
+  if (key === "closed_return_pct") return firstPresent(row.realized_return_pct, row.return_pct);
+  if (key === "closed_reason") return firstPresent(row.close_reason, row.reason);
+  return row[key];
+}
+
+function comparable(value, type) {
+  if (type === "number") {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  if (type === "date") {
+    const parsed = Date.parse(String(value || ""));
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+  const text = String(value ?? "").trim().toLowerCase();
+  return text || null;
+}
+
+function sortRows(view, rows) {
+  const cfg = state.sort[view];
+  if (!cfg) return rows;
+  const direction = cfg.dir === "desc" ? -1 : 1;
+  return rows.slice().sort((a, b) => {
+    const left = comparable(sortValue(a, cfg.key), cfg.type);
+    const right = comparable(sortValue(b, cfg.key), cfg.type);
+    if (left === null && right === null) return Number(a.rank || 0) - Number(b.rank || 0);
+    if (left === null) return 1;
+    if (right === null) return -1;
+    let cmp = 0;
+    if (typeof left === "number" && typeof right === "number") {
+      cmp = left - right;
+    } else {
+      cmp = String(left).localeCompare(String(right), undefined, { numeric: true, sensitivity: "base" });
+    }
+    if (cmp === 0) cmp = Number(a.rank || 0) - Number(b.rank || 0);
+    return cmp * direction;
+  });
+}
+
+function updateSortHeaders(tableId, view) {
+  const cfg = state.sort[view];
+  document.querySelectorAll(`#${tableId} th[data-sort]`).forEach((th) => {
+    const isActive = th.dataset.sort === cfg.key;
+    th.classList.toggle("sorted", isActive);
+    th.dataset.sortDir = isActive ? cfg.dir : "";
+    th.setAttribute("aria-sort", isActive ? (cfg.dir === "desc" ? "descending" : "ascending") : "none");
+  });
+}
+
+function bindSortHeaders(tableId, view, render) {
+  document.querySelectorAll(`#${tableId} th[data-sort]`).forEach((th) => {
+    th.tabIndex = 0;
+    th.setAttribute("role", "button");
+    th.setAttribute("aria-sort", "none");
+    const applySort = () => {
+      const key = th.dataset.sort;
+      const type = th.dataset.sortType || "text";
+      const current = state.sort[view];
+      state.sort[view] = {
+        key,
+        type,
+        dir: current.key === key && current.dir === "asc" ? "desc" : "asc",
+      };
+      render();
+    };
+    th.addEventListener("click", applySort);
+    th.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        applySort();
+      }
+    });
+  });
+  updateSortHeaders(tableId, view);
+}
+
 function showTab(name) {
   document.querySelectorAll(".tab").forEach((el) => el.classList.toggle("active", el.dataset.tab === name));
   document.querySelectorAll(".panel").forEach((el) => el.classList.remove("active"));
@@ -109,11 +196,12 @@ function renderActive() {
   const body = $("activeTable").querySelector("tbody");
   body.replaceChildren();
   const needle = $("activeSearch").value.trim().toLowerCase();
-  const rows = state.monitor.filter((row) => {
+  const rows = sortRows("active", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "ACTIVE") return false;
     if (!needle) return true;
     return `${row.symbol} ${row.strategy_label} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
-  });
+  }));
+  updateSortHeaders("activeTable", "active");
 
   for (const row of rows) {
     const tr = document.createElement("tr");
@@ -155,11 +243,12 @@ function renderClosed() {
   const body = $("closedTable").querySelector("tbody");
   body.replaceChildren();
   const needle = $("closedSearch").value.trim().toLowerCase();
-  const rows = state.monitor.filter((row) => {
+  const rows = sortRows("closed", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "CLOSED") return false;
     if (!needle) return true;
     return `${row.symbol} ${row.strategy_label} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
-  });
+  }));
+  updateSortHeaders("closedTable", "closed");
 
   for (const row of rows) {
     const tr = document.createElement("tr");
@@ -364,6 +453,8 @@ function bindEvents() {
   document.querySelectorAll(".tab").forEach((el) => {
     el.addEventListener("click", () => showTab(el.dataset.tab));
   });
+  bindSortHeaders("activeTable", "active", renderActive);
+  bindSortHeaders("closedTable", "closed", renderClosed);
   $("activeSearch").addEventListener("input", renderActive);
   $("closedSearch").addEventListener("input", renderClosed);
 }

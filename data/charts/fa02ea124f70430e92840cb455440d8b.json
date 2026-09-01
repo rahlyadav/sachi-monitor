@@ -1,36 +1,31 @@
 {
   "schema_version": 1,
   "trade": {
-    "added_at": "2026-07-30T03:35:35",
-    "strategy_snapshot": {
-      "total_return_c_pct": 73.04005394630926,
-      "trades": 15,
-      "win_rate_pct": 53.333333333333336,
-      "avg_trade_pct": 3.25976154111333,
-      "sharpe": 0.46982404966715374,
-      "max_drawdown_pct": -37.27168602882253
-    },
     "id": "fa02ea124f70430e92840cb455440d8b",
-    "action": "HOLD",
-    "manual_stop_price": null,
-    "monitor_updated_at": "2026-09-01T17:23:41",
-    "stop_text": "Manual 1504.20",
-    "quantity": 1.0,
-    "stop_loss_pct": 8.0,
-    "latest_close": 1565.1,
-    "return_pct": -4.275229357798171,
     "symbol": "AFFLE",
-    "status": "ACTIVE",
-    "entry_price": 1635.0,
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
-    "reason": "Strategy position is still active",
     "entry_date": "2026-07-29",
-    "updated_at": "2026-09-01T17:23:44",
+    "entry_price": 1635.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 8.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-09-01",
+    "latest_close": 1565.1,
+    "return_pct": -4.275229357798171,
     "pnl": -69.90000000000009,
     "bars_held": 24,
-    "action_sort": 5,
-    "latest_date": "2026-09-01"
+    "stop_text": "Manual 1504.20",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
     "total_return_c_pct": 73.04005394630926,
@@ -41,6 +36,9 @@
     "max_drawdown_pct": -37.27168602882253
   },
   "manual_stop_price": 1504.2,
+  "chart_start_date": "2026-07-29",
+  "chart_end_date": "2026-09-01",
+  "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
     "donchian_exit_low_32"

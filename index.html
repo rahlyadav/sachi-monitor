@@ -29,7 +29,7 @@
         <strong id="metricActions">NA</strong>
       </div>
       <div class="metric">
-        <span>Signals / Entries</span>
+        <span>Added / Closed</span>
         <strong id="metricPredictions">NA</strong>
       </div>
       <div class="metric">
@@ -39,12 +39,92 @@
     </section>
 
     <nav class="tabs" aria-label="Views">
-      <button class="tab active" data-tab="active">Active Monitor</button>
+      <button class="tab active" data-tab="activity">Latest Activity</button>
+      <button class="tab" data-tab="active">Active Monitor</button>
       <button class="tab" data-tab="closed">Closed Trades</button>
       <button class="tab" data-tab="chart">Trade Chart</button>
     </nav>
 
-    <section id="activeTab" class="panel active">
+    <section id="activityTab" class="panel active">
+      <div class="section-head">
+        <div>
+          <h2>Latest Activity</h2>
+          <p id="activitySummary">Loading latest activity</p>
+        </div>
+      </div>
+      <div class="activity-grid">
+        <section class="activity-block">
+          <div class="activity-block-head">
+            <h3>Added On Latest Data Date</h3>
+            <span id="activityAddedCount">NA</span>
+          </div>
+          <div class="table-wrap activity-table-wrap">
+            <table id="activityAddedTable">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Strategy</th>
+                  <th>Entry</th>
+                  <th>Entry Px</th>
+                  <th>Close</th>
+                  <th>Return %</th>
+                  <th>Chart</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="activity-block">
+          <div class="activity-block-head">
+            <h3>Closed On Latest Data Date</h3>
+            <span id="activityClosedCount">NA</span>
+          </div>
+          <div class="table-wrap activity-table-wrap">
+            <table id="activityClosedTable">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Strategy</th>
+                  <th>Entry</th>
+                  <th>Exit</th>
+                  <th>Exit Px</th>
+                  <th>Return %</th>
+                  <th>Reason</th>
+                  <th>Chart</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="activity-block" id="activityActionBlock">
+          <div class="activity-block-head">
+            <h3>Open Action Alerts</h3>
+            <span id="activityActionCount">NA</span>
+          </div>
+          <div class="table-wrap activity-table-wrap">
+            <table id="activityActionTable">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Strategy</th>
+                  <th>Entry</th>
+                  <th>Action</th>
+                  <th>Reason</th>
+                  <th>Chart</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="activeTab" class="panel">
       <div class="section-head">
         <div>
           <h2>Active Monitor</h2>
@@ -56,18 +136,18 @@
         <table id="activeTable">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Symbol</th>
-              <th>Strategy</th>
-              <th>Entry</th>
-              <th>Entry Px</th>
-              <th>Latest</th>
-              <th>Close</th>
-              <th>Return %</th>
-              <th>Bars</th>
-              <th>Stop</th>
-              <th>Action</th>
-              <th>Reason</th>
+              <th data-sort="rank" data-sort-type="number">#</th>
+              <th data-sort="symbol" data-sort-type="text">Symbol</th>
+              <th data-sort="strategy_label" data-sort-type="text">Strategy</th>
+              <th data-sort="entry_date" data-sort-type="date">Entry</th>
+              <th data-sort="entry_price" data-sort-type="number">Entry Px</th>
+              <th data-sort="latest_date" data-sort-type="date">Latest</th>
+              <th data-sort="latest_close" data-sort-type="number">Close</th>
+              <th data-sort="return_pct" data-sort-type="number">Return %</th>
+              <th data-sort="bars_held" data-sort-type="number">Bars</th>
+              <th data-sort="stop_text" data-sort-type="text">Stop</th>
+              <th data-sort="action" data-sort-type="text">Action</th>
+              <th data-sort="reason" data-sort-type="text">Reason</th>
               <th>Chart</th>
             </tr>
           </thead>
@@ -88,15 +168,15 @@
         <table id="closedTable">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Symbol</th>
-              <th>Strategy</th>
-              <th>Entry</th>
-              <th>Exit</th>
-              <th>Entry Px</th>
-              <th>Exit Px</th>
-              <th>Return %</th>
-              <th>Reason</th>
+              <th data-sort="rank" data-sort-type="number">#</th>
+              <th data-sort="symbol" data-sort-type="text">Symbol</th>
+              <th data-sort="strategy_label" data-sort-type="text">Strategy</th>
+              <th data-sort="entry_date" data-sort-type="date">Entry</th>
+              <th data-sort="closed_exit_date" data-sort-type="date">Exit</th>
+              <th data-sort="entry_price" data-sort-type="number">Entry Px</th>
+              <th data-sort="closed_exit_price" data-sort-type="number">Exit Px</th>
+              <th data-sort="closed_return_pct" data-sort-type="number">Return %</th>
+              <th data-sort="closed_reason" data-sort-type="text">Reason</th>
               <th>Chart</th>
             </tr>
           </thead>

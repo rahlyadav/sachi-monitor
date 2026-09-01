@@ -1,36 +1,31 @@
 {
   "schema_version": 1,
   "trade": {
-    "added_at": "2026-08-27T06:11:11",
-    "strategy_snapshot": {
-      "total_return_c_pct": 610.6320328939265,
-      "trades": 8,
-      "win_rate_pct": 37.5,
-      "avg_trade_pct": 50.067604180077055,
-      "sharpe": 1.2014131844636902,
-      "max_drawdown_pct": -35.270613891812665
-    },
     "id": "8bae8ad49d26488b96390ec33767183a",
-    "action": "HOLD",
-    "manual_stop_price": null,
-    "monitor_updated_at": "2026-09-01T17:23:41",
-    "stop_text": "Manual 914.48",
-    "quantity": 1.0,
-    "stop_loss_pct": 8.0,
-    "latest_close": 1164.6,
-    "return_pct": 17.1629778672032,
     "symbol": "CYIENT",
-    "status": "ACTIVE",
-    "entry_price": 994.0,
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
-    "reason": "Strategy position is still active",
     "entry_date": "2026-08-26",
-    "updated_at": "2026-09-01T17:23:44",
+    "entry_price": 994.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 8.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-09-01",
+    "latest_close": 1164.6,
+    "return_pct": 17.1629778672032,
     "pnl": 170.5999999999999,
     "bars_held": 4,
-    "action_sort": 5,
-    "latest_date": "2026-09-01"
+    "stop_text": "Manual 914.48",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5
+  },
+  "strategy": {
+    "key": "ema_12_26_atr05_band",
+    "label": "EMA Crossover (12/26) + 0.5x ATR Band",
+    "description": "Enter when EMA12 rises above EMA26 + 0.5x ATR(14); exit when EMA12 falls below EMA26 - 0.5x ATR(14).",
+    "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
     "total_return_c_pct": 610.6320328939265,
@@ -41,6 +36,9 @@
     "max_drawdown_pct": -35.270613891812665
   },
   "manual_stop_price": 914.48,
+  "chart_start_date": "2026-08-26",
+  "chart_end_date": "2026-09-01",
+  "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_12",
     "ema_26",

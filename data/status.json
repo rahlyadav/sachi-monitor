@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T21:38:10",
+  "generated_at": "2026-09-01T22:53:33",
   "latest_data_date": "2026-08-26",
   "csv_files": 536,
   "universe": {
@@ -17,15 +17,15 @@
   "monitor": {
     "rows": 44,
     "total_trades": 44,
-    "active": 32,
-    "closed": 12,
-    "hold": 32,
+    "active": 40,
+    "closed": 4,
+    "hold": 40,
     "stop_hit": 0,
     "exit_signal": 0,
     "watch": 0,
     "error": 0,
     "latest_data_date": "2026-08-26",
-    "updated_at": "2026-09-01T21:18:31"
+    "updated_at": "2026-09-01T22:53:15"
   },
   "charts": {
     "written": 44,

@@ -8,21 +8,18 @@
     "entry_date": "2026-07-10",
     "entry_price": 1074.95,
     "quantity": 1.0,
-    "stop_loss_pct": 8.0,
+    "stop_loss_pct": 0.0,
     "manual_stop_price": null,
-    "status": "CLOSED",
-    "exit_date": "2026-08-10",
-    "exit_price": 988.9540000000001,
-    "realized_return_pct": -7.9999999999999964,
-    "close_reason": "STOP HIT: Manual stop 988.95 breached on 2026-08-10",
+    "status": "ACTIVE",
     "latest_date": "2026-08-26",
     "latest_close": 1008.5,
     "return_pct": -6.1816828689706504,
     "pnl": -66.45000000000005,
     "bars_held": 33,
-    "action": "CLOSED",
-    "reason": "STOP HIT: Manual stop 988.95 breached on 2026-08-10",
-    "action_sort": 8
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5
   },
   "strategy": {
     "key": "ema_10_25_50_entry_level_exit_cross",
@@ -38,10 +35,10 @@
     "sharpe": 0.22108336767791673,
     "max_drawdown_pct": -38.69100691385744
   },
-  "manual_stop_price": 988.9540000000001,
+  "manual_stop_price": null,
   "chart_start_date": "2026-07-10",
-  "chart_end_date": "2026-08-10",
-  "chart_end_reason": "exit",
+  "chart_end_date": "2026-08-26",
+  "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_10",
     "ema_25",
@@ -246,6 +243,114 @@
       "ema_10": 1078.3662942502738,
       "ema_25": 1070.4514300205906,
       "ema_50": 1030.4264206417854
+    },
+    {
+      "date": "2026-08-11",
+      "Close": 1013.3,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1066.5360589320421,
+      "ema_25": 1066.055166172853,
+      "ema_50": 1029.754796302892
+    },
+    {
+      "date": "2026-08-12",
+      "Close": 996.2,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1053.7476845807616,
+      "ema_25": 1060.6816918518643,
+      "ema_50": 1028.4389219380726
+    },
+    {
+      "date": "2026-08-13",
+      "Close": 993.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1042.829923747896,
+      "ema_25": 1055.5292540171056,
+      "ema_50": 1027.0766112738345
+    },
+    {
+      "date": "2026-08-14",
+      "Close": 989.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1033.1699376119147,
+      "ema_25": 1050.465465246559,
+      "ema_50": 1025.6108618121154
+    },
+    {
+      "date": "2026-08-17",
+      "Close": 991.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1025.629948955203,
+      "ema_25": 1045.9450448429775,
+      "ema_50": 1024.2810240939932
+    },
+    {
+      "date": "2026-08-18",
+      "Close": 1012.6,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1023.2608673269842,
+      "ema_25": 1043.3800413935178,
+      "ema_50": 1023.8229447177582
+    },
+    {
+      "date": "2026-08-19",
+      "Close": 1007.6,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1020.4134369038961,
+      "ema_25": 1040.6277305170934,
+      "ema_50": 1023.1867508072579
+    },
+    {
+      "date": "2026-08-20",
+      "Close": 1007.2,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1018.0109938304604,
+      "ema_25": 1038.0563666311632,
+      "ema_50": 1022.5598194030517
+    },
+    {
+      "date": "2026-08-21",
+      "Close": 983.9,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1011.8089949521948,
+      "ema_25": 1033.89049227492,
+      "ema_50": 1021.0437480539125
+    },
+    {
+      "date": "2026-08-24",
+      "Close": 961.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 1002.6982685972503,
+      "ema_25": 1028.3373774845415,
+      "ema_50": 1018.7165422478768
+    },
+    {
+      "date": "2026-08-25",
+      "Close": 964.3,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 995.716765215932,
+      "ema_25": 1023.4114253703461,
+      "ema_50": 1016.5825601989404
+    },
+    {
+      "date": "2026-08-26",
+      "Close": 1008.5,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 998.0409897221261,
+      "ema_25": 1022.2643926495504,
+      "ema_50": 1016.265597053884
     }
   ]
 }

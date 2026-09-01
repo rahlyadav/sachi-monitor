@@ -8,7 +8,7 @@
     "entry_date": "2026-08-12",
     "entry_price": 1240.0,
     "quantity": 1.0,
-    "stop_loss_pct": 8.0,
+    "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
     "latest_date": "2026-08-26",
@@ -16,7 +16,7 @@
     "return_pct": 3.7379032258064493,
     "pnl": 46.34999999999991,
     "bars_held": 10,
-    "stop_text": "Manual 1140.80",
+    "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
     "action_sort": 5
@@ -35,7 +35,7 @@
     "sharpe": 0.7700560565097281,
     "max_drawdown_pct": -22.329505649321757
   },
-  "manual_stop_price": 1140.8,
+  "manual_stop_price": null,
   "chart_start_date": "2026-08-12",
   "chart_end_date": "2026-08-26",
   "chart_end_reason": "latest",

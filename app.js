@@ -89,6 +89,12 @@ function firstPresent(...values) {
   return values.find((value) => value !== null && value !== undefined && value !== "") ?? "";
 }
 
+function optionalPrice(value) {
+  if (value === null || value === undefined || value === "") return null;
+  const number = Number(value);
+  return Number.isFinite(number) && number > 0 ? number : null;
+}
+
 function sortValue(row, key) {
   if (key === "closed_exit_date") return firstPresent(row.exit_date, row.latest_date);
   if (key === "closed_exit_price") return firstPresent(row.exit_price, row.latest_close);
@@ -518,10 +524,12 @@ function drawTradeChart(payload) {
     return Math.abs(mid) >= priceRef * 0.15 && Math.abs(mid) <= priceRef * 3;
   });
   const stopCols = payload.stop_columns || [];
-  const allPriceValues = [...closes, Number(payload.manual_stop_price)]
+  const manualStop = optionalPrice(payload.manual_stop_price);
+  const allPriceValues = [...closes]
     .concat(...priceLikeCols.map((col) => points.map((p) => Number(p[col]))))
     .concat(...stopCols.map((col) => points.map((p) => Number(p[col]))))
     .filter((v) => Number.isFinite(v));
+  if (manualStop !== null) allPriceValues.push(manualStop);
 
   let yMin = Math.min(...allPriceValues);
   let yMax = Math.max(...allPriceValues);
@@ -619,8 +627,7 @@ function drawTradeChart(payload) {
     line(points.map((p) => Number(p[col])), "#b43d35", [6, 5], labelForColumn(col));
   });
 
-  const manualStop = Number(payload.manual_stop_price);
-  if (Number.isFinite(manualStop)) {
+  if (manualStop !== null) {
     ctx.save();
     ctx.strokeStyle = "#b43d35";
     ctx.setLineDash([3, 4]);

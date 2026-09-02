@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-01T23:12:56",
+  "generated_at": "2026-09-02T00:13:05",
   "latest_data_date": "2026-09-01",
   "scan_date": "2026-09-01",
   "summary": {
     "added": 2,
-    "closed": 2,
+    "closed": 0,
     "actions": 0
   },
   "added": [
@@ -54,51 +54,6 @@
       "action_sort": 5
     }
   ],
-  "closed": [
-    {
-      "id": "7918ec885f88456fa4e77ed5006dd050",
-      "rank": 20,
-      "symbol": "IDEA",
-      "strategy_key": "donchian_45_32",
-      "strategy_label": "Donchian Breakout (45/32)",
-      "entry_date": "2026-08-26",
-      "entry_price": 15.26,
-      "quantity": 1.0,
-      "stop_loss_pct": 0.0,
-      "manual_stop_price": null,
-      "status": "ACTIVE",
-      "latest_date": "2026-09-01",
-      "latest_close": 14.06,
-      "return_pct": -7.863695937090432,
-      "pnl": -1.1999999999999993,
-      "bars_held": 4,
-      "stop_text": "",
-      "action": "HOLD",
-      "reason": "Strategy position is still active",
-      "action_sort": 5
-    },
-    {
-      "id": "e7abd819a54b4e48911c07ff3f6643c4",
-      "rank": 19,
-      "symbol": "IDEA",
-      "strategy_key": "ema_12_26_atr05_band",
-      "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
-      "entry_date": "2026-08-26",
-      "entry_price": 15.26,
-      "quantity": 1.0,
-      "stop_loss_pct": 0.0,
-      "manual_stop_price": null,
-      "status": "ACTIVE",
-      "latest_date": "2026-09-01",
-      "latest_close": 14.06,
-      "return_pct": -7.863695937090432,
-      "pnl": -1.1999999999999993,
-      "bars_held": 4,
-      "stop_text": "",
-      "action": "HOLD",
-      "reason": "Strategy position is still active",
-      "action_sort": 5
-    }
-  ],
+  "closed": [],
   "actions": []
 }

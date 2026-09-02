@@ -106,8 +106,8 @@ The normal flow is:
 The workflow runs Monday-Friday at:
 
 ```text
-18:00 IST
-21:00 IST
+18:11 IST
+21:11 IST
 ```
 
 The later run is a backup for late market-data availability.

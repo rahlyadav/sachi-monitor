@@ -11,11 +11,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-01",
-    "latest_close": 1164.6,
-    "return_pct": 17.1629778672032,
-    "pnl": 170.5999999999999,
-    "bars_held": 4,
+    "latest_date": "2026-09-02",
+    "latest_close": 1122.2,
+    "return_pct": 12.897384305835025,
+    "pnl": 128.20000000000005,
+    "bars_held": 5,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -28,16 +28,16 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 610.6320328939265,
+    "total_return_c_pct": 584.7598036352091,
     "trades": 8,
     "win_rate_pct": 37.5,
-    "avg_trade_pct": 50.067604180077055,
-    "sharpe": 1.2014131844636902,
+    "avg_trade_pct": 49.53440498490603,
+    "sharpe": 1.1797002428692267,
     "max_drawdown_pct": -35.270613891812665
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-08-26",
-  "chart_end_date": "2026-09-01",
+  "chart_end_date": "2026-09-02",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_12",
@@ -53,9 +53,9 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "ema_12": 918.3144815941661,
-      "ema_26": 889.977481457601,
-      "ema26_atr_upper_05": 907.139981457601,
-      "ema26_atr_lower_05": 872.814981457601
+      "ema_26": 889.9774814576011,
+      "ema26_atr_upper_05": 907.1399814576012,
+      "ema26_atr_lower_05": 872.8149814576011
     },
     {
       "date": "2026-08-27",
@@ -63,16 +63,16 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "ema_12": 938.9891767335251,
-      "ema_26": 902.0310013496305,
-      "ema26_atr_upper_05": 919.8881442067734,
-      "ema26_atr_lower_05": 884.1738584924876
+      "ema_26": 902.0310013496306,
+      "ema26_atr_upper_05": 919.8881442067735,
+      "ema26_atr_lower_05": 884.1738584924877
     },
     {
       "date": "2026-08-28",
       "Close": 1107.45,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 964.906226466829,
+      "ema_12": 964.9062264668289,
       "ema_26": 917.2472234718801,
       "ema26_atr_upper_05": 937.1632949004515,
       "ema26_atr_lower_05": 897.3311520433087
@@ -83,9 +83,9 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "ema_12": 997.197576241163,
-      "ema_26": 936.3252069184075,
-      "ema26_atr_upper_05": 959.671635489836,
-      "ema26_atr_lower_05": 912.978778346979
+      "ema_26": 936.3252069184076,
+      "ema26_atr_upper_05": 959.6716354898361,
+      "ema26_atr_lower_05": 912.9787783469791
     },
     {
       "date": "2026-09-01",
@@ -96,6 +96,16 @@
       "ema_26": 953.2344508503774,
       "ema26_atr_upper_05": 978.3630222789488,
       "ema26_atr_lower_05": 928.1058794218059
+    },
+    {
+      "date": "2026-09-02",
+      "Close": 1122.2,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_12": 1038.2207498531404,
+      "ema_26": 965.7504174540531,
+      "ema26_atr_upper_05": 991.0789888826246,
+      "ema26_atr_lower_05": 940.4218460254817
     }
   ]
 }

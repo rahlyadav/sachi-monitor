@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-09-02T00:13:05",
-  "latest_data_date": "2026-09-01",
+  "generated_at": "2026-09-02T13:35:29",
+  "latest_data_date": "2026-09-02",
   "csv_files": 536,
   "universe": {
     "stocks": 514,
     "indices": 5
   },
   "prediction": {
-    "generated_at": "2026-09-01T17:23:39",
-    "rows": 10,
-    "matches": 10,
-    "entry_signals": 63,
-    "filter_reject": 4,
-    "early_leader_reject": 49
+    "generated_at": "2026-09-02T13:35:20",
+    "rows": 0,
+    "matches": 0,
+    "entry_signals": 5,
+    "filter_reject": 0,
+    "early_leader_reject": 5
   },
   "monitor": {
     "rows": 48,
     "total_trades": 48,
-    "active": 44,
-    "closed": 4,
-    "hold": 44,
+    "active": 43,
+    "closed": 5,
+    "hold": 43,
     "stop_hit": 0,
     "exit_signal": 0,
     "watch": 0,
     "error": 0,
-    "latest_data_date": "2026-09-01",
-    "updated_at": "2026-09-01T23:11:31"
+    "latest_data_date": "2026-09-02",
+    "updated_at": "2026-09-02T13:35:25"
   },
   "charts": {
     "written": 48,

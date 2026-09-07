@@ -10,16 +10,20 @@
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
-    "status": "ACTIVE",
-    "latest_date": "2026-09-04",
-    "latest_close": 562.3,
-    "return_pct": -0.30141843971631666,
-    "pnl": -1.7000000000000455,
-    "bars_held": 53,
+    "status": "CLOSED",
+    "exit_date": "2026-09-07",
+    "exit_price": 559.55,
+    "realized_return_pct": -0.7890070921985903,
+    "close_reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-07",
+    "latest_date": "2026-09-07",
+    "latest_close": 559.55,
+    "return_pct": -0.7890070921985903,
+    "pnl": -4.4500000000000455,
+    "bars_held": 54,
     "stop_text": "",
-    "action": "HOLD",
-    "reason": "Strategy position is still active",
-    "action_sort": 5
+    "action": "CLOSED",
+    "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-07",
+    "action_sort": 8
   },
   "strategy": {
     "key": "ema_12_26_atr05_band",
@@ -31,14 +35,14 @@
     "total_return_c_pct": 4576.619620215266,
     "trades": 11,
     "win_rate_pct": 54.54545454545454,
-    "avg_trade_pct": 95.5532344363043,
-    "sharpe": 1.4714921631517097,
+    "avg_trade_pct": 95.51616158008251,
+    "sharpe": 1.471003560820342,
     "max_drawdown_pct": -64.27194584933112
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-22",
-  "chart_end_date": "2026-09-04",
-  "chart_end_reason": "latest",
+  "chart_end_date": "2026-09-07",
+  "chart_end_reason": "exit",
   "indicator_columns": [
     "ema_12",
     "ema_26",
@@ -586,6 +590,16 @@
       "ema_26": 587.3601799455586,
       "ema26_atr_upper_05": 594.5816085169871,
       "ema26_atr_lower_05": 580.13875137413
+    },
+    {
+      "date": "2026-09-07",
+      "Close": 559.55,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "ema_12": 576.114671554749,
+      "ema_26": 585.3001666162579,
+      "ema26_atr_upper_05": 592.1769523305436,
+      "ema26_atr_lower_05": 578.4233809019722
     }
   ]
 }

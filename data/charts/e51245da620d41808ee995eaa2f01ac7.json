@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "trade": {
-    "id": "1912b80b00a740d6b201f4b3dbfcbb4c",
-    "symbol": "SPLPETRO",
+    "id": "e51245da620d41808ee995eaa2f01ac7",
+    "symbol": "AIRAN",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
-    "entry_date": "2026-09-07",
-    "entry_price": 774.9,
+    "entry_date": "2026-09-08",
+    "entry_price": 16.67,
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
     "latest_date": "2026-09-08",
-    "latest_close": 828.4,
-    "return_pct": 6.904116660214221,
-    "pnl": 53.5,
-    "bars_held": 1,
+    "latest_close": 17.15,
+    "return_pct": 2.879424115176943,
+    "pnl": 0.4799999999999969,
+    "bars_held": 0,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -28,15 +28,15 @@
     "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
-    "total_return_c_pct": 45.64593812306976,
-    "trades": 9,
-    "win_rate_pct": 66.66666666666666,
-    "avg_trade_pct": 5.147332073824789,
-    "sharpe": 0.49185910359940227,
-    "max_drawdown_pct": -24.50284170166468
+    "total_return_c_pct": 63.43214646086817,
+    "trades": 10,
+    "win_rate_pct": 50.0,
+    "avg_trade_pct": 6.837847678648328,
+    "sharpe": 0.384777769763667,
+    "max_drawdown_pct": -50.682387594854816
   },
   "manual_stop_price": null,
-  "chart_start_date": "2026-09-07",
+  "chart_start_date": "2026-09-08",
   "chart_end_date": "2026-09-08",
   "chart_end_reason": "latest",
   "indicator_columns": [
@@ -46,20 +46,12 @@
   "stop_columns": [],
   "points": [
     {
-      "date": "2026-09-07",
-      "Close": 802.5,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "donchian_entry_high_45": 771.05,
-      "donchian_exit_low_32": 685.25
-    },
-    {
       "date": "2026-09-08",
-      "Close": 828.4,
+      "Close": 17.15,
       "position": 1.0,
       "trade_signal": 1.0,
-      "donchian_entry_high_45": 802.5,
-      "donchian_exit_low_32": 685.25
+      "donchian_entry_high_45": 16.44,
+      "donchian_exit_low_32": 14.8
     }
   ]
 }

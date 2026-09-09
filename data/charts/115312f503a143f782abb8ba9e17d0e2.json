@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "trade": {
-    "id": "e45ed46fb61a41d7a9b943ebcea6ce93",
-    "symbol": "AIRAN",
+    "id": "115312f503a143f782abb8ba9e17d0e2",
+    "symbol": "SARDAEN",
     "strategy_key": "sma_atr_band_any_5",
     "strategy_label": "SMA ATR Bands ANY (50/75/100/150/200, \u00b11.0 ATR)",
-    "entry_date": "2026-09-08",
-    "entry_price": 16.67,
+    "entry_date": "2026-09-09",
+    "entry_price": 520.0,
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
     "latest_date": "2026-09-09",
-    "latest_close": 17.66,
-    "return_pct": 5.938812237552482,
-    "pnl": 0.9899999999999984,
-    "bars_held": 1,
+    "latest_close": 545.85,
+    "return_pct": 4.971153846153853,
+    "pnl": 25.850000000000023,
+    "bars_held": 0,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -28,15 +28,15 @@
     "indicator_description": "Uses combined signal from SMA50/75/100/150/200 ATR-band strategies (\u00b11.0 ATR)."
   },
   "metrics": {
-    "total_return_c_pct": -16.49179384050058,
+    "total_return_c_pct": 1156.3794892527844,
     "trades": 12,
-    "win_rate_pct": 33.33333333333333,
-    "avg_trade_pct": -3.243938905717056,
-    "sharpe": 0.1414218728384755,
-    "max_drawdown_pct": -74.31523036837203
+    "win_rate_pct": 41.66666666666667,
+    "avg_trade_pct": 50.47324385248398,
+    "sharpe": 1.1378829695214083,
+    "max_drawdown_pct": -48.95895669984562
   },
   "manual_stop_price": null,
-  "chart_start_date": "2026-09-08",
+  "chart_start_date": "2026-09-09",
   "chart_end_date": "2026-09-09",
   "chart_end_reason": "latest",
   "indicator_columns": [
@@ -49,26 +49,15 @@
   "stop_columns": [],
   "points": [
     {
-      "date": "2026-09-08",
-      "Close": 17.15,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_50": 15.311799999999998,
-      "sma_75": 15.715199999999998,
-      "sma_100": 16.0063,
-      "sma_150": 16.037533333333332,
-      "sma_200": 16.46955
-    },
-    {
       "date": "2026-09-09",
-      "Close": 17.66,
+      "Close": 545.85,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_50": 15.345600000000001,
-      "sma_75": 15.734799999999998,
-      "sma_100": 16.0056,
-      "sma_150": 16.056133333333335,
-      "sma_200": 16.45305
+      "sma_50": 506.58700000000005,
+      "sma_75": 511.58799999999997,
+      "sma_100": 527.589,
+      "sma_150": 527.466,
+      "sma_200": 519.4875
     }
   ]
 }

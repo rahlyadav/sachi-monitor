@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "trade": {
-    "id": "571a200b8681410aa1642a62c70b9b79",
-    "symbol": "SPLPETRO",
+    "id": "e1e353e2d13343f1831cb70325a65b6b",
+    "symbol": "LICHSGFIN",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
-    "entry_date": "2026-09-08",
-    "entry_price": 809.0,
+    "entry_date": "2026-09-09",
+    "entry_price": 560.0,
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
     "latest_date": "2026-09-09",
-    "latest_close": 813.55,
-    "return_pct": 0.5624227441285434,
-    "pnl": 4.5499999999999545,
-    "bars_held": 1,
+    "latest_close": 555.0,
+    "return_pct": -0.8928571428571397,
+    "pnl": -5.0,
+    "bars_held": 0,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -28,15 +28,15 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 50.44265504601455,
-    "trades": 6,
-    "win_rate_pct": 66.66666666666666,
-    "avg_trade_pct": 10.835211770176901,
-    "sharpe": 0.5028083206977002,
-    "max_drawdown_pct": -30.550087596781438
+    "total_return_c_pct": 40.313508177779525,
+    "trades": 11,
+    "win_rate_pct": 27.27272727272727,
+    "avg_trade_pct": 5.483321222330504,
+    "sharpe": 0.33192788910264615,
+    "max_drawdown_pct": -39.522308236582035
   },
   "manual_stop_price": null,
-  "chart_start_date": "2026-09-08",
+  "chart_start_date": "2026-09-09",
   "chart_end_date": "2026-09-09",
   "chart_end_reason": "latest",
   "indicator_columns": [
@@ -48,24 +48,14 @@
   "stop_columns": [],
   "points": [
     {
-      "date": "2026-09-08",
-      "Close": 828.4,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "ema_12": 748.8743955104412,
-      "ema_26": 730.9612277718854,
-      "ema26_atr_upper_05": 743.3183706290283,
-      "ema26_atr_lower_05": 718.6040849147425
-    },
-    {
       "date": "2026-09-09",
-      "Close": 813.55,
+      "Close": 555.0,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 758.8244885088349,
-      "ema_26": 737.0789146035977,
-      "ema26_atr_upper_05": 749.9289146035977,
-      "ema26_atr_lower_05": 724.2289146035977
+      "ema_12": 542.867457192476,
+      "ema_26": 533.0812813118274,
+      "ema26_atr_upper_05": 541.5866384546846,
+      "ema26_atr_lower_05": 524.5759241689702
     }
   ]
 }

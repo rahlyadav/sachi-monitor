@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "trade": {
-    "id": "e1e353e2d13343f1831cb70325a65b6b",
-    "symbol": "LICHSGFIN",
+    "id": "c752eddb799b44ddbf96356e3942fd8c",
+    "symbol": "TEXRAIL",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
-    "entry_date": "2026-09-09",
-    "entry_price": 560.0,
+    "entry_date": "2026-09-10",
+    "entry_price": 115.5,
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
     "latest_date": "2026-09-10",
-    "latest_close": 552.3,
-    "return_pct": -1.375000000000004,
-    "pnl": -7.7000000000000455,
-    "bars_held": 1,
+    "latest_close": 117.77,
+    "return_pct": 1.96536796536797,
+    "pnl": 2.269999999999996,
+    "bars_held": 0,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -28,15 +28,15 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 39.63090192177952,
-    "trades": 11,
-    "win_rate_pct": 27.27272727272727,
-    "avg_trade_pct": 5.439490053499334,
-    "sharpe": 0.3288492158730197,
-    "max_drawdown_pct": -39.522308236582035
+    "total_return_c_pct": 96.72307378157213,
+    "trades": 13,
+    "win_rate_pct": 46.15384615384615,
+    "avg_trade_pct": 14.631293683903127,
+    "sharpe": 0.45500611710628247,
+    "max_drawdown_pct": -52.289371243357564
   },
   "manual_stop_price": null,
-  "chart_start_date": "2026-09-09",
+  "chart_start_date": "2026-09-10",
   "chart_end_date": "2026-09-10",
   "chart_end_reason": "latest",
   "indicator_columns": [
@@ -48,24 +48,14 @@
   "stop_columns": [],
   "points": [
     {
-      "date": "2026-09-09",
-      "Close": 555.0,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "ema_12": 542.867457192476,
-      "ema_26": 533.0812813118274,
-      "ema26_atr_upper_05": 541.5866384546846,
-      "ema26_atr_lower_05": 524.5759241689702
-    },
-    {
       "date": "2026-09-10",
-      "Close": 552.3,
+      "Close": 117.77,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 544.3186176244028,
-      "ema_26": 534.504890103544,
-      "ema26_atr_upper_05": 542.9084615321154,
-      "ema26_atr_lower_05": 526.1013186749725
+      "ema_12": 114.0916895349373,
+      "ema_26": 111.83709703294389,
+      "ema26_atr_upper_05": 113.98602560437246,
+      "ema26_atr_lower_05": 109.68816846151532
     }
   ]
 }

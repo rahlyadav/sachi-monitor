@@ -11,11 +11,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-09",
-    "latest_close": 17.66,
-    "return_pct": 5.938812237552482,
-    "pnl": 0.9899999999999984,
-    "bars_held": 1,
+    "latest_date": "2026-09-10",
+    "latest_close": 17.04,
+    "return_pct": 2.2195560887822374,
+    "pnl": 0.36999999999999744,
+    "bars_held": 2,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -28,16 +28,16 @@
     "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
-    "total_return_c_pct": 68.29222778419428,
+    "total_return_c_pct": 62.38389362642527,
     "trades": 10,
     "win_rate_pct": 50.0,
-    "avg_trade_pct": 7.143786490885881,
-    "sharpe": 0.3978634760759716,
+    "avg_trade_pct": 6.771860876008858,
+    "sharpe": 0.3815783297574443,
     "max_drawdown_pct": -50.682387594854816
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-08",
-  "chart_end_date": "2026-09-09",
+  "chart_end_date": "2026-09-10",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -59,6 +59,14 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "donchian_entry_high_45": 17.15,
+      "donchian_exit_low_32": 14.8
+    },
+    {
+      "date": "2026-09-10",
+      "Close": 17.04,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 17.66,
       "donchian_exit_low_32": 14.8
     }
   ]

@@ -15,11 +15,11 @@
     "exit_price": 1635.1,
     "realized_return_pct": -11.4678650712004,
     "close_reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-07-21",
-    "latest_date": "2026-09-10",
-    "latest_close": 1721.6,
-    "return_pct": -6.7843413287129835,
-    "pnl": -125.30000000000018,
-    "bars_held": 68,
+    "latest_date": "2026-09-11",
+    "latest_close": 1729.1,
+    "return_pct": -6.3782554550869115,
+    "pnl": -117.80000000000018,
+    "bars_held": 69,
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-07-21",
     "action_sort": 8
@@ -31,11 +31,11 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 178.32645822459793,
+    "total_return_c_pct": 179.53896312508846,
     "trades": 5,
     "win_rate_pct": 60.0,
-    "avg_trade_pct": 27.226822218298917,
-    "sharpe": 0.8987082689510967,
+    "avg_trade_pct": 27.312585511609388,
+    "sharpe": 0.9015188053657871,
     "max_drawdown_pct": -35.080081616510284
   },
   "manual_stop_price": null,

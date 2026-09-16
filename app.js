@@ -66,6 +66,52 @@ function sizeLabel(row) {
   return row.position_size_label || "NA";
 }
 
+function normalizeActivityRow(row, fallbackAction, fallbackDate) {
+  const normalized = { ...row };
+  normalized.action = firstPresent(normalized.action, fallbackAction);
+  normalized.signal_date = firstPresent(
+    normalized.signal_date,
+    normalized.entry_date,
+    normalized.exit_date,
+    normalized.latest_date,
+    fallbackDate,
+  );
+  normalized.trigger_price = firstPresent(
+    normalized.trigger_price,
+    normalized.entry_price,
+    normalized.exit_price,
+    normalized.latest_close,
+  );
+  normalized.execution_price = firstPresent(
+    normalized.execution_price,
+    normalized.exit_price,
+    normalized.entry_price,
+    normalized.latest_close,
+    normalized.trigger_price,
+  );
+  normalized.reason = firstPresent(normalized.reason, normalized.close_reason);
+  return normalized;
+}
+
+function activityBuckets(activity) {
+  const fallbackDate = firstPresent(activity.scan_date, activity.latest_data_date);
+  const hasNextFormat = Array.isArray(activity.tomorrow) || Array.isArray(activity.today);
+  if (hasNextFormat) {
+    return {
+      tomorrow: (activity.tomorrow || []).map((row) => normalizeActivityRow(row, "ACTION", fallbackDate)),
+      today: (activity.today || []).map((row) => normalizeActivityRow(row, "ACTION", fallbackDate)),
+    };
+  }
+
+  return {
+    tomorrow: (activity.actions || []).map((row) => normalizeActivityRow(row, "ACTION", fallbackDate)),
+    today: [
+      ...(activity.added || []).map((row) => normalizeActivityRow(row, "ENTER", fallbackDate)),
+      ...(activity.closed || []).map((row) => normalizeActivityRow(row, "CLOSED", fallbackDate)),
+    ],
+  };
+}
+
 function button(label, onClick) {
   const el = document.createElement("button");
   el.type = "button";
@@ -226,8 +272,7 @@ function renderActivityTable(tableId, rows, renderRow, emptyText, colSpan) {
 
 function renderActivity() {
   const activity = state.activity || {};
-  const tomorrow = activity.tomorrow || [];
-  const today = activity.today || [];
+  const { tomorrow, today } = activityBuckets(activity);
 
   $("activityTomorrowCount").textContent = `${tomorrow.length}`;
   $("activityTodayCount").textContent = `${today.length}`;

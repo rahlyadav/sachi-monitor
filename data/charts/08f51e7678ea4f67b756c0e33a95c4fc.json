@@ -15,10 +15,10 @@
     "exit_price": 985.0,
     "realized_return_pct": -8.367831061909857,
     "close_reason": "STOP HIT",
-    "latest_date": "2026-09-15",
-    "latest_close": 887.8,
-    "return_pct": -17.41011209823714,
-    "pnl": -187.1500000000001,
+    "latest_date": "2026-09-16",
+    "latest_close": 883.1,
+    "return_pct": -17.847341736824973,
+    "pnl": -191.85000000000002,
     "bars_held": 47,
     "stop_text": "",
     "action": "HOLD",
@@ -32,16 +32,16 @@
     "indicator_description": "Adds a lower panel with EMA10, EMA25, and EMA50."
   },
   "metrics": {
-    "total_return_c_pct": -2.419890499460442,
+    "total_return_c_pct": -2.936478148314381,
     "trades": 7,
     "win_rate_pct": 28.57142857142857,
-    "avg_trade_pct": 3.7229407681682445,
-    "sharpe": 0.12730781247851838,
-    "max_drawdown_pct": -43.40217940950678
+    "avg_trade_pct": 3.6604793912271263,
+    "sharpe": 0.12343896905361475,
+    "max_drawdown_pct": -43.701807430204354
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-07-10",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-16",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_10",
@@ -465,22 +465,22 @@
       "ema_50": 997.884759698037
     },
     {
-      "date": "2026-09-11",
-      "Close": 925.8,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "ema_10": 955.1146480978935,
-      "ema_25": 982.5380135779828,
-      "ema_50": 995.0579063765454
-    },
-    {
       "date": "2026-09-15",
       "Close": 887.8,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_10": 942.8756211710037,
-      "ema_25": 975.2504740719842,
-      "ema_50": 990.8517139696221
+      "ema_10": 948.2055571888025,
+      "ema_25": 979.6149366549058,
+      "ema_50": 993.567710298114
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 883.1,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 936.3681831544748,
+      "ema_25": 972.1907107583746,
+      "ema_50": 989.2356432275998
     }
   ]
 }

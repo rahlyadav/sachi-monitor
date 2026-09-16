@@ -11,10 +11,10 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-15",
-    "latest_close": 522.45,
-    "return_pct": 14.17176573426573,
-    "pnl": 64.85000000000002,
+    "latest_date": "2026-09-16",
+    "latest_close": 524.2,
+    "return_pct": 14.554195804195814,
+    "pnl": 66.60000000000002,
     "bars_held": 61,
     "stop_text": "",
     "action": "HOLD",
@@ -28,16 +28,16 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 0.8980350056471131,
+    "total_return_c_pct": 1.236003349526693,
     "trades": 2,
     "win_rate_pct": 50.0,
-    "avg_trade_pct": 1.218169118653712,
-    "sharpe": 0.12783553791793428,
+    "avg_trade_pct": 1.4093841536187541,
+    "sharpe": 0.1424250090402103,
     "max_drawdown_pct": -14.77223893425007
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-19",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-16",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_12",
@@ -648,24 +648,24 @@
       "ema26_atr_lower_05": 529.1335977877754
     },
     {
-      "date": "2026-09-11",
-      "Close": 542.3,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "ema_12": 547.1301038724564,
-      "ema_26": 538.4074979516439,
-      "ema26_atr_upper_05": 547.4128550945011,
-      "ema26_atr_lower_05": 529.4021408087867
-    },
-    {
       "date": "2026-09-15",
       "Close": 522.45,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 543.3331648151554,
-      "ema_26": 537.225461066337,
-      "ema26_atr_upper_05": 546.6826039234799,
-      "ema26_atr_lower_05": 527.768318209194
+      "ema_12": 544.0762577186102,
+      "ema_26": 536.9371275812736,
+      "ema26_atr_upper_05": 546.0335561527021,
+      "ema26_atr_lower_05": 527.840699009845
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 524.2,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_12": 541.0183719157471,
+      "ema_26": 535.9936366493274,
+      "ema26_atr_upper_05": 545.3704223636131,
+      "ema26_atr_lower_05": 526.6168509350417
     }
   ]
 }

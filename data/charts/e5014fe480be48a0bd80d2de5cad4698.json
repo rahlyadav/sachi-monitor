@@ -15,15 +15,17 @@
     "exit_price": 1350.0,
     "realized_return_pct": -5.063291139240511,
     "close_reason": "STOP HIT",
-    "latest_date": "2026-09-15",
-    "latest_close": 1311.0,
-    "return_pct": -7.805907172995785,
-    "pnl": -111.0,
+    "latest_date": "2026-09-16",
+    "latest_close": 1299.0,
+    "return_pct": -8.64978902953587,
+    "pnl": -123.0,
     "bars_held": 46,
     "stop_text": "",
-    "action": "HOLD",
-    "reason": "Strategy position is still active",
-    "action_sort": 5
+    "action": "EXIT SIGNAL",
+    "reason": "Strategy exit after monitored entry on 2026-09-16",
+    "suggested_exit_date": "2026-09-16",
+    "suggested_exit_price": 1299.0,
+    "action_sort": 2
   },
   "strategy": {
     "key": "donchian_45_32",
@@ -41,7 +43,7 @@
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-07-13",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-16",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -410,20 +412,20 @@
       "donchian_exit_low_32": 1322.2
     },
     {
-      "date": "2026-09-11",
-      "Close": 1360.0,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "donchian_entry_high_45": 1444.5,
-      "donchian_exit_low_32": 1322.2
-    },
-    {
       "date": "2026-09-15",
       "Close": 1311.0,
       "position": 1.0,
       "trade_signal": 0.0,
-      "donchian_entry_high_45": 1440.1,
+      "donchian_entry_high_45": 1444.5,
       "donchian_exit_low_32": 1322.2
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 1299.0,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "donchian_entry_high_45": 1440.1,
+      "donchian_exit_low_32": 1311.0
     }
   ]
 }

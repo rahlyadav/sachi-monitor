@@ -11,10 +11,10 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-15",
-    "latest_close": 1011.95,
-    "return_pct": 1.1950000000000127,
-    "pnl": 11.950000000000045,
+    "latest_date": "2026-09-16",
+    "latest_close": 1002.5,
+    "return_pct": 0.24999999999999467,
+    "pnl": 2.5,
     "bars_held": 4,
     "stop_text": "",
     "action": "HOLD",
@@ -28,16 +28,16 @@
     "indicator_description": "Uses combined signal from SMA50/75/100/150/200 ATR-band strategies (\u00b11.0 ATR)."
   },
   "metrics": {
-    "total_return_c_pct": 69.08684959572136,
+    "total_return_c_pct": 67.5078479368651,
     "trades": 9,
     "win_rate_pct": 44.44444444444444,
-    "avg_trade_pct": 11.062460855459,
-    "sharpe": 0.47503996590710695,
+    "avg_trade_pct": 10.957460855458997,
+    "sharpe": 0.4690872370641235,
     "max_drawdown_pct": -39.78319333386339
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-09",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-16",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_50",
@@ -82,26 +82,26 @@
       "sma_200": 960.1125
     },
     {
-      "date": "2026-09-11",
-      "Close": 1025.2,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_50": 945.303,
-      "sma_75": 954.1833333333333,
-      "sma_100": 960.307,
-      "sma_150": 931.4323333333334,
-      "sma_200": 959.9495
-    },
-    {
       "date": "2026-09-15",
       "Close": 1011.95,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_50": 945.966,
-      "sma_75": 954.5086666666667,
-      "sma_100": 960.9729999999998,
-      "sma_150": 931.6863333333332,
-      "sma_200": 959.62675
+      "sma_50": 945.038,
+      "sma_75": 954.0066666666667,
+      "sma_100": 960.1745,
+      "sma_150": 931.344,
+      "sma_200": 959.88325
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 1002.5,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_50": 945.512,
+      "sma_75": 954.2060000000001,
+      "sma_100": 960.7459999999999,
+      "sma_150": 931.535,
+      "sma_200": 959.51325
     }
   ]
 }

@@ -15,10 +15,10 @@
     "exit_price": 231.58,
     "realized_return_pct": -14.013069953958112,
     "close_reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-11",
-    "latest_date": "2026-09-15",
-    "latest_close": 228.51,
-    "return_pct": -15.152977870191597,
-    "pnl": -40.81,
+    "latest_date": "2026-09-16",
+    "latest_close": 226.74,
+    "return_pct": -15.810188623199162,
+    "pnl": -42.579999999999984,
     "bars_held": 22,
     "stop_text": "",
     "action": "CLOSED",
@@ -260,16 +260,6 @@
       "ema_26": 244.16928875776472,
       "ema26_atr_upper_05": 247.16964590062187,
       "ema26_atr_lower_05": 241.16893161490756
-    },
-    {
-      "date": "2026-09-11",
-      "Close": 231.58,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "ema_12": 238.01750138937646,
-      "ema_26": 243.23674884978215,
-      "ema26_atr_upper_05": 245.95246313549643,
-      "ema26_atr_lower_05": 240.52103456406786
     }
   ]
 }

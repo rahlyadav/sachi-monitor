@@ -1,6 +1,6 @@
 const state = {
   status: {},
-  activity: { summary: {}, added: [], closed: [], actions: [] },
+  activity: { summary: {}, tomorrow: [], today: [] },
   monitor: [],
   sort: {
     active: { key: "entry_date", type: "date", dir: "desc" },
@@ -62,6 +62,10 @@ function pill(label, kind = "") {
   return el;
 }
 
+function sizeLabel(row) {
+  return row.position_size_label || "NA";
+}
+
 function button(label, onClick) {
   const el = document.createElement("button");
   el.type = "button";
@@ -72,7 +76,7 @@ function button(label, onClick) {
 
 function actionKind(value) {
   const text = String(value || "");
-  if (text === "HOLD" || text.startsWith("PASS")) return "good";
+  if (text === "HOLD" || text === "ENTER" || text.startsWith("PASS")) return "good";
   if (text.includes("EXIT") || text.includes("STOP") || text.includes("REJECT") || text === "ERROR") return "bad";
   return "watch";
 }
@@ -81,7 +85,8 @@ function rowClassForAction(value) {
   const text = String(value || "");
   if (text === "HOLD") return "hold";
   if (text === "STOP HIT") return "stop";
-  if (text === "EXIT SIGNAL") return "exit";
+  if (text.includes("EXIT")) return "exit";
+  if (text === "ENTER") return "pass";
   return "";
 }
 
@@ -192,15 +197,15 @@ function updateSummary() {
   $("lastUpdated").textContent = `Updated: ${status.generated_at || "NA"}`;
   $("latestData").textContent = `Data: ${status.latest_data_date || "NA"}`;
   $("metricActive").textContent = `${monitor.active || 0}`;
-  $("metricActions").textContent = `${monitor.hold || 0} / ${monitor.exit_signal || 0} / ${monitor.stop_hit || 0}`;
-  $("metricPredictions").textContent = `${activitySummary.added || 0} / ${activitySummary.closed || 0}`;
+  $("metricActions").textContent = `${monitor.hold || 0} / ${monitor.exit_next_open || 0} / ${monitor.stop_hit || 0}`;
+  $("metricPredictions").textContent = `${activitySummary.tomorrow || 0} / ${activitySummary.executed_today || 0}`;
   $("metricUniverse").textContent = `${universe.stocks || 0} + ${universe.indices || 0}`;
 
   $("activitySummary").textContent =
     `Data ${activity.latest_data_date || status.latest_data_date || "NA"} | Scan ${activity.scan_date || "NA"} | ` +
-    `Added ${activitySummary.added || 0} | Closed ${activitySummary.closed || 0} | Alerts ${activitySummary.actions || 0}`;
+    `Next market open ${activitySummary.tomorrow || 0} | Executed today ${activitySummary.executed_today || 0}`;
   $("activeSummary").textContent =
-    `Active ${monitor.active || 0} | HOLD ${monitor.hold || 0} | EXIT ${monitor.exit_signal || 0} | STOP ${monitor.stop_hit || 0}`;
+    `Active ${monitor.active || 0} | HOLD ${monitor.hold || 0} | NEXT OPEN EXIT ${monitor.exit_next_open || 0} | STOP ${monitor.stop_hit || 0}`;
   $("closedSummary").textContent = `Closed ${(state.monitor || []).filter((row) => row.status === "CLOSED").length}`;
 }
 
@@ -221,80 +226,59 @@ function renderActivityTable(tableId, rows, renderRow, emptyText, colSpan) {
 
 function renderActivity() {
   const activity = state.activity || {};
-  const added = activity.added || [];
-  const closed = activity.closed || [];
-  const actions = activity.actions || [];
+  const tomorrow = activity.tomorrow || [];
+  const today = activity.today || [];
 
-  $("activityAddedCount").textContent = `${added.length}`;
-  $("activityClosedCount").textContent = `${closed.length}`;
-  $("activityActionCount").textContent = `${actions.length}`;
-  $("activityActionBlock").classList.toggle("muted-block", !actions.length);
+  $("activityTomorrowCount").textContent = `${tomorrow.length}`;
+  $("activityTodayCount").textContent = `${today.length}`;
 
   renderActivityTable(
-    "activityAddedTable",
-    added,
+    "activityTomorrowTable",
+    tomorrow,
     (row) => {
       const tr = document.createElement("tr");
       tr.className = rowClassForAction(row.action);
+      const action = document.createElement("td");
+      action.appendChild(pill(row.action, actionKind(row.action)));
       tr.append(
+        action,
         td(row.symbol),
         td(row.strategy_label),
-        td(row.entry_date),
-        td(fmt(row.entry_price), "numeric"),
-        td(fmt(row.latest_close), "numeric"),
-        td(fmt(row.return_pct), "numeric"),
+        td(row.signal_date),
+        td(fmt(row.trigger_price), "numeric"),
       );
-      const tools = document.createElement("td");
-      tools.appendChild(button("Chart", () => loadChart(row.id)));
-      tr.appendChild(tools);
+      const reason = td(row.reason || "", "reason");
+      reason.title = row.reason || "";
+      tr.append(reason, td(sizeLabel(row), "numeric"));
       return tr;
     },
-    "No trades were added on the latest data date.",
+    "No actions are queued for the next market open.",
     7,
   );
 
   renderActivityTable(
-    "activityClosedTable",
-    closed,
+    "activityTodayTable",
+    today,
     (row) => {
       const tr = document.createElement("tr");
       tr.className = rowClassForAction(row.action);
-      tr.append(
-        td(row.symbol),
-        td(row.strategy_label),
-        td(row.entry_date),
-        td(row.exit_date || row.latest_date || "NA"),
-        td(fmt(row.exit_price || row.latest_close), "numeric"),
-        td(fmt(row.realized_return_pct || row.return_pct), "numeric"),
-        td(row.close_reason || row.reason || "NA", "reason"),
-      );
-      const tools = document.createElement("td");
-      tools.appendChild(button("Chart", () => loadChart(row.id)));
-      tr.appendChild(tools);
-      return tr;
-    },
-    "No trades were closed on the latest data date.",
-    8,
-  );
-
-  renderActivityTable(
-    "activityActionTable",
-    actions,
-    (row) => {
-      const tr = document.createElement("tr");
-      tr.className = rowClassForAction(row.action);
-      tr.append(td(row.symbol), td(row.strategy_label), td(row.entry_date));
       const action = document.createElement("td");
       action.appendChild(pill(row.action, actionKind(row.action)));
-      tr.appendChild(action);
-      tr.appendChild(td(row.reason || "NA", "reason"));
-      const tools = document.createElement("td");
-      tools.appendChild(button("Chart", () => loadChart(row.id)));
-      tr.appendChild(tools);
+      tr.append(
+        action,
+        td(row.symbol),
+        td(row.strategy_label),
+        td(row.signal_date),
+        td(fmt(row.trigger_price), "numeric"),
+        td(fmt(row.execution_price), "numeric"),
+      );
+      const reason = td(row.reason || "", "reason");
+      reason.title = row.reason || "";
+      tr.append(reason, td(sizeLabel(row), "numeric"));
       return tr;
     },
-    "No open exit or stop alerts.",
-    6,
+    "No entry or exit actions were executed on the latest data date.",
+    8,
   );
 }
 
@@ -305,7 +289,7 @@ function renderActive() {
   const rows = sortRows("active", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "ACTIVE") return false;
     if (!needle) return true;
-    return `${row.symbol} ${row.strategy_label} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
+    return `${row.symbol} ${row.strategy_label} ${sizeLabel(row)} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
   }));
   updateSortHeaders("activeTable", "active");
 
@@ -316,20 +300,18 @@ function renderActive() {
       td(row.rank),
       td(row.symbol),
       td(row.strategy_label),
+      td(sizeLabel(row), "numeric"),
       td(row.entry_date),
       td(fmt(row.entry_price), "numeric"),
       td(row.latest_date),
       td(fmt(row.latest_close), "numeric"),
       td(fmt(row.return_pct), "numeric"),
       td(row.bars_held, "numeric"),
-      td(row.stop_text || "NA"),
     );
     const action = document.createElement("td");
     action.appendChild(pill(row.action, actionKind(row.action)));
+    action.title = row.reason || row.action || "";
     tr.appendChild(action);
-    const reason = td(row.reason || "", "reason");
-    reason.title = row.reason || "";
-    tr.appendChild(reason);
     const tools = document.createElement("td");
     tools.appendChild(button("Chart", () => loadChart(row.id)));
     tr.appendChild(tools);
@@ -339,7 +321,7 @@ function renderActive() {
   if (!rows.length) {
     const tr = document.createElement("tr");
     const empty = td("No active trades match the current search.");
-    empty.colSpan = 13;
+    empty.colSpan = 12;
     tr.appendChild(empty);
     body.appendChild(tr);
   }
@@ -352,7 +334,7 @@ function renderClosed() {
   const rows = sortRows("closed", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "CLOSED") return false;
     if (!needle) return true;
-    return `${row.symbol} ${row.strategy_label} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
+    return `${row.symbol} ${row.strategy_label} ${sizeLabel(row)} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
   }));
   updateSortHeaders("closedTable", "closed");
 
@@ -362,6 +344,7 @@ function renderClosed() {
       td(row.rank),
       td(row.symbol),
       td(row.strategy_label),
+      td(sizeLabel(row), "numeric"),
       td(row.entry_date),
       td(row.exit_date || row.latest_date || "NA"),
       td(fmt(row.entry_price), "numeric"),
@@ -378,7 +361,7 @@ function renderClosed() {
   if (!rows.length) {
     const tr = document.createElement("tr");
     const empty = td("No closed trades match the current search.");
-    empty.colSpan = 10;
+    empty.colSpan = 11;
     tr.appendChild(empty);
     body.appendChild(tr);
   }
@@ -664,11 +647,11 @@ async function boot() {
   bindEvents();
   const [status, activity, monitor] = await Promise.all([
     fetchJson("./data/status.json", {}),
-    fetchJson("./data/latest_activity.json", { summary: {}, added: [], closed: [], actions: [] }),
+    fetchJson("./data/latest_activity.json", { summary: {}, tomorrow: [], today: [] }),
     fetchJson("./data/latest_monitor.json", { rows: [], summary: {} }),
   ]);
   state.status = status || {};
-  state.activity = activity || { summary: {}, added: [], closed: [], actions: [] };
+  state.activity = activity || { summary: {}, tomorrow: [], today: [] };
   state.monitor = monitor.rows || [];
   updateSummary();
   renderActivity();

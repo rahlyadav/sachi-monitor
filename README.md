@@ -73,6 +73,7 @@ It does publish monitor-visible information such as:
 - Returns.
 - Strategy labels.
 - Chart points used by the dashboard.
+- Pending next-market-open actions and their signal-day trigger prices.
 
 Treat anything shown on the page as public.
 
@@ -80,7 +81,8 @@ Treat anything shown on the page as public.
 
 The page shows:
 
-- Latest activity: trades added or closed on the latest data date.
+- Latest activity: actions queued for the next market open and actions executed
+  at the latest data date's actual open.
 - Active trades: currently monitored open trades.
 - Closed trades: completed monitor trades.
 - All trades: combined monitor view.
@@ -98,8 +100,8 @@ The normal flow is:
 2. The workflow checks that OHLC data advanced and stock coverage is more than
    `90%`.
 3. Predictions are generated.
-4. Accepted active predictions are added to the web monitor.
-5. Strategy exits are applied to active monitor trades.
+4. Accepted close-of-day signals are queued for the next market open.
+5. Due entry and strategy-exit actions are recorded at the next available open.
 6. Static dashboard files are built.
 7. This repo is replaced with the generated output and pushed.
 

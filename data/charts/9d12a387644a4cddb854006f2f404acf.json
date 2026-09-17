@@ -3,6 +3,7 @@
   "trade": {
     "id": "9d12a387644a4cddb854006f2f404acf",
     "symbol": "MAZDOCK",
+    "cap_bucket": "Large",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-08-26",
@@ -16,6 +17,10 @@
     "return_pct": -15.325670498084287,
     "pnl": -400.0,
     "bars_held": 15,
+    "position_tier": "Large",
+    "suggested_capital": 5000,
+    "position_size_label": "5k",
+    "position_size_reason": "Large cap rule: 5k always",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

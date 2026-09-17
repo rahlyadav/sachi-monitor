@@ -3,6 +3,7 @@
   "trade": {
     "id": "fa02ea124f70430e92840cb455440d8b",
     "symbol": "AFFLE",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-07-29",
@@ -16,6 +17,10 @@
     "return_pct": -5.467889908256884,
     "pnl": -89.40000000000009,
     "bars_held": 35,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

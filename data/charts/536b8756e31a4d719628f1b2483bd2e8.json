@@ -3,6 +3,7 @@
   "trade": {
     "id": "536b8756e31a4d719628f1b2483bd2e8",
     "symbol": "ENGINERSIN",
+    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-09-01",
@@ -16,6 +17,10 @@
     "return_pct": 0.2851711026615966,
     "pnl": 0.75,
     "bars_held": 11,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-1.9%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

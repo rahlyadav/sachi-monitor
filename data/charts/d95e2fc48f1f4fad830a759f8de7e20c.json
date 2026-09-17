@@ -3,6 +3,7 @@
   "trade": {
     "id": "d95e2fc48f1f4fad830a759f8de7e20c",
     "symbol": "PGEL",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-06-22",
@@ -20,6 +21,10 @@
     "return_pct": -6.143617021276593,
     "pnl": -34.64999999999998,
     "bars_held": 61,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-07",

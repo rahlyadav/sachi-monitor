@@ -3,6 +3,7 @@
   "trade": {
     "id": "db863131b03f4707897bd7950029978e",
     "symbol": "PVRINOX",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-07-28",
@@ -16,6 +17,10 @@
     "return_pct": 13.340457743343116,
     "pnl": 149.79999999999995,
     "bars_held": 36,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

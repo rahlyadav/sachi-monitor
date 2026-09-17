@@ -3,6 +3,7 @@
   "trade": {
     "id": "1ec73b8b7b77410396b43ae88a1eaa51",
     "symbol": "FSL",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-07-30",
@@ -20,6 +21,10 @@
     "return_pct": -5.824338770302417,
     "pnl": -16.889999999999986,
     "bars_held": 34,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-10",

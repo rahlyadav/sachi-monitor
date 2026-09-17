@@ -3,6 +3,7 @@
   "trade": {
     "id": "99cc0226fede409abc7517af26461299",
     "symbol": "IFCI",
+    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-08-28",
@@ -16,6 +17,10 @@
     "return_pct": -8.52023258573632,
     "pnl": -7.179999999999993,
     "bars_held": 13,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

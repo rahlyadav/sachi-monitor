@@ -3,6 +3,7 @@
   "trade": {
     "id": "164e42da054c473397722ab1a3fc54e6",
     "symbol": "MOTILALOFS",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-24",
@@ -16,6 +17,10 @@
     "return_pct": -0.1313131313131266,
     "pnl": -1.2999999999999545,
     "bars_held": 17,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-9.8%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

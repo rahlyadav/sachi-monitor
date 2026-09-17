@@ -3,6 +3,7 @@
   "trade": {
     "id": "052a48dedc9f407f88706b3713fc61d3",
     "symbol": "OLECTRA",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-06-19",
@@ -20,6 +21,10 @@
     "return_pct": -17.847496364014127,
     "pnl": -257.70000000000005,
     "bars_held": 62,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-08-20",
     "action_sort": 8

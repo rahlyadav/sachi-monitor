@@ -3,6 +3,7 @@
   "trade": {
     "id": "ebab869780bf49a38c5f8d61312d7bff",
     "symbol": "FINCABLES",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-12",
@@ -16,6 +17,10 @@
     "return_pct": 12.564516129032244,
     "pnl": 155.79999999999995,
     "bars_held": 25,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-1.4%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

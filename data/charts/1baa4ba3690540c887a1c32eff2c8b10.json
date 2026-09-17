@@ -3,6 +3,7 @@
   "trade": {
     "id": "1baa4ba3690540c887a1c32eff2c8b10",
     "symbol": "FIVESTAR",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-06-19",
@@ -20,6 +21,10 @@
     "return_pct": 2.3222200809404736,
     "pnl": 12.050000000000068,
     "bars_held": 62,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL",
     "action_sort": 8

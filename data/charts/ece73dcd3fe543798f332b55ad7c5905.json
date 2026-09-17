@@ -3,6 +3,7 @@
   "trade": {
     "id": "ece73dcd3fe543798f332b55ad7c5905",
     "symbol": "TEGA",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-06-05",
@@ -20,6 +21,10 @@
     "return_pct": 3.957983648275487,
     "pnl": 73.09999999999991,
     "bars_held": 72,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-07-21",
     "action_sort": 8

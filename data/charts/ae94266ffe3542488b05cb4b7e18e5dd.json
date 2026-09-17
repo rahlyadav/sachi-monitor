@@ -3,6 +3,7 @@
   "trade": {
     "id": "ae94266ffe3542488b05cb4b7e18e5dd",
     "symbol": "HCLTECH",
+    "cap_bucket": "Large",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-07-23",
@@ -20,6 +21,10 @@
     "return_pct": 1.804207119741097,
     "pnl": 22.299999999999955,
     "bars_held": 39,
+    "position_tier": "Large",
+    "suggested_capital": 5000,
+    "position_size_label": "5k",
+    "position_size_reason": "Large cap rule: 5k always",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-15",

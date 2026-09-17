@@ -3,6 +3,7 @@
   "trade": {
     "id": "2096ddb62c6347fb9592d8b26ed893c5",
     "symbol": "NAUKRI",
+    "cap_bucket": "Mid",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-07-08",
@@ -16,6 +17,10 @@
     "return_pct": 7.935153583617738,
     "pnl": 93.0,
     "bars_held": 50,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

@@ -3,6 +3,7 @@
   "trade": {
     "id": "750c8324c70c424892051c2c7ee397ae",
     "symbol": "PAYTM",
+    "cap_bucket": "Mid",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-07-10",
@@ -16,6 +17,10 @@
     "return_pct": 38.93923871069429,
     "pnl": 494.0999999999999,
     "bars_held": 48,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-8.6%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

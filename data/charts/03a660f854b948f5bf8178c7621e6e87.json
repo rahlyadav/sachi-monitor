@@ -3,6 +3,7 @@
   "trade": {
     "id": "03a660f854b948f5bf8178c7621e6e87",
     "symbol": "SIEMENS",
+    "cap_bucket": "Large",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-04",
@@ -20,6 +21,10 @@
     "return_pct": -3.982549239718336,
     "pnl": -156.0999999999999,
     "bars_held": 31,
+    "position_tier": "Large",
+    "suggested_capital": 5000,
+    "position_size_label": "5k",
+    "position_size_reason": "Large cap rule: 5k always",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",

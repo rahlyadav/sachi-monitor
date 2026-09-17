@@ -3,6 +3,7 @@
   "trade": {
     "id": "ad6ea5e46b0646f984d37f3835a0f5e6",
     "symbol": "JUBLPHARMA",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-09-11",
@@ -16,6 +17,10 @@
     "return_pct": -0.7745098039215637,
     "pnl": -7.899999999999977,
     "bars_held": 3,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

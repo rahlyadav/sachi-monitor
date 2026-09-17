@@ -3,6 +3,7 @@
   "trade": {
     "id": "9d37466b99db496e9808c377612ff118",
     "symbol": "IDBI",
+    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-06-25",
@@ -20,6 +21,10 @@
     "return_pct": -6.624857468643109,
     "pnl": -5.810000000000002,
     "bars_held": 58,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

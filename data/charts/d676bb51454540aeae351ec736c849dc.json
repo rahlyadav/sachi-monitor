@@ -3,6 +3,7 @@
   "trade": {
     "id": "d676bb51454540aeae351ec736c849dc",
     "symbol": "TRAVELFOOD",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-06-17",
@@ -20,6 +21,10 @@
     "return_pct": -8.059701492537318,
     "pnl": -108.0,
     "bars_held": 64,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Default sizing fallback",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-02",

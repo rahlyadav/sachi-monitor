@@ -3,6 +3,7 @@
   "trade": {
     "id": "9750b815b97a49e788657e672b4f2dbe",
     "symbol": "ENGINERSIN",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-09-01",
@@ -16,6 +17,10 @@
     "return_pct": 0.2851711026615966,
     "pnl": 0.75,
     "bars_held": 11,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-1.9%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

@@ -3,6 +3,7 @@
   "trade": {
     "id": "b8f157222a0d49fb91f47848fbb80794",
     "symbol": "IIFL",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-06-04",
@@ -20,6 +21,10 @@
     "return_pct": 15.498547918683435,
     "pnl": 80.04999999999995,
     "bars_held": 73,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",

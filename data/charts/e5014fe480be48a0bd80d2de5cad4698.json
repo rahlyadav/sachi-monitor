@@ -3,6 +3,7 @@
   "trade": {
     "id": "e5014fe480be48a0bd80d2de5cad4698",
     "symbol": "CDSL",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-07-13",
@@ -20,6 +21,10 @@
     "return_pct": -5.105485232067508,
     "pnl": -72.59999999999991,
     "bars_held": 47,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",

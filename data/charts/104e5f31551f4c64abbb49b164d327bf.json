@@ -3,6 +3,7 @@
   "trade": {
     "id": "104e5f31551f4c64abbb49b164d327bf",
     "symbol": "NATIONALUM",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-12",
@@ -16,6 +17,10 @@
     "return_pct": -10.740276035131746,
     "pnl": -42.80000000000001,
     "bars_held": 25,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

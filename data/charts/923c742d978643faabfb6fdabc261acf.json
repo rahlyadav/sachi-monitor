@@ -3,6 +3,7 @@
   "trade": {
     "id": "923c742d978643faabfb6fdabc261acf",
     "symbol": "ECLERX",
+    "cap_bucket": "Small",
     "strategy_key": "sma_atr_band_any_5",
     "strategy_label": "SMA ATR Bands ANY (50/75/100/150/200, \u00b11.0 ATR)",
     "entry_date": "2026-07-10",
@@ -16,6 +17,10 @@
     "return_pct": 22.96182620372147,
     "pnl": 359.0999999999999,
     "bars_held": 48,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

@@ -3,6 +3,7 @@
   "trade": {
     "id": "f0f7a78fe0964905a36fd3607633cd35",
     "symbol": "FEDERALBNK",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-06-04",
@@ -20,6 +21,10 @@
     "return_pct": 9.475242638591874,
     "pnl": 28.80000000000001,
     "bars_held": 73,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-0.6%)",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-07",

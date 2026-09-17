@@ -3,6 +3,7 @@
   "trade": {
     "id": "c3125e82d0714c45b73703cdd5d46283",
     "symbol": "ENGINERSIN",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-08-31",
@@ -16,6 +17,10 @@
     "return_pct": 3.8385826771653475,
     "pnl": 9.75,
     "bars_held": 12,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-5.0%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

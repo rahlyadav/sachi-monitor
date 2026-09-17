@@ -3,6 +3,7 @@
   "trade": {
     "id": "0d3eb21b775141db8a10343c6ae3be43",
     "symbol": "POLYMED",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-06-24",
@@ -16,6 +17,10 @@
     "return_pct": 3.8000000000000034,
     "pnl": 62.700000000000045,
     "bars_held": 59,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

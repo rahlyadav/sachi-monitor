@@ -3,6 +3,7 @@
   "trade": {
     "id": "dd783c8256bd4b73a10f0e46b71d973f",
     "symbol": "APOLLOTYRE",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-07-02",
@@ -20,6 +21,10 @@
     "return_pct": -5.034562211981575,
     "pnl": -21.850000000000023,
     "bars_held": 54,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-09",

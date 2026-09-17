@@ -3,6 +3,7 @@
   "trade": {
     "id": "f8388122cfbc4294952b49dd25bbe026",
     "symbol": "THELEELA",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-06-19",
@@ -16,6 +17,10 @@
     "return_pct": 15.821678321678313,
     "pnl": 72.39999999999998,
     "bars_held": 62,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-3.5%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

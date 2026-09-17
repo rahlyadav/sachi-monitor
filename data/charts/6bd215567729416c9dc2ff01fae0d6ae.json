@@ -3,6 +3,7 @@
   "trade": {
     "id": "6bd215567729416c9dc2ff01fae0d6ae",
     "symbol": "ITCHOTELS",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-06-22",
@@ -20,6 +21,10 @@
     "return_pct": -10.79190751445086,
     "pnl": -18.669999999999987,
     "bars_held": 61,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-03",

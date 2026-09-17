@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-17T15:54:20",
+  "generated_at": "2026-09-17T20:19:20",
   "latest_data_date": "2026-09-17",
-  "csv_files": 536,
+  "csv_files": 782,
   "universe": {
-    "stocks": 514,
+    "stocks": 760,
     "indices": 5
   },
   "prediction": {

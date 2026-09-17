@@ -3,6 +3,7 @@
   "trade": {
     "id": "a62133a1a71846738691a65e3876c5eb",
     "symbol": "CEATLTD",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-07-02",
@@ -20,6 +21,10 @@
     "return_pct": -6.458560523446022,
     "pnl": -236.9000000000001,
     "bars_held": 54,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-04",

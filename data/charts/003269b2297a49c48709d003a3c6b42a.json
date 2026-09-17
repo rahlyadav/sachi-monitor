@@ -3,6 +3,7 @@
   "trade": {
     "id": "003269b2297a49c48709d003a3c6b42a",
     "symbol": "GRAVITA",
+    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-07-10",
@@ -20,6 +21,10 @@
     "return_pct": -11.693150684931508,
     "pnl": -213.4000000000001,
     "bars_held": 48,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-7.1%)",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-07-31",
     "action_sort": 8

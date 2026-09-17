@@ -3,6 +3,7 @@
   "trade": {
     "id": "bc38d0648db94d4abf8e9a55d5e56ede",
     "symbol": "BLS",
+    "cap_bucket": "Small",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-08-14",
@@ -20,6 +21,10 @@
     "return_pct": -15.438883113025392,
     "pnl": -41.579999999999984,
     "bars_held": 23,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "CLOSED",
     "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-11",

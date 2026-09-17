@@ -3,6 +3,7 @@
   "trade": {
     "id": "e51245da620d41808ee995eaa2f01ac7",
     "symbol": "AIRAN",
+    "cap_bucket": "Other",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-09-08",
@@ -16,6 +17,10 @@
     "return_pct": 0.179964007198552,
     "pnl": 0.029999999999997584,
     "bars_held": 6,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

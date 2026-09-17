@@ -3,6 +3,7 @@
   "trade": {
     "id": "759689bf1f394be0bec13758b3eaa9de",
     "symbol": "LICHSGFIN",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-09-04",
@@ -16,6 +17,10 @@
     "return_pct": -1.462093862815883,
     "pnl": -8.100000000000023,
     "bars_held": 8,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-7.4%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

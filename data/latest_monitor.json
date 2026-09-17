@@ -32,10 +32,15 @@
       "return_pct": 38.00915026873361,
       "pnl": 85.57,
       "bars_held": 66,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "fa02ea124f70430e92840cb455440d8b",
@@ -54,10 +59,15 @@
       "return_pct": -5.467889908256884,
       "pnl": -89.40000000000009,
       "bars_held": 35,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "e51245da620d41808ee995eaa2f01ac7",
@@ -76,10 +86,15 @@
       "return_pct": 0.179964007198552,
       "pnl": 0.029999999999997584,
       "bars_held": 6,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Other"
     },
     {
       "id": "e45ed46fb61a41d7a9b943ebcea6ce93",
@@ -98,10 +113,15 @@
       "return_pct": 0.179964007198552,
       "pnl": 0.029999999999997584,
       "bars_held": 6,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Other"
     },
     {
       "id": "d07d112b878e465cbd942db697ace9c5",
@@ -120,10 +140,15 @@
       "return_pct": 4.55020682758307,
       "pnl": 500.5,
       "bars_held": 39,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-0.3%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Large"
     },
     {
       "id": "2b19397864fb447daaeaf0541ae07da3",
@@ -142,10 +167,15 @@
       "return_pct": 1.928918590522466,
       "pnl": 38.09999999999991,
       "bars_held": 20,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "8bae8ad49d26488b96390ec33767183a",
@@ -164,10 +194,15 @@
       "return_pct": 7.042253521126751,
       "pnl": 70.0,
       "bars_held": 15,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "923c742d978643faabfb6fdabc261acf",
@@ -186,10 +221,15 @@
       "return_pct": 22.96182620372147,
       "pnl": 359.0999999999999,
       "bars_held": 48,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "c3125e82d0714c45b73703cdd5d46283",
@@ -208,10 +248,15 @@
       "return_pct": 3.8385826771653475,
       "pnl": 9.75,
       "bars_held": 12,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-5.0%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "9750b815b97a49e788657e672b4f2dbe",
@@ -230,10 +275,15 @@
       "return_pct": 0.2851711026615966,
       "pnl": 0.75,
       "bars_held": 11,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-1.9%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "536b8756e31a4d719628f1b2483bd2e8",
@@ -252,10 +302,15 @@
       "return_pct": 0.2851711026615966,
       "pnl": 0.75,
       "bars_held": 11,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-1.9%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "ebab869780bf49a38c5f8d61312d7bff",
@@ -274,10 +329,15 @@
       "return_pct": 12.564516129032244,
       "pnl": 155.79999999999995,
       "bars_held": 25,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-1.4%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "9d37466b99db496e9808c377612ff118",
@@ -300,10 +360,15 @@
       "return_pct": -6.624857468643109,
       "pnl": -5.810000000000002,
       "bars_held": 58,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "e7abd819a54b4e48911c07ff3f6643c4",
@@ -322,10 +387,15 @@
       "return_pct": -6.815203145478366,
       "pnl": -1.0399999999999991,
       "bars_held": 15,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-1.0%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "7918ec885f88456fa4e77ed5006dd050",
@@ -344,10 +414,15 @@
       "return_pct": -6.815203145478366,
       "pnl": -1.0399999999999991,
       "bars_held": 15,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-1.0%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "99cc0226fede409abc7517af26461299",
@@ -366,10 +441,15 @@
       "return_pct": -8.52023258573632,
       "pnl": -7.179999999999993,
       "bars_held": 13,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "0d0ecdc3432041e290cc0e190de22284",
@@ -388,10 +468,15 @@
       "return_pct": 1.21,
       "pnl": 12.100000000000023,
       "bars_held": 5,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "ad6ea5e46b0646f984d37f3835a0f5e6",
@@ -410,10 +495,15 @@
       "return_pct": -0.7745098039215637,
       "pnl": -7.899999999999977,
       "bars_held": 3,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "759689bf1f394be0bec13758b3eaa9de",
@@ -432,10 +522,15 @@
       "return_pct": -1.462093862815883,
       "pnl": -8.100000000000023,
       "bars_held": 8,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-7.4%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "7ed7417eb1ec48f28056d8cf71a6f808",
@@ -454,10 +549,15 @@
       "return_pct": -1.462093862815883,
       "pnl": -8.100000000000023,
       "bars_held": 8,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-7.4%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "e1e353e2d13343f1831cb70325a65b6b",
@@ -476,10 +576,15 @@
       "return_pct": -2.5178571428571495,
       "pnl": -14.100000000000023,
       "bars_held": 5,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-5.9%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "a90cc816df0d45d7ad09afa827bae350",
@@ -498,10 +603,15 @@
       "return_pct": 0.49867021276595036,
       "pnl": 1.5,
       "bars_held": 56,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-9.2%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "08f51e7678ea4f67b756c0e33a95c4fc",
@@ -524,10 +634,15 @@
       "return_pct": -17.224056932880604,
       "pnl": -185.1500000000001,
       "bars_held": 48,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "9d12a387644a4cddb854006f2f404acf",
@@ -546,10 +661,15 @@
       "return_pct": -15.325670498084287,
       "pnl": -400.0,
       "bars_held": 15,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Large"
     },
     {
       "id": "803fa4277adc4b8993a47651e31a64f2",
@@ -568,10 +688,15 @@
       "return_pct": -0.1313131313131266,
       "pnl": -1.2999999999999545,
       "bars_held": 17,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-9.8%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "164e42da054c473397722ab1a3fc54e6",
@@ -590,10 +715,15 @@
       "return_pct": -0.1313131313131266,
       "pnl": -1.2999999999999545,
       "bars_held": 17,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-9.8%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "104e5f31551f4c64abbb49b164d327bf",
@@ -612,10 +742,15 @@
       "return_pct": -10.740276035131746,
       "pnl": -42.80000000000001,
       "bars_held": 25,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "2096ddb62c6347fb9592d8b26ed893c5",
@@ -634,10 +769,15 @@
       "return_pct": 7.935153583617738,
       "pnl": 93.0,
       "bars_held": 50,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "77bb1f55063a4d5babac4d8c5aa3eb22",
@@ -656,10 +796,15 @@
       "return_pct": 7.838540556668527,
       "pnl": 91.95000000000005,
       "bars_held": 49,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "41670420c99f4069829ac4cd133dc4ae",
@@ -678,10 +823,15 @@
       "return_pct": -10.149734089526463,
       "pnl": -517.1999999999998,
       "bars_held": 19,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-6.1%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "750c8324c70c424892051c2c7ee397ae",
@@ -700,10 +850,15 @@
       "return_pct": 38.93923871069429,
       "pnl": 494.0999999999999,
       "bars_held": 48,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-8.6%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Mid"
     },
     {
       "id": "0d3eb21b775141db8a10343c6ae3be43",
@@ -722,10 +877,15 @@
       "return_pct": 3.8000000000000034,
       "pnl": 62.700000000000045,
       "bars_held": 59,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "db863131b03f4707897bd7950029978e",
@@ -744,10 +904,15 @@
       "return_pct": 13.340457743343116,
       "pnl": 149.79999999999995,
       "bars_held": 36,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "115312f503a143f782abb8ba9e17d0e2",
@@ -766,10 +931,15 @@
       "return_pct": -2.5096153846153824,
       "pnl": -13.050000000000011,
       "bars_held": 5,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "1912b80b00a740d6b201f4b3dbfcbb4c",
@@ -788,10 +958,15 @@
       "return_pct": 4.142469996128528,
       "pnl": 32.10000000000002,
       "bars_held": 7,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "571a200b8681410aa1642a62c70b9b79",
@@ -810,10 +985,15 @@
       "return_pct": -0.24721878862793423,
       "pnl": -2.0,
       "bars_held": 6,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "be8c51c2f6e943aab67c75644374b889",
@@ -832,10 +1012,15 @@
       "return_pct": 21.065393093313745,
       "pnl": 286.70000000000005,
       "bars_held": 67,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "c752eddb799b44ddbf96356e3942fd8c",
@@ -854,10 +1039,15 @@
       "return_pct": -3.298701298701301,
       "pnl": -3.8100000000000023,
       "bars_held": 4,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Micro"
     },
     {
       "id": "f8388122cfbc4294952b49dd25bbe026",
@@ -876,10 +1066,15 @@
       "return_pct": 15.821678321678313,
       "pnl": 72.39999999999998,
       "bars_held": 62,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-3.5%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "ea49f31404d045629994d24664c997f2",
@@ -898,10 +1093,15 @@
       "return_pct": 6.436389195702374,
       "pnl": 32.05000000000001,
       "bars_held": 58,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-4.4%)",
       "stop_text": "",
       "action": "HOLD",
       "reason": "Strategy position is still active",
-      "action_sort": 5
+      "action_sort": 5,
+      "cap_bucket": "Small"
     },
     {
       "id": "dd783c8256bd4b73a10f0e46b71d973f",
@@ -924,10 +1124,15 @@
       "return_pct": -5.034562211981575,
       "pnl": -21.850000000000023,
       "bars_held": 54,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-09",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Mid"
     },
     {
       "id": "bc38d0648db94d4abf8e9a55d5e56ede",
@@ -950,10 +1155,15 @@
       "return_pct": -15.438883113025392,
       "pnl": -41.579999999999984,
       "bars_held": 23,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-11",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "e5014fe480be48a0bd80d2de5cad4698",
@@ -976,10 +1186,15 @@
       "return_pct": -5.105485232067508,
       "pnl": -72.59999999999991,
       "bars_held": 47,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "a62133a1a71846738691a65e3876c5eb",
@@ -1002,10 +1217,15 @@
       "return_pct": -6.458560523446022,
       "pnl": -236.9000000000001,
       "bars_held": 54,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-04",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "f0f7a78fe0964905a36fd3607633cd35",
@@ -1028,10 +1248,15 @@
       "return_pct": 9.475242638591874,
       "pnl": 28.80000000000001,
       "bars_held": 73,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-0.6%)",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-07",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Mid"
     },
     {
       "id": "1baa4ba3690540c887a1c32eff2c8b10",
@@ -1054,9 +1279,14 @@
       "return_pct": 2.3222200809404736,
       "pnl": 12.050000000000068,
       "bars_held": 62,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "1ec73b8b7b77410396b43ae88a1eaa51",
@@ -1079,10 +1309,15 @@
       "return_pct": -5.824338770302417,
       "pnl": -16.889999999999986,
       "bars_held": 34,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-10",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "003269b2297a49c48709d003a3c6b42a",
@@ -1105,9 +1340,14 @@
       "return_pct": -11.693150684931508,
       "pnl": -213.4000000000001,
       "bars_held": 48,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-7.1%)",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-07-31",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "ae94266ffe3542488b05cb4b7e18e5dd",
@@ -1130,10 +1370,15 @@
       "return_pct": 1.804207119741097,
       "pnl": 22.299999999999955,
       "bars_held": 39,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-15",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Large"
     },
     {
       "id": "b8f157222a0d49fb91f47848fbb80794",
@@ -1156,10 +1401,15 @@
       "return_pct": 15.498547918683435,
       "pnl": 80.04999999999995,
       "bars_held": 73,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "53db20daefdc4ded955a5479072e99f4",
@@ -1182,10 +1432,15 @@
       "return_pct": -0.6439176441637162,
       "pnl": -31.399999999999636,
       "bars_held": 64,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-08",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Large"
     },
     {
       "id": "6bd215567729416c9dc2ff01fae0d6ae",
@@ -1208,10 +1463,15 @@
       "return_pct": -10.79190751445086,
       "pnl": -18.669999999999987,
       "bars_held": 61,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-03",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Mid"
     },
     {
       "id": "7ea5721cf3224cd1a6354652132ed7c2",
@@ -1234,10 +1494,15 @@
       "return_pct": 4.441087613293049,
       "pnl": 14.699999999999989,
       "bars_held": 51,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Mid"
     },
     {
       "id": "c55cf6a5713d4b09852cc880b8073805",
@@ -1260,10 +1525,15 @@
       "return_pct": -8.55668625483733,
       "pnl": -29.850000000000023,
       "bars_held": 45,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "052a48dedc9f407f88706b3713fc61d3",
@@ -1286,9 +1556,14 @@
       "return_pct": -17.847496364014127,
       "pnl": -257.70000000000005,
       "bars_held": 62,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-08-20",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "d95e2fc48f1f4fad830a759f8de7e20c",
@@ -1311,10 +1586,15 @@
       "return_pct": -6.143617021276593,
       "pnl": -34.64999999999998,
       "bars_held": 61,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-07",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "03a660f854b948f5bf8178c7621e6e87",
@@ -1337,10 +1617,15 @@
       "return_pct": -3.982549239718336,
       "pnl": -156.0999999999999,
       "bars_held": 31,
+      "position_tier": "Strong",
+      "suggested_capital": 3000,
+      "position_size_label": "3k",
+      "position_size_reason": "Within 10% of 52-week high (-0.9%)",
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Large"
     },
     {
       "id": "ece73dcd3fe543798f332b55ad7c5905",
@@ -1363,9 +1648,14 @@
       "return_pct": 3.957983648275487,
       "pnl": 73.09999999999991,
       "bars_held": 72,
+      "position_tier": "Normal",
+      "suggested_capital": 1000,
+      "position_size_label": "1k",
+      "position_size_reason": "Passes Early Leader and Filter List",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-07-21",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     },
     {
       "id": "d676bb51454540aeae351ec736c849dc",
@@ -1391,7 +1681,8 @@
       "stop_text": "",
       "action": "CLOSED",
       "reason": "EXIT SIGNAL: Strategy exit after monitored entry on 2026-09-02",
-      "action_sort": 8
+      "action_sort": 8,
+      "cap_bucket": "Small"
     }
   ]
 }

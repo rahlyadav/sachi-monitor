@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-17T15:54:20",
+  "generated_at": "2026-09-17T20:19:20",
   "latest_data_date": "2026-09-17",
   "scan_date": "2026-09-17",
   "summary": {
@@ -25,7 +25,8 @@
       "execution_date": "2026-09-17",
       "execution_price": 3743.1,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
-      "position_size_label": "3k"
+      "position_size_label": "3k",
+      "cap_bucket": "Large"
     },
     {
       "id": "8ce946ffdeb990d007",
@@ -43,7 +44,8 @@
       "execution_date": "2026-09-17",
       "execution_price": 316.2,
       "reason": "Strategy exit after monitored entry on 2026-09-16",
-      "position_size_label": "1k"
+      "position_size_label": "1k",
+      "cap_bucket": "Small"
     },
     {
       "id": "54884e78b45e903a16",
@@ -61,7 +63,8 @@
       "execution_date": "2026-09-17",
       "execution_price": 1299.0,
       "reason": "Strategy exit after monitored entry on 2026-09-16",
-      "position_size_label": "1k"
+      "position_size_label": "1k",
+      "cap_bucket": "Small"
     },
     {
       "id": "236da71f2002f521b5",
@@ -79,7 +82,8 @@
       "execution_date": "2026-09-17",
       "execution_price": 345.15,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
-      "position_size_label": "1k"
+      "position_size_label": "1k",
+      "cap_bucket": "Mid"
     },
     {
       "id": "416df55a41f7653564",
@@ -97,7 +101,8 @@
       "execution_date": "2026-09-17",
       "execution_price": 585.0,
       "reason": "Strategy exit after monitored entry on 2026-09-16",
-      "position_size_label": "1k"
+      "position_size_label": "1k",
+      "cap_bucket": "Small"
     }
   ]
 }

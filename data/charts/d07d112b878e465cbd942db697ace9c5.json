@@ -3,6 +3,7 @@
   "trade": {
     "id": "d07d112b878e465cbd942db697ace9c5",
     "symbol": "BAJAJAUTO",
+    "cap_bucket": "Large",
     "strategy_key": "ema_12_26_atr05_band",
     "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
     "entry_date": "2026-07-23",
@@ -16,6 +17,10 @@
     "return_pct": 4.55020682758307,
     "pnl": 500.5,
     "bars_held": 39,
+    "position_tier": "Large",
+    "suggested_capital": 5000,
+    "position_size_label": "5k",
+    "position_size_reason": "Large cap rule: 5k always",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",

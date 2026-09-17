@@ -10,22 +10,20 @@
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
-    "status": "ACTIVE",
-    "exit_date": "2026-08-25",
-    "exit_price": 321.35,
-    "realized_return_pct": -7.883044288376095,
-    "close_reason": "STOP HIT",
-    "latest_date": "2026-09-16",
-    "latest_close": 316.2,
-    "return_pct": -9.359323491471994,
-    "pnl": -32.650000000000034,
-    "bars_held": 44,
+    "status": "CLOSED",
+    "exit_date": "2026-09-17",
+    "exit_price": 316.2,
+    "realized_return_pct": -9.359323491471994,
+    "close_reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",
+    "latest_date": "2026-09-17",
+    "latest_close": 319.0,
+    "return_pct": -8.55668625483733,
+    "pnl": -29.850000000000023,
+    "bars_held": 45,
     "stop_text": "",
-    "action": "EXIT SIGNAL",
-    "reason": "Strategy exit after monitored entry on 2026-09-16",
-    "suggested_exit_date": "2026-09-16",
-    "suggested_exit_price": 316.2,
-    "action_sort": 2
+    "action": "CLOSED",
+    "reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",
+    "action_sort": 8
   },
   "strategy": {
     "key": "ema_10_25_50_entry_level_exit_cross",
@@ -38,13 +36,13 @@
     "trades": 5,
     "win_rate_pct": 0.0,
     "avg_trade_pct": -6.512460110645073,
-    "sharpe": -0.11889596704703234,
+    "sharpe": -0.11884854824846718,
     "max_drawdown_pct": -43.039428484061894
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-07-15",
-  "chart_end_date": "2026-09-16",
-  "chart_end_reason": "latest",
+  "chart_end_date": "2026-09-17",
+  "chart_end_reason": "exit",
   "indicator_columns": [
     "ema_10",
     "ema_25",
@@ -456,6 +454,15 @@
       "ema_10": 327.5245196372538,
       "ema_25": 330.37590961083754,
       "ema_50": 330.78255528957396
+    },
+    {
+      "date": "2026-09-17",
+      "Close": 319.0,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "ema_10": 325.9746069759349,
+      "ema_25": 329.50083964077317,
+      "ema_50": 330.320494297826
     }
   ]
 }

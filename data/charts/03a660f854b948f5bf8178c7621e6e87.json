@@ -10,18 +10,20 @@
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
-    "status": "ACTIVE",
-    "latest_date": "2026-09-16",
-    "latest_close": 3742.0,
-    "return_pct": -4.531074599448925,
-    "pnl": -177.5999999999999,
-    "bars_held": 30,
+    "status": "CLOSED",
+    "exit_date": "2026-09-17",
+    "exit_price": 3743.1,
+    "realized_return_pct": -4.503010511276662,
+    "close_reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
+    "latest_date": "2026-09-17",
+    "latest_close": 3763.5,
+    "return_pct": -3.982549239718336,
+    "pnl": -156.0999999999999,
+    "bars_held": 31,
     "stop_text": "",
-    "action": "EXIT NEXT OPEN",
-    "reason": "Strategy exit signal on the latest close; execute at the next market open",
-    "suggested_exit_date": "",
-    "suggested_exit_price": "",
-    "action_sort": 2
+    "action": "CLOSED",
+    "reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
+    "action_sort": 8
   },
   "strategy": {
     "key": "donchian_45_32",
@@ -33,14 +35,14 @@
     "total_return_c_pct": 101.05848451503188,
     "trades": 14,
     "win_rate_pct": 28.57142857142857,
-    "avg_trade_pct": 7.1297112482552025,
-    "sharpe": 0.6048318427619868,
+    "avg_trade_pct": 7.131715825981792,
+    "sharpe": 0.6046495922797767,
     "max_drawdown_pct": -41.80660689981054
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-08-04",
-  "chart_end_date": "2026-09-16",
-  "chart_end_reason": "latest",
+  "chart_end_date": "2026-09-17",
+  "chart_end_reason": "exit",
   "indicator_columns": [
     "donchian_entry_high_45",
     "donchian_exit_low_32"
@@ -294,6 +296,14 @@
       "trade_signal": 0.0,
       "donchian_entry_high_45": 4114.0,
       "donchian_exit_low_32": 3760.0
+    },
+    {
+      "date": "2026-09-17",
+      "Close": 3763.5,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "donchian_entry_high_45": 4114.0,
+      "donchian_exit_low_32": 3742.0
     }
   ]
 }

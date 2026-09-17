@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-16T15:47:43",
-  "latest_data_date": "2026-09-16",
-  "scan_date": "2026-09-16",
+  "generated_at": "2026-09-17T15:54:20",
+  "latest_data_date": "2026-09-17",
+  "scan_date": "2026-09-17",
   "summary": {
-    "tomorrow": 5,
-    "executed_today": 0
+    "tomorrow": 0,
+    "executed_today": 5
   },
-  "tomorrow": [
+  "tomorrow": [],
+  "today": [
     {
       "id": "3b215f1ba0ab3a8db6",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-16",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "SIEMENS",
@@ -21,13 +22,15 @@
       "entry_price": 3919.6,
       "trigger_price": 3742.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-17",
+      "execution_price": 3743.1,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k"
     },
     {
       "id": "8ce946ffdeb990d007",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-16",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "NUVOCO",
@@ -37,13 +40,15 @@
       "entry_price": 348.85,
       "trigger_price": 316.2,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-17",
+      "execution_price": 316.2,
       "reason": "Strategy exit after monitored entry on 2026-09-16",
       "position_size_label": "1k"
     },
     {
       "id": "54884e78b45e903a16",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-16",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "CDSL",
@@ -53,13 +58,15 @@
       "entry_price": 1422.0,
       "trigger_price": 1299.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-17",
+      "execution_price": 1299.0,
       "reason": "Strategy exit after monitored entry on 2026-09-16",
       "position_size_label": "1k"
     },
     {
       "id": "236da71f2002f521b5",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-16",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "MMFIN",
@@ -69,13 +76,15 @@
       "entry_price": 331.0,
       "trigger_price": 345.05,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-17",
+      "execution_price": 345.15,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "416df55a41f7653564",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-16",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "IIFL",
@@ -85,9 +94,10 @@
       "entry_price": 516.5,
       "trigger_price": 585.7,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-17",
+      "execution_price": 585.0,
       "reason": "Strategy exit after monitored entry on 2026-09-16",
       "position_size_label": "1k"
     }
-  ],
-  "today": []
+  ]
 }

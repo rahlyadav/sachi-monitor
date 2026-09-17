@@ -3,7 +3,6 @@
   "trade": {
     "id": "536b8756e31a4d719628f1b2483bd2e8",
     "symbol": "ENGINERSIN",
-    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-09-01",
@@ -12,15 +11,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-15",
-    "latest_close": 262.45,
-    "return_pct": -0.20912547528517678,
-    "pnl": -0.5500000000000114,
-    "bars_held": 9,
-    "position_tier": "Strong",
-    "suggested_capital": 3000,
-    "position_size_label": "3k",
-    "position_size_reason": "Within 10% of 52-week high (-1.9%)",
+    "latest_date": "2026-09-17",
+    "latest_close": 263.75,
+    "return_pct": 0.2851711026615966,
+    "pnl": 0.75,
+    "bars_held": 11,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -33,16 +28,16 @@
     "indicator_description": "Adds a lower panel with SMA20, SMA50, and SMA50 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 19.14394206445287,
+    "total_return_c_pct": 19.734100664886434,
     "trades": 15,
-    "win_rate_pct": 40.0,
-    "avg_trade_pct": 2.5222427434532633,
-    "sharpe": 0.24066562356575216,
+    "win_rate_pct": 46.666666666666664,
+    "avg_trade_pct": 2.555195848649715,
+    "sharpe": 0.24295034241324137,
     "max_drawdown_pct": -50.74529992996478
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-01",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-17",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_20",
@@ -151,6 +146,26 @@
       "sma_50": 244.4632,
       "sma50_atr_upper_05": 249.71177142857144,
       "sma50_atr_lower_05": 239.21462857142856
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 260.65,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 262.43199999999996,
+      "sma_50": 244.83219999999997,
+      "sma50_atr_upper_05": 250.3282714285714,
+      "sma50_atr_lower_05": 239.33612857142853
+    },
+    {
+      "date": "2026-09-17",
+      "Close": 263.75,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 263.7745,
+      "sma_50": 245.40540000000001,
+      "sma50_atr_upper_05": 250.86682857142858,
+      "sma50_atr_lower_05": 239.94397142857144
     }
   ]
 }

@@ -3,7 +3,6 @@
   "trade": {
     "id": "99cc0226fede409abc7517af26461299",
     "symbol": "IFCI",
-    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-08-28",
@@ -12,15 +11,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-15",
-    "latest_close": 76.95,
-    "return_pct": -8.686365254538975,
-    "pnl": -7.319999999999993,
-    "bars_held": 11,
-    "position_tier": "Normal",
-    "suggested_capital": 1000,
-    "position_size_label": "1k",
-    "position_size_reason": "Passes Early Leader and Filter List",
+    "latest_date": "2026-09-17",
+    "latest_close": 77.09,
+    "return_pct": -8.52023258573632,
+    "pnl": -7.179999999999993,
+    "bars_held": 13,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -33,16 +28,16 @@
     "indicator_description": "Adds a lower panel with SMA20, SMA50, and SMA50 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 42.4983568191096,
+    "total_return_c_pct": 42.757613088826,
     "trades": 17,
     "win_rate_pct": 29.411764705882355,
-    "avg_trade_pct": 8.799946134992414,
-    "sharpe": 0.3370326780882071,
+    "avg_trade_pct": 8.809718644921983,
+    "sharpe": 0.3374972545388248,
     "max_drawdown_pct": -66.08471755605431
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-08-28",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-17",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_20",
@@ -171,6 +166,26 @@
       "sma_50": 79.5994,
       "sma50_atr_upper_05": 83.10047142857144,
       "sma50_atr_lower_05": 76.09832857142857
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 75.06,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 87.2925,
+      "sma_50": 79.6114,
+      "sma50_atr_upper_05": 83.12604285714286,
+      "sma50_atr_lower_05": 76.09675714285714
+    },
+    {
+      "date": "2026-09-17",
+      "Close": 77.09,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 87.063,
+      "sma_50": 79.67519999999999,
+      "sma50_atr_upper_05": 83.22805714285714,
+      "sma50_atr_lower_05": 76.12234285714284
     }
   ]
 }

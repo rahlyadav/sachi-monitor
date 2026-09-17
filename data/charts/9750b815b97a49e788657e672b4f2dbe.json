@@ -3,7 +3,6 @@
   "trade": {
     "id": "9750b815b97a49e788657e672b4f2dbe",
     "symbol": "ENGINERSIN",
-    "cap_bucket": "Small",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-09-01",
@@ -12,15 +11,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-15",
-    "latest_close": 262.45,
-    "return_pct": -0.20912547528517678,
-    "pnl": -0.5500000000000114,
-    "bars_held": 9,
-    "position_tier": "Strong",
-    "suggested_capital": 3000,
-    "position_size_label": "3k",
-    "position_size_reason": "Within 10% of 52-week high (-1.9%)",
+    "latest_date": "2026-09-17",
+    "latest_close": 263.75,
+    "return_pct": 0.2851711026615966,
+    "pnl": 0.75,
+    "bars_held": 11,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -33,16 +28,16 @@
     "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
-    "total_return_c_pct": 52.71120234695288,
+    "total_return_c_pct": 53.46763047821996,
     "trades": 15,
-    "win_rate_pct": 40.0,
-    "avg_trade_pct": 4.352865281957643,
-    "sharpe": 0.36252694511257466,
+    "win_rate_pct": 46.666666666666664,
+    "avg_trade_pct": 4.385818387154095,
+    "sharpe": 0.3647306346347281,
     "max_drawdown_pct": -47.91589671548161
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-01",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-17",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -129,6 +124,22 @@
       "trade_signal": 1.0,
       "donchian_entry_high_45": 281.95,
       "donchian_exit_low_32": 221.98
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 260.65,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 281.95,
+      "donchian_exit_low_32": 222.38
+    },
+    {
+      "date": "2026-09-17",
+      "Close": 263.75,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 281.95,
+      "donchian_exit_low_32": 224.89
     }
   ]
 }

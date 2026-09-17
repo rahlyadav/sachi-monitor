@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "e51245da620d41808ee995eaa2f01ac7",
+    "symbol": "AIRAN",
+    "strategy_key": "donchian_45_32",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "entry_date": "2026-09-08",
+    "entry_price": 16.67,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-09-17",
+    "latest_close": 16.7,
+    "return_pct": 0.179964007198552,
+    "pnl": 0.029999999999997584,
+    "bars_held": 6,
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
+  },
+  "metrics": {
+    "total_return_c_pct": 59.143839410874534,
+    "trades": 10,
+    "win_rate_pct": 50.0,
+    "avg_trade_pct": 6.567901667850489,
+    "sharpe": 0.37185628084267797,
+    "max_drawdown_pct": -52.8422830286568
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-09-08",
+  "chart_end_date": "2026-09-17",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "donchian_entry_high_45",
+    "donchian_exit_low_32"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-09-08",
+      "Close": 17.15,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 16.44,
+      "donchian_exit_low_32": 14.8
+    },
+    {
+      "date": "2026-09-09",
+      "Close": 17.66,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 17.15,
+      "donchian_exit_low_32": 14.8
+    },
+    {
+      "date": "2026-09-10",
+      "Close": 17.04,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 17.66,
+      "donchian_exit_low_32": 14.8
+    },
+    {
+      "date": "2026-09-11",
+      "Close": 17.13,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 17.66,
+      "donchian_exit_low_32": 14.8
+    },
+    {
+      "date": "2026-09-15",
+      "Close": 16.45,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 17.66,
+      "donchian_exit_low_32": 14.8
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 15.72,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 17.66,
+      "donchian_exit_low_32": 14.8
+    },
+    {
+      "date": "2026-09-17",
+      "Close": 16.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 17.66,
+      "donchian_exit_low_32": 14.8
+    }
+  ]
+}

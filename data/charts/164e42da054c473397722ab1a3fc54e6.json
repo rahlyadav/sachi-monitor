@@ -3,7 +3,6 @@
   "trade": {
     "id": "164e42da054c473397722ab1a3fc54e6",
     "symbol": "MOTILALOFS",
-    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-24",
@@ -12,15 +11,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-15",
-    "latest_close": 990.8,
-    "return_pct": 0.08080808080808133,
-    "pnl": 0.7999999999999545,
-    "bars_held": 15,
-    "position_tier": "Strong",
-    "suggested_capital": 3000,
-    "position_size_label": "3k",
-    "position_size_reason": "Within 10% of 52-week high (-9.8%)",
+    "latest_date": "2026-09-17",
+    "latest_close": 988.7,
+    "return_pct": -0.1313131313131266,
+    "pnl": -1.2999999999999545,
+    "bars_held": 17,
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -33,16 +28,16 @@
     "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
-    "total_return_c_pct": 237.8863922481481,
+    "total_return_c_pct": 237.17024224439248,
     "trades": 14,
-    "win_rate_pct": 64.28571428571429,
-    "avg_trade_pct": 13.0626074414485,
-    "sharpe": 0.740723030943371,
+    "win_rate_pct": 57.14285714285714,
+    "avg_trade_pct": 13.047455926296985,
+    "sharpe": 0.739141508144084,
     "max_drawdown_pct": -40.245592916293894
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-08-24",
-  "chart_end_date": "2026-09-15",
+  "chart_end_date": "2026-09-17",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -177,6 +172,22 @@
       "trade_signal": 1.0,
       "donchian_entry_high_45": 1055.0,
       "donchian_exit_low_32": 836.95
+    },
+    {
+      "date": "2026-09-16",
+      "Close": 976.5,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1055.0,
+      "donchian_exit_low_32": 851.95
+    },
+    {
+      "date": "2026-09-17",
+      "Close": 988.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1055.0,
+      "donchian_exit_low_32": 861.0
     }
   ]
 }

@@ -3,6 +3,7 @@
   "trade": {
     "id": "03a660f854b948f5bf8178c7621e6e87",
     "symbol": "SIEMENS",
+    "cap_bucket": "Large",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-04",
@@ -15,7 +16,11 @@
     "latest_close": 3770.0,
     "return_pct": -3.8167159914276994,
     "pnl": -149.5999999999999,
-    "bars_held": 30,
+    "bars_held": 29,
+    "position_tier": "Large",
+    "suggested_capital": 5000,
+    "position_size_label": "5k",
+    "position_size_reason": "Large cap rule: 5k always",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -32,7 +37,7 @@
     "trades": 14,
     "win_rate_pct": 28.57142857142857,
     "avg_trade_pct": 7.180736863113861,
-    "sharpe": 0.6101965387610292,
+    "sharpe": 0.6103805768726679,
     "max_drawdown_pct": -41.37116729350233
   },
   "manual_stop_price": null,
@@ -278,20 +283,12 @@
       "donchian_exit_low_32": 3650.8
     },
     {
-      "date": "2026-09-11",
-      "Close": 3957.0,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "donchian_entry_high_45": 4114.0,
-      "donchian_exit_low_32": 3658.8
-    },
-    {
       "date": "2026-09-15",
       "Close": 3770.0,
       "position": 1.0,
       "trade_signal": 1.0,
       "donchian_entry_high_45": 4114.0,
-      "donchian_exit_low_32": 3760.0
+      "donchian_exit_low_32": 3658.8
     }
   ]
 }

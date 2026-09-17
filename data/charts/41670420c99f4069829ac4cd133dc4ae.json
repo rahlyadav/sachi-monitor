@@ -3,6 +3,7 @@
   "trade": {
     "id": "41670420c99f4069829ac4cd133dc4ae",
     "symbol": "NETWEB",
+    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-08-20",
@@ -15,7 +16,11 @@
     "latest_close": 4614.0,
     "return_pct": -9.453068273249986,
     "pnl": -481.6999999999998,
-    "bars_held": 18,
+    "bars_held": 17,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-6.1%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -32,7 +37,7 @@
     "trades": 5,
     "win_rate_pct": 60.0,
     "avg_trade_pct": 45.18417259884931,
-    "sharpe": 1.37815787820805,
+    "sharpe": 1.379061591448313,
     "max_drawdown_pct": -28.89784207747378
   },
   "manual_stop_price": null,
@@ -218,24 +223,14 @@
       "sma50_atr_lower_05": 4682.996142857142
     },
     {
-      "date": "2026-09-11",
-      "Close": 5027.0,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_20": 5207.195,
-      "sma_50": 4796.374,
-      "sma50_atr_upper_05": 4892.995428571428,
-      "sma50_atr_lower_05": 4699.752571428571
-    },
-    {
       "date": "2026-09-15",
       "Close": 4614.0,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_20": 5170.17,
-      "sma_50": 4804.038,
-      "sma50_atr_upper_05": 4908.6237142857135,
-      "sma50_atr_lower_05": 4699.452285714286
+      "sma_20": 5186.545,
+      "sma_50": 4788.114,
+      "sma50_atr_upper_05": 4896.092571428571,
+      "sma50_atr_lower_05": 4680.135428571428
     }
   ]
 }

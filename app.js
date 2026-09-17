@@ -66,6 +66,64 @@ function sizeLabel(row) {
   return row.position_size_label || "NA";
 }
 
+function capBucket(row) {
+  return row.cap_bucket || "Other";
+}
+
+function capCell(row) {
+  const bucket = capBucket(row);
+  const kind = `cap cap-${String(bucket).toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+  const cell = document.createElement("td");
+  cell.appendChild(pill(bucket, kind));
+  return cell;
+}
+
+function normalizeActivityRow(row, fallbackAction, fallbackDate) {
+  const normalized = { ...row };
+  normalized.action = firstPresent(normalized.action, fallbackAction);
+  normalized.signal_date = firstPresent(
+    normalized.signal_date,
+    normalized.entry_date,
+    normalized.exit_date,
+    normalized.latest_date,
+    fallbackDate,
+  );
+  normalized.trigger_price = firstPresent(
+    normalized.trigger_price,
+    normalized.entry_price,
+    normalized.exit_price,
+    normalized.latest_close,
+  );
+  normalized.execution_price = firstPresent(
+    normalized.execution_price,
+    normalized.exit_price,
+    normalized.entry_price,
+    normalized.latest_close,
+    normalized.trigger_price,
+  );
+  normalized.reason = firstPresent(normalized.reason, normalized.close_reason);
+  return normalized;
+}
+
+function activityBuckets(activity) {
+  const fallbackDate = firstPresent(activity.scan_date, activity.latest_data_date);
+  const hasNextFormat = Array.isArray(activity.tomorrow) || Array.isArray(activity.today);
+  if (hasNextFormat) {
+    return {
+      tomorrow: (activity.tomorrow || []).map((row) => normalizeActivityRow(row, "ACTION", fallbackDate)),
+      today: (activity.today || []).map((row) => normalizeActivityRow(row, "ACTION", fallbackDate)),
+    };
+  }
+
+  return {
+    tomorrow: (activity.actions || []).map((row) => normalizeActivityRow(row, "ACTION", fallbackDate)),
+    today: [
+      ...(activity.added || []).map((row) => normalizeActivityRow(row, "ENTER", fallbackDate)),
+      ...(activity.closed || []).map((row) => normalizeActivityRow(row, "CLOSED", fallbackDate)),
+    ],
+  };
+}
+
 function button(label, onClick) {
   const el = document.createElement("button");
   el.type = "button";
@@ -226,8 +284,7 @@ function renderActivityTable(tableId, rows, renderRow, emptyText, colSpan) {
 
 function renderActivity() {
   const activity = state.activity || {};
-  const tomorrow = activity.tomorrow || [];
-  const today = activity.today || [];
+  const { tomorrow, today } = activityBuckets(activity);
 
   $("activityTomorrowCount").textContent = `${tomorrow.length}`;
   $("activityTodayCount").textContent = `${today.length}`;
@@ -243,6 +300,7 @@ function renderActivity() {
       tr.append(
         action,
         td(row.symbol),
+        capCell(row),
         td(row.strategy_label),
         td(row.signal_date),
         td(fmt(row.trigger_price), "numeric"),
@@ -253,7 +311,7 @@ function renderActivity() {
       return tr;
     },
     "No actions are queued for the next market open.",
-    7,
+    8,
   );
 
   renderActivityTable(
@@ -267,6 +325,7 @@ function renderActivity() {
       tr.append(
         action,
         td(row.symbol),
+        capCell(row),
         td(row.strategy_label),
         td(row.signal_date),
         td(fmt(row.trigger_price), "numeric"),
@@ -278,7 +337,7 @@ function renderActivity() {
       return tr;
     },
     "No entry or exit actions were executed on the latest data date.",
-    8,
+    9,
   );
 }
 
@@ -289,7 +348,7 @@ function renderActive() {
   const rows = sortRows("active", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "ACTIVE") return false;
     if (!needle) return true;
-    return `${row.symbol} ${row.strategy_label} ${sizeLabel(row)} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
+    return `${row.symbol} ${capBucket(row)} ${row.strategy_label} ${sizeLabel(row)} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
   }));
   updateSortHeaders("activeTable", "active");
 
@@ -299,6 +358,7 @@ function renderActive() {
     tr.append(
       td(row.rank),
       td(row.symbol),
+      capCell(row),
       td(row.strategy_label),
       td(sizeLabel(row), "numeric"),
       td(row.entry_date),
@@ -321,7 +381,7 @@ function renderActive() {
   if (!rows.length) {
     const tr = document.createElement("tr");
     const empty = td("No active trades match the current search.");
-    empty.colSpan = 12;
+    empty.colSpan = 13;
     tr.appendChild(empty);
     body.appendChild(tr);
   }
@@ -334,7 +394,7 @@ function renderClosed() {
   const rows = sortRows("closed", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "CLOSED") return false;
     if (!needle) return true;
-    return `${row.symbol} ${row.strategy_label} ${sizeLabel(row)} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
+    return `${row.symbol} ${capBucket(row)} ${row.strategy_label} ${sizeLabel(row)} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
   }));
   updateSortHeaders("closedTable", "closed");
 
@@ -343,6 +403,7 @@ function renderClosed() {
     tr.append(
       td(row.rank),
       td(row.symbol),
+      capCell(row),
       td(row.strategy_label),
       td(sizeLabel(row), "numeric"),
       td(row.entry_date),
@@ -361,7 +422,7 @@ function renderClosed() {
   if (!rows.length) {
     const tr = document.createElement("tr");
     const empty = td("No closed trades match the current search.");
-    empty.colSpan = 11;
+    empty.colSpan = 12;
     tr.appendChild(empty);
     body.appendChild(tr);
   }
@@ -447,6 +508,8 @@ function renderFacts(payload) {
       <h3>Status</h3>
       <dl>
         <dt>Value Point</dt><dd>${escapeHtml(valuePointLabel)}</dd>
+        <dt>Cap Bucket</dt><dd>${escapeHtml(capBucket(trade))}</dd>
+        <dt>Size</dt><dd>${escapeHtml(sizeLabel(trade))}</dd>
         <dt>Action</dt><dd>${escapeHtml(trade.action || trade.monitor_action || "NA")}</dd>
         <dt>Reason</dt><dd>${escapeHtml(trade.reason || trade.monitor_reason || "NA")}</dd>
         <dt>Bars Held</dt><dd>${escapeHtml(trade.bars_held ?? "NA")}</dd>

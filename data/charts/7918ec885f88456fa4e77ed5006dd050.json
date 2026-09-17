@@ -3,6 +3,7 @@
   "trade": {
     "id": "7918ec885f88456fa4e77ed5006dd050",
     "symbol": "IDEA",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-26",
@@ -15,7 +16,11 @@
     "latest_close": 14.45,
     "return_pct": -5.30799475753605,
     "pnl": -0.8100000000000005,
-    "bars_held": 14,
+    "bars_held": 13,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-1.0%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -32,7 +37,7 @@
     "trades": 12,
     "win_rate_pct": 50.0,
     "avg_trade_pct": 8.086756599044454,
-    "sharpe": 0.48293697855391576,
+    "sharpe": 0.48308255426657254,
     "max_drawdown_pct": -52.84482403788117
   },
   "manual_stop_price": null,
@@ -136,14 +141,6 @@
     {
       "date": "2026-09-10",
       "Close": 14.9,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "donchian_entry_high_45": 15.6,
-      "donchian_exit_low_32": 12.63
-    },
-    {
-      "date": "2026-09-11",
-      "Close": 14.97,
       "position": 1.0,
       "trade_signal": 1.0,
       "donchian_entry_high_45": 15.6,

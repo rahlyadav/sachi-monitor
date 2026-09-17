@@ -3,6 +3,7 @@
   "trade": {
     "id": "536b8756e31a4d719628f1b2483bd2e8",
     "symbol": "ENGINERSIN",
+    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-09-01",
@@ -15,7 +16,11 @@
     "latest_close": 262.45,
     "return_pct": -0.20912547528517678,
     "pnl": -0.5500000000000114,
-    "bars_held": 10,
+    "bars_held": 9,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-1.9%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -32,7 +37,7 @@
     "trades": 15,
     "win_rate_pct": 40.0,
     "avg_trade_pct": 2.5222427434532633,
-    "sharpe": 0.24059315000896292,
+    "sharpe": 0.24066562356575216,
     "max_drawdown_pct": -50.74529992996478
   },
   "manual_stop_price": null,
@@ -138,24 +143,14 @@
       "sma50_atr_lower_05": 238.8991857142857
     },
     {
-      "date": "2026-09-11",
-      "Close": 268.95,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_20": 261.9635,
-      "sma_50": 244.5932,
-      "sma50_atr_upper_05": 249.61855714285713,
-      "sma50_atr_lower_05": 239.56784285714286
-    },
-    {
       "date": "2026-09-15",
       "Close": 262.45,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_20": 262.847,
-      "sma_50": 244.9982,
-      "sma50_atr_upper_05": 250.24962857142856,
-      "sma50_atr_lower_05": 239.74677142857144
+      "sma_20": 261.6385,
+      "sma_50": 244.4632,
+      "sma50_atr_upper_05": 249.71177142857144,
+      "sma50_atr_lower_05": 239.21462857142856
     }
   ]
 }

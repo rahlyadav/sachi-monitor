@@ -3,6 +3,7 @@
   "trade": {
     "id": "164e42da054c473397722ab1a3fc54e6",
     "symbol": "MOTILALOFS",
+    "cap_bucket": "Mid",
     "strategy_key": "donchian_45_32",
     "strategy_label": "Donchian Breakout (45/32)",
     "entry_date": "2026-08-24",
@@ -15,7 +16,11 @@
     "latest_close": 990.8,
     "return_pct": 0.08080808080808133,
     "pnl": 0.7999999999999545,
-    "bars_held": 16,
+    "bars_held": 15,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-9.8%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -32,7 +37,7 @@
     "trades": 14,
     "win_rate_pct": 64.28571428571429,
     "avg_trade_pct": 13.0626074414485,
-    "sharpe": 0.740499537019614,
+    "sharpe": 0.740723030943371,
     "max_drawdown_pct": -40.245592916293894
   },
   "manual_stop_price": null,
@@ -166,20 +171,12 @@
       "donchian_exit_low_32": 836.95
     },
     {
-      "date": "2026-09-11",
-      "Close": 1026.5,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "donchian_entry_high_45": 1055.0,
-      "donchian_exit_low_32": 836.95
-    },
-    {
       "date": "2026-09-15",
       "Close": 990.8,
       "position": 1.0,
       "trade_signal": 1.0,
       "donchian_entry_high_45": 1055.0,
-      "donchian_exit_low_32": 851.95
+      "donchian_exit_low_32": 836.95
     }
   ]
 }

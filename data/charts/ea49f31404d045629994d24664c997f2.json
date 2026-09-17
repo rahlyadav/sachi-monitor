@@ -3,6 +3,7 @@
   "trade": {
     "id": "ea49f31404d045629994d24664c997f2",
     "symbol": "THELEELA",
+    "cap_bucket": "Small",
     "strategy_key": "sma_20_50_atr05_band",
     "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
     "entry_date": "2026-06-25",
@@ -15,7 +16,11 @@
     "latest_close": 522.45,
     "return_pct": 4.920172708103232,
     "pnl": 24.500000000000057,
-    "bars_held": 57,
+    "bars_held": 56,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-4.4%)",
     "stop_text": "",
     "action": "HOLD",
     "reason": "Strategy position is still active",
@@ -32,7 +37,7 @@
     "trades": 3,
     "win_rate_pct": 33.33333333333333,
     "avg_trade_pct": -3.72857191880005,
-    "sharpe": -0.16133028745332098,
+    "sharpe": -0.16158219547442637,
     "max_drawdown_pct": -17.952814262933348
   },
   "manual_stop_price": null,
@@ -608,24 +613,14 @@
       "sma50_atr_lower_05": 506.52049999999997
     },
     {
-      "date": "2026-09-11",
-      "Close": 542.3,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_20": 550.5875,
-      "sma_50": 516.285,
-      "sma50_atr_upper_05": 525.2903571428571,
-      "sma50_atr_lower_05": 507.2796428571428
-    },
-    {
       "date": "2026-09-15",
       "Close": 522.45,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_20": 550.7524999999999,
-      "sma_50": 516.981,
-      "sma50_atr_upper_05": 526.4381428571429,
-      "sma50_atr_lower_05": 507.52385714285714
+      "sma_20": 549.595,
+      "sma_50": 515.8879999999999,
+      "sma50_atr_upper_05": 524.9844285714285,
+      "sma50_atr_lower_05": 506.79157142857133
     }
   ]
 }

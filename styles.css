@@ -224,13 +224,13 @@ main {
 
 table {
   width: 100%;
-  min-width: 1240px;
+  min-width: 1320px;
   border-collapse: collapse;
   font-size: 13px;
 }
 
 #activityTab table {
-  min-width: 860px;
+  min-width: 960px;
 }
 
 th,
@@ -342,6 +342,42 @@ tr.stop {
   color: var(--amber);
   border-color: rgba(160, 106, 18, 0.28);
   background: #fff7e8;
+}
+
+.pill.cap {
+  min-width: 58px;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.pill.cap-large {
+  color: #234f86;
+  border-color: rgba(36, 106, 159, 0.25);
+  background: #eef6fc;
+}
+
+.pill.cap-mid {
+  color: #5e4b00;
+  border-color: rgba(160, 106, 18, 0.25);
+  background: #fff7d8;
+}
+
+.pill.cap-small {
+  color: #14613f;
+  border-color: rgba(22, 114, 71, 0.24);
+  background: #edf8f0;
+}
+
+.pill.cap-micro {
+  color: #753a67;
+  border-color: rgba(117, 58, 103, 0.24);
+  background: #f8eff7;
+}
+
+.pill.cap-index,
+.pill.cap-other {
+  color: var(--muted);
+  background: #f6f7f3;
 }
 
 .chart-layout {
@@ -466,6 +502,6 @@ tr.stop {
   }
 
   table {
-    min-width: 1180px;
+    min-width: 1260px;
   }
 }

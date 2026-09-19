@@ -78,6 +78,31 @@ function capCell(row) {
   return cell;
 }
 
+function newsTag(row) {
+  return firstPresent(row.news_tag, row.source_news_tag, "No News");
+}
+
+function newsCatalyst(row) {
+  return firstPresent(row.news_catalyst, row.source_news_catalyst, "NA");
+}
+
+function newsKind(row) {
+  const tag = String(newsTag(row)).toLowerCase();
+  if (tag.includes("positive")) return "good";
+  if (tag.includes("negative") || tag.includes("error")) return "bad";
+  if (tag.includes("mixed") || tag.includes("neutral")) return "watch";
+  return "";
+}
+
+function newsCell(row) {
+  const cell = document.createElement("td");
+  const tag = newsTag(row);
+  cell.appendChild(pill(tag, newsKind(row)));
+  const subject = firstPresent(row.news_latest_subject, row.source_news_latest_subject);
+  if (subject) cell.title = subject;
+  return cell;
+}
+
 function normalizeActivityRow(row, fallbackAction, fallbackDate) {
   const normalized = { ...row };
   normalized.action = firstPresent(normalized.action, fallbackAction);
@@ -307,11 +332,11 @@ function renderActivity() {
       );
       const reason = td(row.reason || "", "reason");
       reason.title = row.reason || "";
-      tr.append(reason, td(sizeLabel(row), "numeric"));
+      tr.append(reason, newsCell(row), td(newsCatalyst(row), "news-catalyst"), td(sizeLabel(row), "numeric"));
       return tr;
     },
     "No actions are queued for the next market open.",
-    8,
+    10,
   );
 
   renderActivityTable(
@@ -333,11 +358,11 @@ function renderActivity() {
       );
       const reason = td(row.reason || "", "reason");
       reason.title = row.reason || "";
-      tr.append(reason, td(sizeLabel(row), "numeric"));
+      tr.append(reason, newsCell(row), td(newsCatalyst(row), "news-catalyst"), td(sizeLabel(row), "numeric"));
       return tr;
     },
     "No entry or exit actions were executed on the latest data date.",
-    9,
+    11,
   );
 }
 
@@ -348,7 +373,7 @@ function renderActive() {
   const rows = sortRows("active", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "ACTIVE") return false;
     if (!needle) return true;
-    return `${row.symbol} ${capBucket(row)} ${row.strategy_label} ${sizeLabel(row)} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
+    return `${row.symbol} ${capBucket(row)} ${row.strategy_label} ${sizeLabel(row)} ${newsTag(row)} ${newsCatalyst(row)} ${row.action} ${row.reason}`.toLowerCase().includes(needle);
   }));
   updateSortHeaders("activeTable", "active");
 
@@ -361,6 +386,8 @@ function renderActive() {
       capCell(row),
       td(row.strategy_label),
       td(sizeLabel(row), "numeric"),
+      newsCell(row),
+      td(newsCatalyst(row), "news-catalyst"),
       td(row.entry_date),
       td(fmt(row.entry_price), "numeric"),
       td(row.latest_date),
@@ -381,7 +408,7 @@ function renderActive() {
   if (!rows.length) {
     const tr = document.createElement("tr");
     const empty = td("No active trades match the current search.");
-    empty.colSpan = 13;
+    empty.colSpan = 15;
     tr.appendChild(empty);
     body.appendChild(tr);
   }
@@ -394,7 +421,7 @@ function renderClosed() {
   const rows = sortRows("closed", state.monitor.filter((row) => {
     if (String(row.status || "").toUpperCase() !== "CLOSED") return false;
     if (!needle) return true;
-    return `${row.symbol} ${capBucket(row)} ${row.strategy_label} ${sizeLabel(row)} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
+    return `${row.symbol} ${capBucket(row)} ${row.strategy_label} ${sizeLabel(row)} ${newsTag(row)} ${newsCatalyst(row)} ${row.close_reason} ${row.reason}`.toLowerCase().includes(needle);
   }));
   updateSortHeaders("closedTable", "closed");
 
@@ -406,6 +433,8 @@ function renderClosed() {
       capCell(row),
       td(row.strategy_label),
       td(sizeLabel(row), "numeric"),
+      newsCell(row),
+      td(newsCatalyst(row), "news-catalyst"),
       td(row.entry_date),
       td(row.exit_date || row.latest_date || "NA"),
       td(fmt(row.entry_price), "numeric"),
@@ -422,7 +451,7 @@ function renderClosed() {
   if (!rows.length) {
     const tr = document.createElement("tr");
     const empty = td("No closed trades match the current search.");
-    empty.colSpan = 12;
+    empty.colSpan = 14;
     tr.appendChild(empty);
     body.appendChild(tr);
   }
@@ -510,6 +539,8 @@ function renderFacts(payload) {
         <dt>Value Point</dt><dd>${escapeHtml(valuePointLabel)}</dd>
         <dt>Cap Bucket</dt><dd>${escapeHtml(capBucket(trade))}</dd>
         <dt>Size</dt><dd>${escapeHtml(sizeLabel(trade))}</dd>
+        <dt>News</dt><dd>${escapeHtml(newsTag(trade))}</dd>
+        <dt>Catalyst</dt><dd>${escapeHtml(newsCatalyst(trade))}</dd>
         <dt>Action</dt><dd>${escapeHtml(trade.action || trade.monitor_action || "NA")}</dd>
         <dt>Reason</dt><dd>${escapeHtml(trade.reason || trade.monitor_reason || "NA")}</dd>
         <dt>Bars Held</dt><dd>${escapeHtml(trade.bars_held ?? "NA")}</dd>

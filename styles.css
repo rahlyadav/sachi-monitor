@@ -299,6 +299,11 @@ td.filter {
   white-space: normal;
 }
 
+td.news-catalyst {
+  min-width: 140px;
+  white-space: normal;
+}
+
 tr.pass,
 tr.hold {
   background: #f7fbf8;

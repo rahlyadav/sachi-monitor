@@ -16,11 +16,11 @@
     "exit_price": 80.53,
     "realized_return_pct": -8.175598631698977,
     "close_reason": "STOP HIT",
-    "latest_date": "2026-09-18",
+    "latest_date": "2026-09-21",
     "latest_close": 83.06,
     "return_pct": -5.290763968072976,
     "pnl": -4.640000000000001,
-    "bars_held": 59,
+    "bars_held": 60,
     "position_tier": "Normal",
     "suggested_capital": 1000,
     "position_size_label": "1k",
@@ -41,12 +41,12 @@
     "trades": 14,
     "win_rate_pct": 42.857142857142854,
     "avg_trade_pct": -1.0883531167734226,
-    "sharpe": 0.14039781017487757,
+    "sharpe": 0.14035561369392477,
     "max_drawdown_pct": -51.43931285559149
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-25",
-  "chart_end_date": "2026-09-18",
+  "chart_end_date": "2026-09-21",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_20",
@@ -655,6 +655,16 @@
       "sma_50": 85.3502,
       "sma50_atr_upper_05": 87.1877,
       "sma50_atr_lower_05": 83.5127
+    },
+    {
+      "date": "2026-09-21",
+      "Close": 83.06,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 87.268,
+      "sma_50": 85.35359999999999,
+      "sma50_atr_upper_05": 87.18502857142856,
+      "sma50_atr_lower_05": 83.52217142857141
     }
   ]
 }

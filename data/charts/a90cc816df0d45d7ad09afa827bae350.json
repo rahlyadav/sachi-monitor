@@ -12,19 +12,21 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-09-24",
-    "latest_close": 282.0,
-    "return_pct": -6.25,
-    "pnl": -18.80000000000001,
-    "bars_held": 61,
+    "latest_date": "2026-09-25",
+    "latest_close": 284.0,
+    "return_pct": -5.585106382978722,
+    "pnl": -16.80000000000001,
+    "bars_held": 62,
     "position_tier": "Strong",
     "suggested_capital": 3000,
     "position_size_label": "3k",
     "position_size_reason": "Within 10% of 52-week high (-9.2%)",
     "stop_text": "",
-    "action": "HOLD",
-    "reason": "Strategy position is still active",
-    "action_sort": 5
+    "action": "EXIT NEXT OPEN",
+    "reason": "Strategy exit signal on the latest close; execute at the next market open",
+    "suggested_exit_date": "",
+    "suggested_exit_price": "",
+    "action_sort": 2
   },
   "strategy": {
     "key": "ema_12_26_atr05_band",
@@ -33,16 +35,16 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 19.841935367585783,
+    "total_return_c_pct": 20.6918781716112,
     "trades": 5,
     "win_rate_pct": 20.0,
-    "avg_trade_pct": 7.3739211736973775,
-    "sharpe": 0.42472639854736055,
+    "avg_trade_pct": 7.506899897101634,
+    "sharpe": 0.43594730865896825,
     "max_drawdown_pct": -29.222322803876423
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-30",
-  "chart_end_date": "2026-09-24",
+  "chart_end_date": "2026-09-25",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_12",
@@ -671,6 +673,16 @@
       "ema_26": 307.787853368865,
       "ema26_atr_upper_05": 312.5717819402936,
       "ema26_atr_lower_05": 303.0039247974364
+    },
+    {
+      "date": "2026-09-25",
+      "Close": 284.0,
+      "position": 1.0,
+      "trade_signal": 0.0,
+      "ema_12": 300.80940976404503,
+      "ema_26": 306.02579015635644,
+      "ema26_atr_upper_05": 310.759718727785,
+      "ema26_atr_lower_05": 301.29186158492786
     }
   ]
 }

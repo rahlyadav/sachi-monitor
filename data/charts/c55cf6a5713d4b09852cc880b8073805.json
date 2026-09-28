@@ -16,11 +16,11 @@
     "exit_price": 316.2,
     "realized_return_pct": -9.359323491471994,
     "close_reason": "EXIT NEXT OPEN: Strategy exit after monitored entry on 2026-09-16",
-    "latest_date": "2026-09-25",
-    "latest_close": 335.45,
-    "return_pct": -3.8411924896087246,
-    "pnl": -13.400000000000034,
-    "bars_held": 51,
+    "latest_date": "2026-09-28",
+    "latest_close": 325.85,
+    "return_pct": -6.593091586641819,
+    "pnl": -23.0,
+    "bars_held": 52,
     "position_tier": "Normal",
     "suggested_capital": 1000,
     "position_size_label": "1k",
@@ -37,12 +37,12 @@
     "indicator_description": "Adds a lower panel with EMA10, EMA25, and EMA50."
   },
   "metrics": {
-    "total_return_c_pct": -46.66079183453725,
+    "total_return_c_pct": -48.18726790664469,
     "trades": 17,
     "win_rate_pct": 11.76470588235294,
-    "avg_trade_pct": -3.145916062912915,
-    "sharpe": -0.5797299159553275,
-    "max_drawdown_pct": -58.57666098831245
+    "avg_trade_pct": -3.310577349500737,
+    "sharpe": -0.6087251583853597,
+    "max_drawdown_pct": -59.70807457624361
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-07-15",

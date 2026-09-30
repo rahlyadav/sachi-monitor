@@ -1,17 +1,44 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T17:22:28",
-  "latest_data_date": "2026-09-29",
-  "scan_date": "2026-09-29",
+  "generated_at": "2026-09-30T17:22:33",
+  "latest_data_date": "2026-09-30",
+  "scan_date": "2026-09-30",
   "summary": {
-    "tomorrow": 5,
-    "executed_today": 2
+    "tomorrow": 1,
+    "executed_today": 5
   },
   "tomorrow": [
     {
+      "id": "37be4b3fdb638ba7e5",
+      "action": "ENTER",
+      "status": "PENDING",
+      "signal_date": "2026-09-30",
+      "planned_execution": "NEXT MARKET OPEN",
+      "symbol": "CUPID",
+      "cap_bucket": "Micro",
+      "strategy_key": "donchian_45_32",
+      "strategy_label": "Donchian Breakout (45/32)",
+      "trigger_price": 311.65,
+      "trigger_basis": "Signal-day close",
+      "reason": "PASS | EL@Entry PASS 2026-09-30 | Score 105 | RS20 19.1% | 52W -40.9% | 20D high + 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-09-30 | 2024 5/5 (100%)",
+      "position_size_label": "1k",
+      "news_tag": "Neutral",
+      "news_catalyst": "NA",
+      "news_catalysts": "NA",
+      "news_count": 8,
+      "news_positive_count": 0,
+      "news_negative_count": 0,
+      "news_score_sum": 0,
+      "news_latest_date": "2026-09-30",
+      "news_latest_subject": "Press Release",
+      "news_fetch_status": "OK"
+    }
+  ],
+  "today": [
+    {
       "id": "90e45c10dbeccdd349",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-29",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "USHAMART",
@@ -22,6 +49,8 @@
       "entry_price": 541.0,
       "trigger_price": 498.9,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-30",
+      "execution_price": 498.95,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k",
       "news_tag": "Neutral",
@@ -38,7 +67,7 @@
     {
       "id": "a6a8e635ec40cc304c",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-29",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "AFFLE",
@@ -49,13 +78,15 @@
       "entry_price": 1635.0,
       "trigger_price": 1501.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-30",
+      "execution_price": 1511.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "1de598a97a7734a516",
       "action": "ENTER",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-29",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "LLOYDSENGG",
@@ -64,6 +95,8 @@
       "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
       "trigger_price": 102.19,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-30",
+      "execution_price": 102.72,
       "reason": "PASS | EL@Entry PASS 2026-09-29 | Score 105 | RS20 24.3% | 52W -1.2% | 20D high + 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-09-29 | 2024 4/5 (80%)",
       "position_size_label": "1k",
       "news_tag": "Neutral",
@@ -80,7 +113,7 @@
     {
       "id": "9542a148d1a605cfc9",
       "action": "ENTER",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-29",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "KIRLOSENG",
@@ -89,6 +122,8 @@
       "strategy_label": "Donchian Breakout (45/32)",
       "trigger_price": 2402.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-30",
+      "execution_price": 2358.0,
       "reason": "PASS | EL@Entry PASS 2026-09-29 | Score 105 | RS20 20.5% | 52W -11.7% | 20D high + 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-09-29 | 2024 5/5 (100%)",
       "position_size_label": "1k",
       "news_tag": "Neutral",
@@ -105,7 +140,7 @@
     {
       "id": "d46c6cdfdff7b4fb60",
       "action": "ENTER",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-09-29",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "AXISCADES",
@@ -114,6 +149,8 @@
       "strategy_label": "52W High Cross Within 10%",
       "trigger_price": 2067.4,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-09-30",
+      "execution_price": 2070.0,
       "reason": "PASS | EL@Entry PASS 2026-09-29 | Score 105 | RS20 29.8% | 52W -6.5% | 20D high | Filter@Entry 2026-09-29 | 2024 5/5 (100%)",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -126,46 +163,6 @@
       "news_latest_date": "2026-09-28",
       "news_latest_subject": "Trading Window",
       "news_fetch_status": "OK"
-    }
-  ],
-  "today": [
-    {
-      "id": "3194a6cd9ae906c77e",
-      "action": "EXIT",
-      "status": "EXECUTED",
-      "signal_date": "2026-09-28",
-      "planned_execution": "NEXT MARKET OPEN",
-      "symbol": "IDEA",
-      "cap_bucket": "Mid",
-      "strategy_key": "donchian_45_32",
-      "strategy_label": "Donchian Breakout (45/32)",
-      "entry_date": "2026-08-26",
-      "entry_price": 15.26,
-      "trigger_price": 13.47,
-      "trigger_basis": "Signal-day close",
-      "execution_date": "2026-09-29",
-      "execution_price": 13.6,
-      "reason": "Strategy exit signal on the latest close; execute at the next market open",
-      "position_size_label": "3k"
-    },
-    {
-      "id": "20aa261d5d0f550ee5",
-      "action": "EXIT",
-      "status": "EXECUTED",
-      "signal_date": "2026-09-28",
-      "planned_execution": "NEXT MARKET OPEN",
-      "symbol": "BAJAJAUTO",
-      "cap_bucket": "Large",
-      "strategy_key": "ema_12_26_atr05_band",
-      "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
-      "entry_date": "2026-07-23",
-      "entry_price": 10999.5,
-      "trigger_price": 11024.0,
-      "trigger_basis": "Signal-day close",
-      "execution_date": "2026-09-29",
-      "execution_price": 11016.0,
-      "reason": "Strategy exit signal on the latest close; execute at the next market open",
-      "position_size_label": "5k"
     }
   ]
 }

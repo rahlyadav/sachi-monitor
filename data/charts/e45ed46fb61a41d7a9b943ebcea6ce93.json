@@ -12,10 +12,10 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-10-05",
-    "latest_close": 15.43,
-    "return_pct": -7.4385122975405,
-    "pnl": -1.240000000000002,
+    "latest_date": "2026-10-06",
+    "latest_close": 15.4,
+    "return_pct": -7.618476304739064,
+    "pnl": -1.2700000000000014,
     "bars_held": 18,
     "position_tier": "Normal",
     "suggested_capital": 1000,
@@ -33,16 +33,16 @@
     "indicator_description": "Uses combined signal from SMA50/75/100/150/200 ATR-band strategies (\u00b11.0 ATR)."
   },
   "metrics": {
-    "total_return_c_pct": -27.03671455033545,
+    "total_return_c_pct": -27.1785744701987,
     "trades": 12,
     "win_rate_pct": 25.0,
-    "avg_trade_pct": -4.358715950308137,
-    "sharpe": 0.09447586747742649,
-    "max_drawdown_pct": -75.8931876267628
+    "avg_trade_pct": -4.373712950908018,
+    "sharpe": 0.093788607001202,
+    "max_drawdown_pct": -75.94005764433875
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-08",
-  "chart_end_date": "2026-10-05",
+  "chart_end_date": "2026-10-06",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_50",
@@ -241,26 +241,26 @@
       "sma_200": 16.25395
     },
     {
-      "date": "2026-10-01",
-      "Close": 15.6,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_50": 15.632200000000001,
-      "sma_75": 15.711066666666666,
-      "sma_100": 15.9187,
-      "sma_150": 16.0124,
-      "sma_200": 16.24175
-    },
-    {
       "date": "2026-10-05",
       "Close": 15.43,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_50": 15.6402,
-      "sma_75": 15.699866666666667,
-      "sma_100": 15.911800000000001,
-      "sma_150": 16.004466666666666,
-      "sma_200": 16.2273
+      "sma_50": 15.628799999999998,
+      "sma_75": 15.708799999999998,
+      "sma_100": 15.916999999999998,
+      "sma_150": 16.011266666666668,
+      "sma_200": 16.2409
+    },
+    {
+      "date": "2026-10-06",
+      "Close": 15.4,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_50": 15.6362,
+      "sma_75": 15.697199999999999,
+      "sma_100": 15.9098,
+      "sma_150": 16.003133333333334,
+      "sma_200": 16.2263
     }
   ]
 }

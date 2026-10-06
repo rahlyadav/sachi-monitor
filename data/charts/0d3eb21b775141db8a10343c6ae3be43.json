@@ -11,22 +11,24 @@
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
-    "status": "ACTIVE",
-    "latest_date": "2026-10-05",
-    "latest_close": 1619.6,
-    "return_pct": -1.8424242424242454,
-    "pnl": -30.40000000000009,
+    "status": "CLOSED",
+    "exit_date": "2026-10-06",
+    "exit_price": 1613.0,
+    "realized_return_pct": -2.2424242424242458,
+    "close_reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
+    "latest_date": "2026-10-06",
+    "latest_close": 1633.8,
+    "return_pct": -0.9818181818181837,
+    "pnl": -16.200000000000045,
     "bars_held": 71,
     "position_tier": "Normal",
     "suggested_capital": 1000,
     "position_size_label": "1k",
     "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
-    "action": "EXIT NEXT OPEN",
-    "reason": "Strategy exit signal on the latest close; execute at the next market open",
-    "suggested_exit_date": "",
-    "suggested_exit_price": "",
-    "action_sort": 2
+    "action": "CLOSED",
+    "reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
+    "action_sort": 8
   },
   "strategy": {
     "key": "ema_12_26_atr05_band",
@@ -35,17 +37,17 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 104.25854381058839,
+    "total_return_c_pct": 106.04940039376345,
     "trades": 11,
     "win_rate_pct": 45.45454545454545,
-    "avg_trade_pct": 16.408098096751456,
-    "sharpe": 0.4946289000162491,
+    "avg_trade_pct": 16.486335011352004,
+    "sharpe": 0.49875248263213956,
     "max_drawdown_pct": -44.92876314761634
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-24",
-  "chart_end_date": "2026-10-05",
-  "chart_end_reason": "latest",
+  "chart_end_date": "2026-10-06",
+  "chart_end_reason": "exit",
   "indicator_columns": [
     "ema_12",
     "ema_26",
@@ -755,24 +757,24 @@
       "ema26_atr_lower_05": 1680.781904783831
     },
     {
-      "date": "2026-10-01",
-      "Close": 1638.1,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "ema_12": 1678.2105615301434,
-      "ema_26": 1699.3729277098964,
-      "ema26_atr_upper_05": 1723.0122134241822,
-      "ema26_atr_lower_05": 1675.7336419956107
-    },
-    {
       "date": "2026-10-05",
       "Close": 1619.6,
       "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_12": 1675.3644076839896,
+      "ema_26": 1698.002557339526,
+      "ema26_atr_upper_05": 1721.7097001966688,
+      "ema26_atr_lower_05": 1674.2954144823832
+    },
+    {
+      "date": "2026-10-06",
+      "Close": 1633.8,
+      "position": 1.0,
       "trade_signal": 0.0,
-      "ema_12": 1669.1935520639674,
-      "ema_26": 1693.4638219536077,
-      "ema26_atr_upper_05": 1717.1388219536077,
-      "ema26_atr_lower_05": 1669.7888219536078
+      "ema_12": 1668.9698834249143,
+      "ema_26": 1693.246812351413,
+      "ema26_atr_upper_05": 1716.4432409228416,
+      "ema26_atr_lower_05": 1670.0503837799843
     }
   ]
 }

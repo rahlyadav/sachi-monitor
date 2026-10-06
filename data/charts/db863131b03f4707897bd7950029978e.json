@@ -12,10 +12,10 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-10-05",
-    "latest_close": 1231.4,
-    "return_pct": 9.662481075785912,
-    "pnl": 108.5,
+    "latest_date": "2026-10-06",
+    "latest_close": 1249.4,
+    "return_pct": 11.265473327990016,
+    "pnl": 126.5,
     "bars_held": 48,
     "position_tier": "Normal",
     "suggested_capital": 1000,
@@ -33,16 +33,16 @@
     "indicator_description": "Adds a lower panel with EMA12, EMA26, and EMA26 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": -8.255592401985423,
+    "total_return_c_pct": -6.91451774162789,
     "trades": 6,
     "win_rate_pct": 50.0,
-    "avg_trade_pct": -1.0120159699588185,
-    "sharpe": -0.0422401872761128,
+    "avg_trade_pct": -0.7448505945914681,
+    "sharpe": -0.019061962665642192,
     "max_drawdown_pct": -31.066450520427946
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-07-28",
-  "chart_end_date": "2026-10-05",
+  "chart_end_date": "2026-10-06",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_12",
@@ -523,24 +523,24 @@
       "ema26_atr_lower_05": 1210.1206880299617
     },
     {
-      "date": "2026-10-01",
-      "Close": 1215.3,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "ema_12": 1241.2790067752785,
-      "ema_26": 1233.5268275409696,
-      "ema26_atr_upper_05": 1258.5232561123983,
-      "ema26_atr_lower_05": 1208.530398969541
-    },
-    {
       "date": "2026-10-05",
       "Close": 1231.4,
       "position": 1.0,
       "trade_signal": 1.0,
-      "ema_12": 1239.7591595790818,
-      "ema_26": 1233.3692847601571,
-      "ema26_atr_upper_05": 1258.4978561887285,
-      "ema26_atr_lower_05": 1208.2407133315858
+      "ema_12": 1243.7559298522017,
+      "ema_26": 1234.7194201335624,
+      "ema26_atr_upper_05": 1259.2515629907052,
+      "ema26_atr_lower_05": 1210.1872772764195
+    },
+    {
+      "date": "2026-10-06",
+      "Close": 1249.4,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_12": 1244.6242483364783,
+      "ema_26": 1235.8068704940392,
+      "ema26_atr_upper_05": 1260.4890133511822,
+      "ema26_atr_lower_05": 1211.1247276368963
     }
   ]
 }

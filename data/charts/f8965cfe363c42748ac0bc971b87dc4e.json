@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "f8965cfe363c42748ac0bc971b87dc4e",
+    "symbol": "RRKABEL",
+    "cap_bucket": "Small",
+    "strategy_key": "ema_10_25_50_entry_level_exit_cross",
+    "strategy_label": "EMA10 Level Entry + Cross Exit (EMA25/50)",
+    "entry_date": "2026-10-07",
+    "entry_price": 2785.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-10-07",
+    "latest_close": 2722.5,
+    "return_pct": -2.2441651705565557,
+    "pnl": -62.5,
+    "bars_held": 0,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-6.5%)",
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5,
+    "source_signal_date": "2026-10-06",
+    "source_trigger_price": 2789.7,
+    "source_trigger_basis": "Signal-day close",
+    "news_tag": "No News",
+    "news_catalyst": "NA",
+    "news_catalysts": "NA",
+    "news_count": 0,
+    "news_positive_count": 0,
+    "news_negative_count": 0,
+    "news_score_sum": 0,
+    "news_score_max": 0,
+    "news_score_min": 0,
+    "news_window_start": "2026-09-29",
+    "news_window_end": "2026-10-06",
+    "news_window_days": 7,
+    "news_latest_date": "",
+    "news_latest_subject": "",
+    "news_latest_source": "",
+    "news_fetch_status": "OK"
+  },
+  "strategy": {
+    "key": "ema_10_25_50_entry_level_exit_cross",
+    "label": "EMA10 Level Entry + Cross Exit (EMA25/50)",
+    "description": "Enter when EMA10 is above both EMA25 and EMA50; exit when EMA10 crosses below EMA25 and EMA50.",
+    "indicator_description": "Adds a lower panel with EMA10, EMA25, and EMA50."
+  },
+  "metrics": {
+    "total_return_c_pct": 48.962156649509666,
+    "trades": 9,
+    "win_rate_pct": 44.44444444444444,
+    "avg_trade_pct": 6.290867727048423,
+    "sharpe": 0.6390124065173318,
+    "max_drawdown_pct": -23.839100173673554
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-10-07",
+  "chart_end_date": "2026-10-07",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "ema_10",
+    "ema_25",
+    "ema_50"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-10-07",
+      "Close": 2722.5,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 2600.366086142253,
+      "ema_25": 2570.8107651114688,
+      "ema_50": 2545.318821726767
+    }
+  ]
+}

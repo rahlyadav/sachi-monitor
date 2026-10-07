@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "3565c4f4266d4d21a5d89be025caa51b",
+    "symbol": "HFCL",
+    "cap_bucket": "Small",
+    "strategy_key": "donchian_45_32",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "entry_date": "2026-10-07",
+    "entry_price": 275.91,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-10-07",
+    "latest_close": 271.9,
+    "return_pct": -1.453372476532222,
+    "pnl": -4.010000000000048,
+    "bars_held": 0,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (0.0%)",
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5,
+    "source_signal_date": "2026-10-06",
+    "source_trigger_price": 262.78,
+    "source_trigger_basis": "Signal-day close",
+    "news_tag": "Neutral",
+    "news_catalyst": "NA",
+    "news_catalysts": "NA",
+    "news_count": 4,
+    "news_positive_count": 0,
+    "news_negative_count": 0,
+    "news_score_sum": 0,
+    "news_score_max": 0,
+    "news_score_min": 0,
+    "news_window_start": "2026-09-29",
+    "news_window_end": "2026-10-06",
+    "news_window_days": 7,
+    "news_latest_date": "2026-10-01",
+    "news_latest_subject": "General Updates",
+    "news_latest_source": "NSE",
+    "news_fetch_status": "OK"
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
+  },
+  "metrics": {
+    "total_return_c_pct": 745.1191580404096,
+    "trades": 14,
+    "win_rate_pct": 42.857142857142854,
+    "avg_trade_pct": 24.9933435886945,
+    "sharpe": 1.0023316012032801,
+    "max_drawdown_pct": -41.507675438596515
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-10-07",
+  "chart_end_date": "2026-10-07",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "donchian_entry_high_45",
+    "donchian_exit_low_32"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-10-07",
+      "Close": 271.9,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 262.78,
+      "donchian_exit_low_32": 205.92
+    }
+  ]
+}

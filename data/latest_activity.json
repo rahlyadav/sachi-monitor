@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-09T20:23:19",
-  "latest_data_date": "2026-10-09",
-  "scan_date": "2026-10-09",
+  "generated_at": "2026-10-12T20:55:13",
+  "latest_data_date": "2026-10-12",
+  "scan_date": "2026-10-12",
   "summary": {
-    "tomorrow": 5,
-    "executed_today": 1
+    "tomorrow": 0,
+    "executed_today": 5
   },
-  "tomorrow": [
+  "tomorrow": [],
+  "today": [
     {
       "id": "101f8004ebf067d43a",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-09",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "AKUMS",
@@ -22,6 +23,8 @@
       "entry_price": 830.0,
       "trigger_price": 751.85,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-12",
+      "execution_price": 750.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -38,7 +41,7 @@
     {
       "id": "41cd449fa38018ffbb",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-09",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "AIRAN",
@@ -49,13 +52,15 @@
       "entry_price": 16.67,
       "trigger_price": 14.75,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-12",
+      "execution_price": 14.44,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "36eb55926aa206ed36",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-09",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "AIRAN",
@@ -66,13 +71,15 @@
       "entry_price": 16.67,
       "trigger_price": 14.75,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-12",
+      "execution_price": 14.44,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "872cb50a86b14b65ce",
       "action": "ENTER",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-09",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "SKYGOLD",
@@ -81,6 +88,8 @@
       "strategy_label": "52W High Cross Within 10%",
       "trigger_price": 921.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-12",
+      "execution_price": 939.5,
       "reason": "PASS | EL@Entry PASS 2026-10-09 | Score 105 | RS20 15.4% | 52W -1.6% | 20D high | Filter@Entry 2026-10-09 | 2024 5/5 (100%)",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -97,7 +106,7 @@
     {
       "id": "00a83c7128c2ab6e85",
       "action": "ENTER",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-09",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "HDFCLIFE",
@@ -106,6 +115,8 @@
       "strategy_label": "SMA ATR Bands ANY (50/75/100/150/200, \u00b11.0 ATR)",
       "trigger_price": 556.65,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-12",
+      "execution_price": 560.05,
       "reason": "PASS | EL@Entry PASS 2026-10-09 | Score 87 | RS20 13.0% | 52W -29.4% | 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-10-09 | 2024 5/5 (100%)",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -117,37 +128,6 @@
       "news_score_sum": 0,
       "news_latest_date": "2026-10-06",
       "news_latest_subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
-      "news_fetch_status": "OK"
-    }
-  ],
-  "today": [
-    {
-      "id": "ffcada61ce1b33474c",
-      "action": "EXIT",
-      "status": "EXECUTED",
-      "signal_date": "2026-10-08",
-      "planned_execution": "NEXT MARKET OPEN",
-      "symbol": "SOUTHBANK",
-      "cap_bucket": "Micro",
-      "strategy_key": "near52_cross_10",
-      "strategy_label": "52W High Cross Within 10%",
-      "entry_date": "2026-09-25",
-      "entry_price": 50.05,
-      "trigger_price": 46.39,
-      "trigger_basis": "Signal-day close",
-      "execution_date": "2026-10-09",
-      "execution_price": 46.15,
-      "reason": "Strategy exit signal on the latest close; execute at the next market open",
-      "position_size_label": "5k",
-      "news_tag": "Positive",
-      "news_catalyst": "capacity_expansion",
-      "news_catalysts": "capacity_expansion",
-      "news_count": 7,
-      "news_positive_count": 3,
-      "news_negative_count": 0,
-      "news_score_sum": 6,
-      "news_latest_date": "2026-09-24",
-      "news_latest_subject": "Allotment of Securities",
       "news_fetch_status": "OK"
     }
   ]

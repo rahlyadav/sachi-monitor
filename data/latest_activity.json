@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T18:54:07",
-  "latest_data_date": "2026-10-13",
-  "scan_date": "2026-10-13",
+  "generated_at": "2026-10-14T16:16:54",
+  "latest_data_date": "2026-10-14",
+  "scan_date": "2026-10-14",
   "summary": {
-    "tomorrow": 2,
-    "executed_today": 0
+    "tomorrow": 0,
+    "executed_today": 2
   },
-  "tomorrow": [
+  "tomorrow": [],
+  "today": [
     {
       "id": "7ae47df0e4d5c4c469",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-13",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "RRKABEL",
@@ -22,6 +23,8 @@
       "entry_price": 2785.0,
       "trigger_price": 2614.2,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-14",
+      "execution_price": 2634.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k",
       "news_tag": "No News",
@@ -38,7 +41,7 @@
     {
       "id": "dc2526abef5b0ec6f7",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-13",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "USHAMART",
@@ -49,6 +52,8 @@
       "entry_price": 541.0,
       "trigger_price": 486.45,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-14",
+      "execution_price": 486.45,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k",
       "news_tag": "Neutral",
@@ -62,6 +67,5 @@
       "news_latest_subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "news_fetch_status": "OK"
     }
-  ],
-  "today": []
+  ]
 }

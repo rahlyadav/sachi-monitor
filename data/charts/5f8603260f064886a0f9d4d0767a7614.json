@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "5f8603260f064886a0f9d4d0767a7614",
+    "symbol": "GABRIEL",
+    "cap_bucket": "Small",
+    "strategy_key": "donchian_45_32",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "entry_date": "2026-10-21",
+    "entry_price": 1485.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-10-21",
+    "latest_close": 1418.4,
+    "return_pct": -4.484848484848481,
+    "pnl": -66.59999999999991,
+    "bars_held": 0,
+    "position_tier": "Strong",
+    "suggested_capital": 3000,
+    "position_size_label": "3k",
+    "position_size_reason": "Within 10% of 52-week high (-7.1%)",
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5,
+    "source_signal_date": "2026-10-19",
+    "source_trigger_price": 1486.1,
+    "source_trigger_basis": "Signal-day close",
+    "news_tag": "Positive",
+    "news_catalyst": "acquisition_growth",
+    "news_catalysts": "acquisition_growth",
+    "news_count": 1,
+    "news_positive_count": 1,
+    "news_negative_count": 0,
+    "news_score_sum": 1,
+    "news_score_max": 1,
+    "news_score_min": 1,
+    "news_window_start": "2026-10-12",
+    "news_window_end": "2026-10-19",
+    "news_window_days": 7,
+    "news_latest_date": "2026-10-19",
+    "news_latest_subject": "General Updates",
+    "news_latest_source": "NSE",
+    "news_fetch_status": "OK"
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
+  },
+  "metrics": {
+    "total_return_c_pct": 738.1144401839489,
+    "trades": 11,
+    "win_rate_pct": 54.54545454545454,
+    "avg_trade_pct": 28.510897518718316,
+    "sharpe": 1.0912209222178333,
+    "max_drawdown_pct": -33.21635137589465
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-10-21",
+  "chart_end_date": "2026-10-21",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "donchian_entry_high_45",
+    "donchian_exit_low_32"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-10-21",
+      "Close": 1418.4,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1486.1,
+      "donchian_exit_low_32": 1283.7
+    }
+  ]
+}

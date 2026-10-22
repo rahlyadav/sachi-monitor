@@ -16,10 +16,10 @@
     "exit_price": 266.2,
     "realized_return_pct": 18.242793052902773,
     "close_reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
-    "latest_date": "2026-10-21",
-    "latest_close": 261.8,
-    "return_pct": 16.288366721449844,
-    "pnl": 36.670000000000016,
+    "latest_date": "2026-10-22",
+    "latest_close": 253.55,
+    "return_pct": 12.623817349975575,
+    "pnl": 28.420000000000016,
     "bars_held": 89,
     "position_tier": "Normal",
     "suggested_capital": 1000,
@@ -40,7 +40,7 @@
     "total_return_c_pct": 5.28022115092841,
     "trades": 4,
     "win_rate_pct": 50.0,
-    "avg_trade_pct": 2.562633593760533,
+    "avg_trade_pct": 1.5854204280340627,
     "sharpe": 0.2730184301992252,
     "max_drawdown_pct": -19.949523457717422
   },
@@ -848,22 +848,13 @@
       "ema_50": 283.5867979626261
     },
     {
-      "date": "2026-10-19",
-      "Close": 266.4,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "ema_10": 278.878834520262,
-      "ema_25": 285.18173946503487,
-      "ema_50": 282.9128058856604
-    },
-    {
       "date": "2026-10-21",
       "Close": 261.8,
       "position": 0.0,
       "trade_signal": 0.0,
-      "ema_10": 275.7735918802143,
-      "ema_25": 283.3831441215707,
-      "ema_50": 282.08485271367374
+      "ema_10": 278.0424708838984,
+      "ema_25": 284.82789331118875,
+      "ema_50": 282.73241372879767
     }
   ]
 }

@@ -16,10 +16,10 @@
     "exit_price": 1415.1,
     "realized_return_pct": -11.831775700934589,
     "close_reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
-    "latest_date": "2026-10-21",
-    "latest_close": 1438.4,
-    "return_pct": -10.380062305295946,
-    "pnl": -166.5999999999999,
+    "latest_date": "2026-10-22",
+    "latest_close": 1453.7,
+    "return_pct": -9.426791277258562,
+    "pnl": -151.29999999999995,
     "bars_held": 9,
     "position_tier": "Strong",
     "suggested_capital": 3000,
@@ -144,15 +144,6 @@
       "trade_signal": 0.0,
       "near52_high_252": 1677.5,
       "near52_sma_50": 1422.286,
-      "near52_exit_low_20": 1346.4
-    },
-    {
-      "date": "2026-10-19",
-      "Close": 1432.4,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "near52_high_252": 1677.5,
-      "near52_sma_50": 1425.4260000000002,
       "near52_exit_low_20": 1346.4
     }
   ]

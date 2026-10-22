@@ -12,10 +12,10 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-10-21",
-    "latest_close": 1571.5,
-    "return_pct": 15.466568699485684,
-    "pnl": 210.5,
+    "latest_date": "2026-10-22",
+    "latest_close": 1545.7,
+    "return_pct": 13.570903747244678,
+    "pnl": 184.70000000000005,
     "bars_held": 90,
     "position_tier": "Normal",
     "suggested_capital": 1000,
@@ -33,16 +33,16 @@
     "indicator_description": "Uses combined signal from SMA50/75/100/150/200 ATR-band strategies (\u00b11.0 ATR)."
   },
   "metrics": {
-    "total_return_c_pct": -13.397356829759588,
+    "total_return_c_pct": -14.819150144294879,
     "trades": 7,
     "win_rate_pct": 28.57142857142857,
-    "avg_trade_pct": -2.4482677719984074,
-    "sharpe": -0.06145193691851011,
+    "avg_trade_pct": -2.7373660766273398,
+    "sharpe": -0.08479749178974832,
     "max_drawdown_pct": -35.704457489825145
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-12",
-  "chart_end_date": "2026-10-21",
+  "chart_end_date": "2026-10-22",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_50",
@@ -1033,26 +1033,26 @@
       "sma_200": 1434.694
     },
     {
-      "date": "2026-10-19",
-      "Close": 1613.6,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_50": 1675.65,
-      "sma_75": 1620.6973333333333,
-      "sma_100": 1556.511,
-      "sma_150": 1433.7266666666667,
-      "sma_200": 1434.26
-    },
-    {
       "date": "2026-10-21",
       "Close": 1571.5,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_50": 1675.04,
-      "sma_75": 1621.3933333333334,
-      "sma_100": 1559.932,
-      "sma_150": 1436.1206666666667,
-      "sma_200": 1433.7225
+      "sma_50": 1674.808,
+      "sma_75": 1620.1360000000002,
+      "sma_100": 1556.09,
+      "sma_150": 1433.446,
+      "sma_200": 1434.0494999999999
+    },
+    {
+      "date": "2026-10-22",
+      "Close": 1545.7,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_50": 1673.6819999999998,
+      "sma_75": 1620.488,
+      "sma_100": 1559.2530000000002,
+      "sma_150": 1435.668,
+      "sma_200": 1433.3829999999998
     }
   ]
 }

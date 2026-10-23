@@ -12,19 +12,21 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-10-22",
-    "latest_close": 502.0,
-    "return_pct": -9.386281588447654,
-    "pnl": -52.0,
-    "bars_held": 31,
+    "latest_date": "2026-10-23",
+    "latest_close": 490.0,
+    "return_pct": -11.552346570397109,
+    "pnl": -64.0,
+    "bars_held": 32,
     "position_tier": "Strong",
     "suggested_capital": 3000,
     "position_size_label": "3k",
     "position_size_reason": "Within 10% of 52-week high (-7.4%)",
     "stop_text": "",
-    "action": "HOLD",
-    "reason": "Strategy position is still active",
-    "action_sort": 5
+    "action": "EXIT NEXT OPEN",
+    "reason": "Strategy exit signal on the latest close; execute at the next market open",
+    "suggested_exit_date": "",
+    "suggested_exit_price": "",
+    "action_sort": 2
   },
   "strategy": {
     "key": "donchian_45_32",
@@ -33,16 +35,16 @@
     "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
-    "total_return_c_pct": -47.18551898798137,
+    "total_return_c_pct": -48.44801654205353,
     "trades": 17,
     "win_rate_pct": 23.52941176470588,
-    "avg_trade_pct": -2.8698584685137933,
-    "sharpe": -0.30055481266902534,
-    "max_drawdown_pct": -54.132863855452065
+    "avg_trade_pct": -2.9972740556872908,
+    "sharpe": -0.3158052474532881,
+    "max_drawdown_pct": -55.22928942066038
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-04",
-  "chart_end_date": "2026-10-22",
+  "chart_end_date": "2026-10-23",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -303,6 +305,14 @@
       "Close": 502.0,
       "position": 1.0,
       "trade_signal": 1.0,
+      "donchian_entry_high_45": 572.5,
+      "donchian_exit_low_32": 502.0
+    },
+    {
+      "date": "2026-10-23",
+      "Close": 490.0,
+      "position": 1.0,
+      "trade_signal": 0.0,
       "donchian_entry_high_45": 572.5,
       "donchian_exit_low_32": 502.0
     }

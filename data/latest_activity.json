@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-23T16:17:51",
-  "latest_data_date": "2026-10-23",
-  "scan_date": "2026-10-23",
+  "generated_at": "2026-10-26T17:59:26",
+  "latest_data_date": "2026-10-26",
+  "scan_date": "2026-10-26",
   "summary": {
-    "tomorrow": 10,
-    "executed_today": 0
+    "tomorrow": 0,
+    "executed_today": 10
   },
-  "tomorrow": [
+  "tomorrow": [],
+  "today": [
     {
       "id": "de09ce2b84af610aff",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "KARURVYSYA",
@@ -22,6 +23,8 @@
       "entry_price": 368.2,
       "trigger_price": 336.3,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 336.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k",
       "news_tag": "Neutral",
@@ -38,7 +41,7 @@
     {
       "id": "fc60ba97ad6d1dbc4b",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "HDFCLIFE",
@@ -49,6 +52,8 @@
       "entry_price": 560.05,
       "trigger_price": 523.75,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 520.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -65,7 +70,7 @@
     {
       "id": "d70f237917acf5a85f",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "OPTIEMUS",
@@ -76,6 +81,8 @@
       "entry_price": 800.0,
       "trigger_price": 673.7,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 673.75,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -92,7 +99,7 @@
     {
       "id": "03b7feb55c34c33066",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "TEXRAIL",
@@ -103,13 +110,15 @@
       "entry_price": 115.5,
       "trigger_price": 98.5,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 98.69,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "60fa86f12db8f62ddb",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "LICHSGFIN",
@@ -120,13 +129,15 @@
       "entry_price": 560.0,
       "trigger_price": 490.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 490.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k"
     },
     {
       "id": "1578084bd4e7cec122",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "SPLPETRO",
@@ -137,13 +148,15 @@
       "entry_price": 809.0,
       "trigger_price": 712.6,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 702.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "19daa8bc9508fe775b",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "SPLPETRO",
@@ -154,13 +167,15 @@
       "entry_price": 774.9,
       "trigger_price": 712.6,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 702.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "b9962bf6f8d75beba7",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "LICHSGFIN",
@@ -171,13 +186,15 @@
       "entry_price": 554.0,
       "trigger_price": 490.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 490.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k"
     },
     {
       "id": "937b47eaebfeb335e8",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "ENGINERSIN",
@@ -188,13 +205,15 @@
       "entry_price": 254.0,
       "trigger_price": 242.5,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 242.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k"
     },
     {
       "id": "8ea927b4d0bc7f7906",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-23",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "MOTILALOFS",
@@ -205,9 +224,10 @@
       "entry_price": 990.0,
       "trigger_price": 925.8,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-10-26",
+      "execution_price": 916.3,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k"
     }
-  ],
-  "today": []
+  ]
 }

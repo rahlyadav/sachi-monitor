@@ -11,22 +11,24 @@
     "quantity": 1.0,
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
-    "status": "ACTIVE",
-    "latest_date": "2026-10-23",
-    "latest_close": 490.0,
-    "return_pct": -12.5,
-    "pnl": -70.0,
-    "bars_held": 29,
+    "status": "CLOSED",
+    "exit_date": "2026-10-26",
+    "exit_price": 490.0,
+    "realized_return_pct": -12.5,
+    "close_reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
+    "latest_date": "2026-10-26",
+    "latest_close": 497.4,
+    "return_pct": -11.178571428571438,
+    "pnl": -62.60000000000002,
+    "bars_held": 30,
     "position_tier": "Strong",
     "suggested_capital": 3000,
     "position_size_label": "3k",
     "position_size_reason": "Within 10% of 52-week high (-5.9%)",
     "stop_text": "",
-    "action": "EXIT NEXT OPEN",
-    "reason": "Strategy exit signal on the latest close; execute at the next market open",
-    "suggested_exit_date": "",
-    "suggested_exit_price": "",
-    "action_sort": 2
+    "action": "CLOSED",
+    "reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
+    "action_sort": 8
   },
   "strategy": {
     "key": "ema_12_26_atr05_band",
@@ -39,13 +41,13 @@
     "trades": 11,
     "win_rate_pct": 27.27272727272727,
     "avg_trade_pct": 4.428126417135698,
-    "sharpe": 0.25364021888446237,
+    "sharpe": 0.2535650136235297,
     "max_drawdown_pct": -39.522308236582035
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-09",
-  "chart_end_date": "2026-10-23",
-  "chart_end_reason": "latest",
+  "chart_end_date": "2026-10-26",
+  "chart_end_reason": "exit",
   "indicator_columns": [
     "ema_12",
     "ema_26",
@@ -353,6 +355,16 @@
       "ema_26": 529.3556490324277,
       "ema26_atr_upper_05": 537.6735061752848,
       "ema26_atr_lower_05": 521.0377918895705
+    },
+    {
+      "date": "2026-10-26",
+      "Close": 497.4,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "ema_12": 516.2494703076518,
+      "ema_26": 526.9885639189146,
+      "ema26_atr_upper_05": 535.4957067760574,
+      "ema26_atr_lower_05": 518.4814210617717
     }
   ]
 }

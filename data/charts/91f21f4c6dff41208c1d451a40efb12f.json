@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "91f21f4c6dff41208c1d451a40efb12f",
+    "symbol": "BSE",
+    "cap_bucket": "Mid",
+    "strategy_key": "ema_10_25_50_entry_level_exit_cross",
+    "strategy_label": "EMA10 Level Entry + Cross Exit (EMA25/50)",
+    "entry_date": "2026-10-29",
+    "entry_price": 3490.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-10-29",
+    "latest_close": 3502.0,
+    "return_pct": 0.34383954154728613,
+    "pnl": 12.0,
+    "bars_held": 0,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5,
+    "source_signal_date": "2026-10-28",
+    "source_trigger_price": 3485.0,
+    "source_trigger_basis": "Signal-day close",
+    "news_tag": "Neutral",
+    "news_catalyst": "NA",
+    "news_catalysts": "NA",
+    "news_count": 3,
+    "news_positive_count": 0,
+    "news_negative_count": 0,
+    "news_score_sum": 0,
+    "news_score_max": 0,
+    "news_score_min": 0,
+    "news_window_start": "2026-10-21",
+    "news_window_end": "2026-10-28",
+    "news_window_days": 7,
+    "news_latest_date": "2026-10-27",
+    "news_latest_subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
+    "news_latest_source": "NSE",
+    "news_fetch_status": "OK"
+  },
+  "strategy": {
+    "key": "ema_10_25_50_entry_level_exit_cross",
+    "label": "EMA10 Level Entry + Cross Exit (EMA25/50)",
+    "description": "Enter when EMA10 is above both EMA25 and EMA50; exit when EMA10 crosses below EMA25 and EMA50.",
+    "indicator_description": "Adds a lower panel with EMA10, EMA25, and EMA50."
+  },
+  "metrics": {
+    "total_return_c_pct": 5670.259620268683,
+    "trades": 16,
+    "win_rate_pct": 62.5,
+    "avg_trade_pct": 53.4466945487255,
+    "sharpe": 1.6835977485734535,
+    "max_drawdown_pct": -33.79993837284497
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-10-29",
+  "chart_end_date": "2026-10-29",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "ema_10",
+    "ema_25",
+    "ema_50"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-10-29",
+      "Close": 3502.0,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 3383.5352918324015,
+      "ema_25": 3334.604539185131,
+      "ema_50": 3354.882592490759
+    }
+  ]
+}

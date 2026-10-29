@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "fef55fb933c5401bbc9b0bb3617d1efb",
+    "symbol": "BSE",
+    "cap_bucket": "Mid",
+    "strategy_key": "donchian_45_32",
+    "strategy_label": "Donchian Breakout (45/32)",
+    "entry_date": "2026-10-29",
+    "entry_price": 3490.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-10-29",
+    "latest_close": 3502.0,
+    "return_pct": 0.34383954154728613,
+    "pnl": 12.0,
+    "bars_held": 0,
+    "position_tier": "Normal",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Passes Early Leader and Filter List",
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5,
+    "source_signal_date": "2026-10-28",
+    "source_trigger_price": 3485.0,
+    "source_trigger_basis": "Signal-day close",
+    "news_tag": "Neutral",
+    "news_catalyst": "NA",
+    "news_catalysts": "NA",
+    "news_count": 3,
+    "news_positive_count": 0,
+    "news_negative_count": 0,
+    "news_score_sum": 0,
+    "news_score_max": 0,
+    "news_score_min": 0,
+    "news_window_start": "2026-10-21",
+    "news_window_end": "2026-10-28",
+    "news_window_days": 7,
+    "news_latest_date": "2026-10-27",
+    "news_latest_subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
+    "news_latest_source": "NSE",
+    "news_fetch_status": "OK"
+  },
+  "strategy": {
+    "key": "donchian_45_32",
+    "label": "Donchian Breakout (45/32)",
+    "description": "Long when close breaks above prior 45-day high; exit when close falls below prior 32-day low.",
+    "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
+  },
+  "metrics": {
+    "total_return_c_pct": 1957.8848300049024,
+    "trades": 15,
+    "win_rate_pct": 66.66666666666666,
+    "avg_trade_pct": 39.5958833386035,
+    "sharpe": 1.3683785221853688,
+    "max_drawdown_pct": -38.69751487006793
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-10-29",
+  "chart_end_date": "2026-10-29",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "donchian_entry_high_45",
+    "donchian_exit_low_32"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-10-29",
+      "Close": 3502.0,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 3485.0,
+      "donchian_exit_low_32": 3046.0
+    }
+  ]
+}

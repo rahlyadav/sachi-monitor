@@ -12,11 +12,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-10-28",
-    "latest_close": 1572.6,
-    "return_pct": 15.547391623806028,
-    "pnl": 211.5999999999999,
-    "bars_held": 94,
+    "latest_date": "2026-10-29",
+    "latest_close": 1549.8,
+    "return_pct": 13.872152828802342,
+    "pnl": 188.79999999999995,
+    "bars_held": 95,
     "position_tier": "Normal",
     "suggested_capital": 1000,
     "position_size_label": "1k",
@@ -33,16 +33,16 @@
     "indicator_description": "Uses combined signal from SMA50/75/100/150/200 ATR-band strategies (\u00b11.0 ATR)."
   },
   "metrics": {
-    "total_return_c_pct": -13.336737734953841,
+    "total_return_c_pct": -14.59320624547339,
     "trades": 7,
     "win_rate_pct": 28.57142857142857,
-    "avg_trade_pct": -2.4359418752894206,
-    "sharpe": -0.059214930279312204,
+    "avg_trade_pct": -2.6914240979847595,
+    "sharpe": -0.07964544248122617,
     "max_drawdown_pct": -35.704457489825145
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-06-12",
-  "chart_end_date": "2026-10-28",
+  "chart_end_date": "2026-10-29",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_50",
@@ -1097,6 +1097,17 @@
       "sma_100": 1572.042,
       "sma_150": 1445.4106666666667,
       "sma_200": 1431.2714999999998
+    },
+    {
+      "date": "2026-10-29",
+      "Close": 1549.8,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_50": 1664.254,
+      "sma_75": 1623.3,
+      "sma_100": 1575.2880000000002,
+      "sma_150": 1448.3386666666665,
+      "sma_200": 1430.7825
     }
   ]
 }

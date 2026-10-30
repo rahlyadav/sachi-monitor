@@ -12,19 +12,21 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-10-29",
-    "latest_close": 1660.6,
-    "return_pct": 6.183259799219898,
-    "pnl": 96.69999999999982,
-    "bars_held": 76,
+    "latest_date": "2026-10-30",
+    "latest_close": 1556.7,
+    "return_pct": -0.46038749280644664,
+    "pnl": -7.2000000000000455,
+    "bars_held": 77,
     "position_tier": "Normal",
     "suggested_capital": 1000,
     "position_size_label": "1k",
     "position_size_reason": "Passes Early Leader and Filter List",
     "stop_text": "",
-    "action": "HOLD",
-    "reason": "Strategy position is still active",
-    "action_sort": 5
+    "action": "EXIT NEXT OPEN",
+    "reason": "Strategy exit signal on the latest close; execute at the next market open",
+    "suggested_exit_date": "",
+    "suggested_exit_price": "",
+    "action_sort": 2
   },
   "strategy": {
     "key": "sma_atr_band_any_5",
@@ -33,16 +35,16 @@
     "indicator_description": "Uses combined signal from SMA50/75/100/150/200 ATR-band strategies (\u00b11.0 ATR)."
   },
   "metrics": {
-    "total_return_c_pct": 627.7262492958436,
+    "total_return_c_pct": 582.1940577374681,
     "trades": 10,
-    "win_rate_pct": 60.0,
-    "avg_trade_pct": 38.85234140903636,
-    "sharpe": 0.9592910250063597,
+    "win_rate_pct": 50.0,
+    "avg_trade_pct": 38.187976679833724,
+    "sharpe": 0.9329671598288038,
     "max_drawdown_pct": -44.88340658218573
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-07-10",
-  "chart_end_date": "2026-10-29",
+  "chart_end_date": "2026-10-30",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_50",
@@ -899,6 +901,17 @@
       "sma_100": 1771.7930000000001,
       "sma_150": 1683.4286666666667,
       "sma_200": 1747.8640000000003
+    },
+    {
+      "date": "2026-10-30",
+      "Close": 1556.7,
+      "position": 1.0,
+      "trade_signal": 0.0,
+      "sma_50": 1891.312,
+      "sma_75": 1881.68,
+      "sma_100": 1773.5119999999997,
+      "sma_150": 1684.0133333333333,
+      "sma_200": 1743.6409999999998
     }
   ]
 }

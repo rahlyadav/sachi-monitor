@@ -1,17 +1,69 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T17:31:12",
-  "latest_data_date": "2026-10-30",
-  "scan_date": "2026-10-30",
+  "generated_at": "2026-11-02T21:14:56",
+  "latest_data_date": "2026-11-02",
+  "scan_date": "2026-11-02",
   "summary": {
-    "tomorrow": 4,
-    "executed_today": 0
+    "tomorrow": 2,
+    "executed_today": 4
   },
   "tomorrow": [
     {
+      "id": "1c12f3684d9a367dda",
+      "action": "ENTER",
+      "status": "PENDING",
+      "signal_date": "2026-11-02",
+      "planned_execution": "NEXT MARKET OPEN",
+      "symbol": "PPLPHARMA",
+      "cap_bucket": "Small",
+      "strategy_key": "ema_12_26_atr05_band",
+      "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
+      "trigger_price": 239.92,
+      "trigger_basis": "Signal-day close",
+      "reason": "PASS | EL@Entry PASS 2026-11-02 | Score 100 | RS20 18.5% | 52W -1.3% | 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-11-02 | 2024 4/5 (80%)",
+      "position_size_label": "3k",
+      "news_tag": "Neutral",
+      "news_catalyst": "results_event",
+      "news_catalysts": "results_event",
+      "news_count": 7,
+      "news_positive_count": 0,
+      "news_negative_count": 0,
+      "news_score_sum": 0,
+      "news_latest_date": "2026-10-30",
+      "news_latest_subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
+      "news_fetch_status": "OK"
+    },
+    {
+      "id": "2cc6940d38d88ab2f1",
+      "action": "ENTER",
+      "status": "PENDING",
+      "signal_date": "2026-11-02",
+      "planned_execution": "NEXT MARKET OPEN",
+      "symbol": "COFORGE",
+      "cap_bucket": "Mid",
+      "strategy_key": "sma_20_50_atr05_band",
+      "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
+      "trigger_price": 2099.0,
+      "trigger_basis": "Signal-day close",
+      "reason": "PASS | EL@Entry PASS 2026-11-02 | Score 107 | RS20 12.3% | 52W -0.6% | 20D high | Filter@Entry 2026-11-02 | 2024 4/5 (80%)",
+      "position_size_label": "3k",
+      "news_tag": "Neutral",
+      "news_catalyst": "NA",
+      "news_catalysts": "NA",
+      "news_count": 5,
+      "news_positive_count": 0,
+      "news_negative_count": 0,
+      "news_score_sum": 0,
+      "news_latest_date": "2026-10-29",
+      "news_latest_subject": "ESOP/ESOS/ESPS",
+      "news_fetch_status": "OK"
+    }
+  ],
+  "today": [
+    {
       "id": "e5d3bbe0136c3859fb",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-30",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "AXISCADES",
@@ -22,6 +74,8 @@
       "entry_price": 2070.0,
       "trigger_price": 1875.9,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-11-02",
+      "execution_price": 1866.5,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -38,7 +92,7 @@
     {
       "id": "d6c6b64b618925b3ad",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-30",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "ECLERX",
@@ -49,13 +103,15 @@
       "entry_price": 1563.9,
       "trigger_price": 1556.7,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-11-02",
+      "execution_price": 1570.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "1k"
     },
     {
       "id": "facafdf6b777fa1f75",
       "action": "ENTER",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-30",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "COFORGE",
@@ -64,6 +120,8 @@
       "strategy_label": "Donchian Breakout (45/32)",
       "trigger_price": 2045.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-11-02",
+      "execution_price": 2065.0,
       "reason": "PASS | EL@Entry PASS 2026-10-30 | Score 110 | RS20 16.8% | 52W -0.8% | 20D high | Filter@Entry 2026-10-30 | 2024 4/5 (80%)",
       "position_size_label": "3k",
       "news_tag": "Neutral",
@@ -80,7 +138,7 @@
     {
       "id": "d3f9c15682f8b73ff9",
       "action": "ENTER",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-10-30",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "ATHERENERG",
@@ -89,6 +147,8 @@
       "strategy_label": "Donchian Breakout (45/32)",
       "trigger_price": 1756.0,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-11-02",
+      "execution_price": 1767.8,
       "reason": "PASS | EL@Entry PASS 2026-10-30 | Score 110 | RS20 23.1% | 52W -1.6% | 20D high + 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-10-30 | 2024 5/5 (100%)",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -102,6 +162,5 @@
       "news_latest_subject": "Analysts/Institutional Investor Meet/Con. Call Updates",
       "news_fetch_status": "OK"
     }
-  ],
-  "today": []
+  ]
 }

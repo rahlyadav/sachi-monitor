@@ -12,11 +12,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-11-03",
-    "latest_close": 401.2,
-    "return_pct": -5.876832844574786,
-    "pnl": -25.05000000000001,
-    "bars_held": 9,
+    "latest_date": "2026-11-04",
+    "latest_close": 435.1,
+    "return_pct": 2.0762463343108495,
+    "pnl": 8.850000000000023,
+    "bars_held": 10,
     "position_tier": "Micro",
     "suggested_capital": 1000,
     "position_size_label": "1k",
@@ -52,16 +52,16 @@
     "indicator_description": "Adds a lower panel with SMA20, SMA50, and SMA50 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 427.36109975147724,
+    "total_return_c_pct": 471.9212724373574,
     "trades": 14,
-    "win_rate_pct": 42.857142857142854,
-    "avg_trade_pct": 21.399496786081404,
-    "sharpe": 0.7730173165439074,
+    "win_rate_pct": 50.0,
+    "avg_trade_pct": 21.96757387028752,
+    "sharpe": 0.7990014833817698,
     "max_drawdown_pct": -62.29111419162399
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-10-21",
-  "chart_end_date": "2026-11-03",
+  "chart_end_date": "2026-11-04",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_20",
@@ -170,6 +170,16 @@
       "sma_50": 399.295,
       "sma50_atr_upper_05": 411.2896428571429,
       "sma50_atr_lower_05": 387.30035714285714
+    },
+    {
+      "date": "2026-11-04",
+      "Close": 435.1,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 408.15500000000003,
+      "sma_50": 400.30600000000004,
+      "sma50_atr_upper_05": 413.1220714285715,
+      "sma50_atr_lower_05": 387.4899285714286
     }
   ]
 }

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "trade": {
+    "id": "66fafc92bd1a41e0913d962bd01cb06f",
+    "symbol": "KITEX",
+    "cap_bucket": "Micro",
+    "strategy_key": "ema_10_25_50_entry_level_exit_cross",
+    "strategy_label": "EMA10 Level Entry + Cross Exit (EMA25/50)",
+    "entry_date": "2026-11-06",
+    "entry_price": 139.0,
+    "quantity": 1.0,
+    "stop_loss_pct": 0.0,
+    "manual_stop_price": null,
+    "status": "ACTIVE",
+    "latest_date": "2026-11-06",
+    "latest_close": 134.02,
+    "return_pct": -3.5827338129496344,
+    "pnl": -4.97999999999999,
+    "bars_held": 0,
+    "position_tier": "Micro",
+    "suggested_capital": 1000,
+    "position_size_label": "1k",
+    "position_size_reason": "Micro cap rule: 1k always",
+    "stop_text": "",
+    "action": "HOLD",
+    "reason": "Strategy position is still active",
+    "action_sort": 5,
+    "source_signal_date": "2026-11-05",
+    "source_trigger_price": 139.67,
+    "source_trigger_basis": "Signal-day close",
+    "news_tag": "Neutral",
+    "news_catalyst": "results_event",
+    "news_catalysts": "results_event",
+    "news_count": 2,
+    "news_positive_count": 0,
+    "news_negative_count": 0,
+    "news_score_sum": 0,
+    "news_score_max": 0,
+    "news_score_min": 0,
+    "news_window_start": "2026-10-29",
+    "news_window_end": "2026-11-05",
+    "news_window_days": 7,
+    "news_latest_date": "2026-11-04",
+    "news_latest_subject": "Copy of Newspaper Publication",
+    "news_latest_source": "NSE",
+    "news_fetch_status": "OK"
+  },
+  "strategy": {
+    "key": "ema_10_25_50_entry_level_exit_cross",
+    "label": "EMA10 Level Entry + Cross Exit (EMA25/50)",
+    "description": "Enter when EMA10 is above both EMA25 and EMA50; exit when EMA10 crosses below EMA25 and EMA50.",
+    "indicator_description": "Adds a lower panel with EMA10, EMA25, and EMA50."
+  },
+  "metrics": {
+    "total_return_c_pct": 294.7612910497852,
+    "trades": 17,
+    "win_rate_pct": 29.411764705882355,
+    "avg_trade_pct": 14.831731869457595,
+    "sharpe": 0.7103075111522097,
+    "max_drawdown_pct": -39.699866916786995
+  },
+  "manual_stop_price": null,
+  "chart_start_date": "2026-11-06",
+  "chart_end_date": "2026-11-06",
+  "chart_end_reason": "latest",
+  "indicator_columns": [
+    "ema_10",
+    "ema_25",
+    "ema_50"
+  ],
+  "stop_columns": [],
+  "points": [
+    {
+      "date": "2026-11-06",
+      "Close": 134.02,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 126.0781488617234,
+      "ema_25": 121.6825585581341,
+      "ema_50": 123.65740429203977
+    }
+  ]
+}

@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-06T18:43:48",
-  "latest_data_date": "2026-11-06",
+  "generated_at": "2026-11-09T21:58:44",
+  "latest_data_date": "2026-11-09",
   "csv_files": 782,
   "universe": {
     "stocks": 760,
     "indices": 5
   },
   "prediction": {
-    "generated_at": "2026-11-06T18:43:36",
-    "rows": 0,
-    "matches": 0,
-    "entry_signals": 84,
-    "filter_reject": 0,
-    "early_leader_reject": 84
+    "generated_at": "2026-11-09T21:58:31",
+    "rows": 1,
+    "matches": 1,
+    "entry_signals": 101,
+    "filter_reject": 1,
+    "early_leader_reject": 99
   },
   "monitor": {
     "rows": 102,
@@ -25,8 +25,8 @@
     "exit_signal": 0,
     "watch": 0,
     "error": 0,
-    "latest_data_date": "2026-11-06",
-    "updated_at": "2026-11-06T18:43:42"
+    "latest_data_date": "2026-11-09",
+    "updated_at": "2026-11-09T21:58:38"
   },
   "charts": {
     "written": 102,

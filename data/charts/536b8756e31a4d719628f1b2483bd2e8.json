@@ -12,19 +12,21 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-11-09",
-    "latest_close": 299.35,
-    "return_pct": 13.821292775665416,
-    "pnl": 36.35000000000002,
-    "bars_held": 46,
+    "latest_date": "2026-11-11",
+    "latest_close": 311.2,
+    "return_pct": 18.326996197718625,
+    "pnl": 48.19999999999999,
+    "bars_held": 48,
     "position_tier": "Strong",
     "suggested_capital": 3000,
     "position_size_label": "3k",
     "position_size_reason": "Within 10% of 52-week high (-1.9%)",
     "stop_text": "",
-    "action": "HOLD",
-    "reason": "Strategy position is still active",
-    "action_sort": 5
+    "action": "EXIT SIGNAL",
+    "reason": "Strategy exit after monitored entry on 2026-11-11",
+    "suggested_exit_date": "2026-11-11",
+    "suggested_exit_price": 311.2,
+    "action_sort": 2
   },
   "strategy": {
     "key": "sma_20_50_atr05_band",
@@ -37,12 +39,12 @@
     "trades": 15,
     "win_rate_pct": 46.666666666666664,
     "avg_trade_pct": 3.4576039601833024,
-    "sharpe": 0.3017201304485928,
+    "sharpe": 0.3015424271475744,
     "max_drawdown_pct": -50.74529992996478
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-09-01",
-  "chart_end_date": "2026-11-09",
+  "chart_end_date": "2026-11-11",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_20",
@@ -521,6 +523,26 @@
       "sma_50": 281.029,
       "sma50_atr_upper_05": 288.5307857142857,
       "sma50_atr_lower_05": 273.5272142857143
+    },
+    {
+      "date": "2026-11-09",
+      "Close": 299.35,
+      "position": 1.0,
+      "trade_signal": 0.0,
+      "sma_20": 274.29499999999996,
+      "sma_50": 282.0768,
+      "sma50_atr_upper_05": 289.4232285714286,
+      "sma50_atr_lower_05": 274.7303714285714
+    },
+    {
+      "date": "2026-11-11",
+      "Close": 311.2,
+      "position": 0.0,
+      "trade_signal": 0.0,
+      "sma_20": 275.4275,
+      "sma_50": 283.2264,
+      "sma50_atr_upper_05": 291.12104285714287,
+      "sma50_atr_lower_05": 275.33175714285716
     }
   ]
 }

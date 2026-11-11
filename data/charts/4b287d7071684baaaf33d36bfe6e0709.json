@@ -12,11 +12,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-11-09",
-    "latest_close": 1353.8,
-    "return_pct": 2.173584905660375,
-    "pnl": 28.799999999999955,
-    "bars_held": 1,
+    "latest_date": "2026-11-11",
+    "latest_close": 1373.0,
+    "return_pct": 3.622641509433966,
+    "pnl": 48.0,
+    "bars_held": 3,
     "position_tier": "Strong",
     "suggested_capital": 3000,
     "position_size_label": "3k",
@@ -52,16 +52,16 @@
     "indicator_description": "Adds a lower panel with close and Donchian 45/32 channels."
   },
   "metrics": {
-    "total_return_c_pct": 68.8814737003973,
+    "total_return_c_pct": 71.27660170678499,
     "trades": 8,
     "win_rate_pct": 62.5,
-    "avg_trade_pct": 7.836578510822312,
-    "sharpe": 0.7037380638982803,
+    "avg_trade_pct": 8.01771058629401,
+    "sharpe": 0.7189328624771958,
     "max_drawdown_pct": -25.472963923491875
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-11-06",
-  "chart_end_date": "2026-11-09",
+  "chart_end_date": "2026-11-11",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "donchian_entry_high_45",
@@ -83,6 +83,22 @@
       "position": 1.0,
       "trade_signal": 1.0,
       "donchian_entry_high_45": 1335.0,
+      "donchian_exit_low_32": 1057.0
+    },
+    {
+      "date": "2026-11-09",
+      "Close": 1353.8,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1353.8,
+      "donchian_exit_low_32": 1057.0
+    },
+    {
+      "date": "2026-11-11",
+      "Close": 1373.0,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "donchian_entry_high_45": 1353.8,
       "donchian_exit_low_32": 1057.0
     }
   ]

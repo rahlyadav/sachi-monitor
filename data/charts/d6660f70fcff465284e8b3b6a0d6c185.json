@@ -12,11 +12,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-11-09",
-    "latest_close": 58.68,
-    "return_pct": 13.391304347826093,
-    "pnl": 6.93,
-    "bars_held": 15,
+    "latest_date": "2026-11-11",
+    "latest_close": 60.46,
+    "return_pct": 16.830917874396146,
+    "pnl": 8.71,
+    "bars_held": 17,
     "position_tier": "Micro 52W",
     "suggested_capital": 5000,
     "position_size_label": "5k",
@@ -52,16 +52,16 @@
     "indicator_description": "Adds prior 52-week high, SMA50, and prior 20-day close low."
   },
   "metrics": {
-    "total_return_c_pct": 58.93282510098719,
+    "total_return_c_pct": 63.7538958010512,
     "trades": 22,
     "win_rate_pct": 50.0,
-    "avg_trade_pct": 3.721891803191393,
-    "sharpe": 0.4000287738817164,
+    "avg_trade_pct": 3.8782378725809403,
+    "sharpe": 0.4174484148006144,
     "max_drawdown_pct": -41.881824427786775
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-10-16",
-  "chart_end_date": "2026-11-09",
+  "chart_end_date": "2026-11-11",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "near52_high_252",
@@ -213,6 +213,24 @@
       "near52_high_252": 57.9,
       "near52_sma_50": 49.6972,
       "near52_exit_low_20": 47.91
+    },
+    {
+      "date": "2026-11-09",
+      "Close": 58.68,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "near52_high_252": 59.1,
+      "near52_sma_50": 49.956199999999995,
+      "near52_exit_low_20": 49.01
+    },
+    {
+      "date": "2026-11-11",
+      "Close": 60.46,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "near52_high_252": 59.1,
+      "near52_sma_50": 50.258,
+      "near52_exit_low_20": 49.13
     }
   ]
 }

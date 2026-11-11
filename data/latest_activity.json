@@ -1,17 +1,86 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T21:58:44",
-  "latest_data_date": "2026-11-09",
-  "scan_date": "2026-11-09",
+  "generated_at": "2026-11-11T19:10:56",
+  "latest_data_date": "2026-11-11",
+  "scan_date": "2026-11-11",
   "summary": {
-    "tomorrow": 1,
-    "executed_today": 0
+    "tomorrow": 3,
+    "executed_today": 1
   },
   "tomorrow": [
     {
-      "id": "b023b48f63c0465d6e",
+      "id": "5d015a8885aba8f757",
+      "action": "EXIT",
+      "status": "PENDING",
+      "signal_date": "2026-11-11",
+      "planned_execution": "NEXT MARKET OPEN",
+      "symbol": "ENGINERSIN",
+      "cap_bucket": "Small",
+      "strategy_key": "sma_20_50_atr05_band",
+      "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
+      "entry_date": "2026-09-01",
+      "entry_price": 263.0,
+      "trigger_price": 311.2,
+      "trigger_basis": "Signal-day close",
+      "reason": "Strategy exit after monitored entry on 2026-11-11",
+      "position_size_label": "3k"
+    },
+    {
+      "id": "562a35b1861165b1e5",
       "action": "ENTER",
       "status": "PENDING",
+      "signal_date": "2026-11-11",
+      "planned_execution": "NEXT MARKET OPEN",
+      "symbol": "PPLPHARMA",
+      "cap_bucket": "Small",
+      "strategy_key": "sma_20_50_atr05_band",
+      "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
+      "trigger_price": 245.25,
+      "trigger_basis": "Signal-day close",
+      "reason": "PASS | EL@Entry PASS 2026-11-11 | Score 100 | RS20 15.8% | 52W -2.1% | 50DMA reclaim | Filter@Entry 2026-11-11 | 2024 5/5 (100%)",
+      "position_size_label": "3k",
+      "news_tag": "No News",
+      "news_catalyst": "NA",
+      "news_catalysts": "NA",
+      "news_count": 0,
+      "news_positive_count": 0,
+      "news_negative_count": 0,
+      "news_score_sum": 0,
+      "news_latest_date": "",
+      "news_latest_subject": "",
+      "news_fetch_status": "OK"
+    },
+    {
+      "id": "c3b2d5515e0835375e",
+      "action": "ENTER",
+      "status": "PENDING",
+      "signal_date": "2026-11-11",
+      "planned_execution": "NEXT MARKET OPEN",
+      "symbol": "MM",
+      "cap_bucket": "Large",
+      "strategy_key": "near52_cross_10",
+      "strategy_label": "52W High Cross Within 10%",
+      "trigger_price": 3465.0,
+      "trigger_basis": "Signal-day close",
+      "reason": "PASS | EL@Entry PASS 2026-11-11 | Score 92 | RS20 14.3% | 52W -9.8% | 20D high + 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-11-11 | 2024 4/5 (80%)",
+      "position_size_label": "5k",
+      "news_tag": "No News",
+      "news_catalyst": "NA",
+      "news_catalysts": "NA",
+      "news_count": 0,
+      "news_positive_count": 0,
+      "news_negative_count": 0,
+      "news_score_sum": 0,
+      "news_latest_date": "",
+      "news_latest_subject": "",
+      "news_fetch_status": "OK"
+    }
+  ],
+  "today": [
+    {
+      "id": "b023b48f63c0465d6e",
+      "action": "ENTER",
+      "status": "EXECUTED",
       "signal_date": "2026-11-09",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "UNOMINDA",
@@ -20,6 +89,8 @@
       "strategy_label": "EMA Crossover (12/26) + 0.5x ATR Band",
       "trigger_price": 1353.8,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-11-11",
+      "execution_price": 1367.3,
       "reason": "PASS | EL@Entry PASS 2026-11-09 | Score 97 | RS20 12.7% | 52W -1.0% | 20D high + 20DMA reclaim + 50DMA reclaim | Filter@Entry 2026-11-09 | 2024 4/5 (80%)",
       "position_size_label": "3k",
       "news_tag": "Neutral",
@@ -33,6 +104,5 @@
       "news_latest_subject": "Copy of Newspaper Publication",
       "news_fetch_status": "OK"
     }
-  ],
-  "today": []
+  ]
 }

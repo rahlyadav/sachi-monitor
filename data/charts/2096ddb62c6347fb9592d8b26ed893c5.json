@@ -16,7 +16,7 @@
     "exit_price": 1208.7,
     "realized_return_pct": 3.1313993174061583,
     "close_reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
-    "latest_date": "2026-11-11",
+    "latest_date": "2026-11-12",
     "latest_close": 1190.0,
     "return_pct": 1.5358361774743923,
     "pnl": 18.0,

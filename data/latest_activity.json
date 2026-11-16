@@ -1,17 +1,44 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T19:03:27",
-  "latest_data_date": "2026-11-13",
-  "scan_date": "2026-11-13",
+  "generated_at": "2026-11-16T21:32:13",
+  "latest_data_date": "2026-11-16",
+  "scan_date": "2026-11-16",
   "summary": {
     "tomorrow": 1,
-    "executed_today": 0
+    "executed_today": 1
   },
   "tomorrow": [
     {
+      "id": "ad94f52b75b942ebc5",
+      "action": "ENTER",
+      "status": "PENDING",
+      "signal_date": "2026-11-16",
+      "planned_execution": "NEXT MARKET OPEN",
+      "symbol": "EMCURE",
+      "cap_bucket": "Small",
+      "strategy_key": "sma_20_50_atr05_band",
+      "strategy_label": "SMA Crossover (20/50) + 0.5x ATR Band",
+      "trigger_price": 2338.8,
+      "trigger_basis": "Signal-day close",
+      "reason": "PASS | EL@Entry PASS 2026-11-16 | Score 100 | RS20 19.8% | 52W -2.3% | 50DMA reclaim | Filter@Entry 2026-11-16 | 2024 4/5 (80%)",
+      "position_size_label": "3k",
+      "news_tag": "Neutral",
+      "news_catalyst": "NA",
+      "news_catalysts": "NA",
+      "news_count": 1,
+      "news_positive_count": 0,
+      "news_negative_count": 0,
+      "news_score_sum": 0,
+      "news_latest_date": "2026-11-14",
+      "news_latest_subject": "General Updates",
+      "news_fetch_status": "OK"
+    }
+  ],
+  "today": [
+    {
       "id": "1a22ad324db71a16eb",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-11-13",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "HFCL",
@@ -22,6 +49,8 @@
       "entry_price": 275.91,
       "trigger_price": 205.47,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-11-16",
+      "execution_price": 204.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "3k",
       "news_tag": "Neutral",
@@ -35,6 +64,5 @@
       "news_latest_subject": "General Updates",
       "news_fetch_status": "OK"
     }
-  ],
-  "today": []
+  ]
 }

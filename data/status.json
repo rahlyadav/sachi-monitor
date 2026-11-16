@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-11-13T19:03:27",
-  "latest_data_date": "2026-11-13",
+  "generated_at": "2026-11-16T21:32:13",
+  "latest_data_date": "2026-11-16",
   "csv_files": 782,
   "universe": {
     "stocks": 760,
     "indices": 5
   },
   "prediction": {
-    "generated_at": "2026-11-13T19:03:15",
-    "rows": 0,
-    "matches": 0,
-    "entry_signals": 77,
-    "filter_reject": 0,
-    "early_leader_reject": 77
+    "generated_at": "2026-11-16T21:32:06",
+    "rows": 1,
+    "matches": 1,
+    "entry_signals": 67,
+    "filter_reject": 1,
+    "early_leader_reject": 65
   },
   "monitor": {
     "rows": 105,
     "total_trades": 105,
-    "active": 41,
-    "closed": 64,
+    "active": 40,
+    "closed": 65,
     "hold": 40,
     "stop_hit": 0,
-    "exit_next_open": 1,
+    "exit_next_open": 0,
     "exit_signal": 0,
     "watch": 0,
     "error": 0,
-    "latest_data_date": "2026-11-13",
-    "updated_at": "2026-11-13T19:03:21"
+    "latest_data_date": "2026-11-16",
+    "updated_at": "2026-11-16T21:32:10"
   },
   "charts": {
     "written": 105,

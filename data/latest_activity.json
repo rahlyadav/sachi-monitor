@@ -1,17 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T19:34:11",
-  "latest_data_date": "2026-11-20",
-  "scan_date": "2026-11-20",
+  "generated_at": "2026-11-23T23:16:32",
+  "latest_data_date": "2026-11-23",
+  "scan_date": "2026-11-23",
   "summary": {
-    "tomorrow": 1,
-    "executed_today": 0
+    "tomorrow": 0,
+    "executed_today": 1
   },
-  "tomorrow": [
+  "tomorrow": [],
+  "today": [
     {
       "id": "eb728c9a76d245923a",
       "action": "EXIT",
-      "status": "PENDING",
+      "status": "EXECUTED",
       "signal_date": "2026-11-20",
       "planned_execution": "NEXT MARKET OPEN",
       "symbol": "SKYGOLD",
@@ -22,6 +23,8 @@
       "entry_price": 939.5,
       "trigger_price": 874.9,
       "trigger_basis": "Signal-day close",
+      "execution_date": "2026-11-23",
+      "execution_price": 865.0,
       "reason": "Strategy exit signal on the latest close; execute at the next market open",
       "position_size_label": "5k",
       "news_tag": "Neutral",
@@ -35,6 +38,5 @@
       "news_latest_subject": "Certificate under SEBI (Depositories and Participants) Regulations, 2018",
       "news_fetch_status": "OK"
     }
-  ],
-  "today": []
+  ]
 }

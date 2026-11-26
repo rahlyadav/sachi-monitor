@@ -16,10 +16,10 @@
     "exit_price": 865.0,
     "realized_return_pct": -7.929749866950509,
     "close_reason": "EXIT NEXT OPEN: Strategy exit signal on the latest close; execute at the next market open",
-    "latest_date": "2026-11-25",
-    "latest_close": 802.3,
-    "return_pct": -14.603512506652482,
-    "pnl": -137.20000000000005,
+    "latest_date": "2026-11-26",
+    "latest_close": 808.9,
+    "return_pct": -13.90101117615753,
+    "pnl": -130.60000000000002,
     "bars_held": 30,
     "position_tier": "Micro 52W",
     "suggested_capital": 5000,
@@ -334,15 +334,6 @@
       "near52_high_252": 1083.95,
       "near52_sma_50": 898.0440000000001,
       "near52_exit_low_20": 858.3
-    },
-    {
-      "date": "2026-11-23",
-      "Close": 819.45,
-      "position": 0.0,
-      "trade_signal": 0.0,
-      "near52_high_252": 1083.95,
-      "near52_sma_50": 897.789,
-      "near52_exit_low_20": 819.45
     }
   ]
 }

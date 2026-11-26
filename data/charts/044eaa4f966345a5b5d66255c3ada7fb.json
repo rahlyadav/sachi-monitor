@@ -12,10 +12,10 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-11-25",
-    "latest_close": 2313.5,
-    "return_pct": -1.0817513254660627,
-    "pnl": -25.300000000000182,
+    "latest_date": "2026-11-26",
+    "latest_close": 2329.1,
+    "return_pct": -0.41474260304430466,
+    "pnl": -9.700000000000273,
     "bars_held": 6,
     "position_tier": "Strong",
     "suggested_capital": 3000,
@@ -52,16 +52,16 @@
     "indicator_description": "Adds a lower panel with SMA20, SMA50, and SMA50 +/- 0.5x ATR(14) band."
   },
   "metrics": {
-    "total_return_c_pct": 48.44866257291156,
+    "total_return_c_pct": 49.44965636419638,
     "trades": 4,
     "win_rate_pct": 50.0,
-    "avg_trade_pct": 11.538150136837121,
-    "sharpe": 0.7897247297045259,
+    "avg_trade_pct": 11.704902317442562,
+    "sharpe": 0.8009610452257412,
     "max_drawdown_pct": -18.48075718560793
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-11-17",
-  "chart_end_date": "2026-11-25",
+  "chart_end_date": "2026-11-26",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "sma_20",
@@ -122,24 +122,24 @@
       "sma50_atr_lower_05": 1953.1844285714287
     },
     {
-      "date": "2026-11-23",
-      "Close": 2309.9,
-      "position": 1.0,
-      "trade_signal": 1.0,
-      "sma_20": 2170.265,
-      "sma_50": 2008.098,
-      "sma50_atr_upper_05": 2051.4872857142855,
-      "sma50_atr_lower_05": 1964.7087142857142
-    },
-    {
       "date": "2026-11-25",
       "Close": 2313.5,
       "position": 1.0,
       "trade_signal": 1.0,
-      "sma_20": 2192.18,
-      "sma_50": 2015.1119999999999,
-      "sma50_atr_upper_05": 2053.3084285714285,
-      "sma50_atr_lower_05": 1976.9155714285712
+      "sma_20": 2170.445,
+      "sma_50": 2008.17,
+      "sma50_atr_upper_05": 2050.2771428571427,
+      "sma50_atr_lower_05": 1966.0628571428572
+    },
+    {
+      "date": "2026-11-26",
+      "Close": 2329.1,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "sma_20": 2193.1400000000003,
+      "sma_50": 2015.4959999999999,
+      "sma50_atr_upper_05": 2051.7817142857143,
+      "sma50_atr_lower_05": 1979.2102857142856
     }
   ]
 }

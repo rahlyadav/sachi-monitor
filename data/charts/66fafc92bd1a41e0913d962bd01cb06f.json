@@ -12,11 +12,11 @@
     "stop_loss_pct": 0.0,
     "manual_stop_price": null,
     "status": "ACTIVE",
-    "latest_date": "2026-11-26",
-    "latest_close": 122.81,
-    "return_pct": -11.647482014388489,
-    "pnl": -16.189999999999998,
-    "bars_held": 12,
+    "latest_date": "2026-11-27",
+    "latest_close": 127.99,
+    "return_pct": -7.920863309352521,
+    "pnl": -11.010000000000005,
+    "bars_held": 13,
     "position_tier": "Micro",
     "suggested_capital": 1000,
     "position_size_label": "1k",
@@ -52,16 +52,16 @@
     "indicator_description": "Adds a lower panel with EMA10, EMA25, and EMA50."
   },
   "metrics": {
-    "total_return_c_pct": 261.7417859560075,
+    "total_return_c_pct": 276.99968393868085,
     "trades": 17,
     "win_rate_pct": 29.411764705882355,
-    "avg_trade_pct": 14.35733491643178,
-    "sharpe": 0.6738023780832955,
+    "avg_trade_pct": 14.576547781433897,
+    "sharpe": 0.6888826909707224,
     "max_drawdown_pct": -41.759148716851215
   },
   "manual_stop_price": null,
   "chart_start_date": "2026-11-06",
-  "chart_end_date": "2026-11-26",
+  "chart_end_date": "2026-11-27",
   "chart_end_reason": "latest",
   "indicator_columns": [
     "ema_10",
@@ -186,6 +186,15 @@
       "ema_10": 128.72616116489988,
       "ema_25": 126.78555133375727,
       "ema_50": 126.15830792915746
+    },
+    {
+      "date": "2026-11-27",
+      "Close": 127.99,
+      "position": 1.0,
+      "trade_signal": 1.0,
+      "ema_10": 128.59231368037263,
+      "ema_25": 126.87820123116056,
+      "ema_50": 126.23013899075913
     }
   ]
 }
